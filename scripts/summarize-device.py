@@ -41,7 +41,7 @@ def main() -> None:
         raise SystemExit("no results/device/run-*.log yet")
     dev = next(iter(runs.values())).get("device", {})
     print(f"Device: {dev}\n")
-    print("| Threads | Cold load ms (read / parse / tokenizer / encoder / scorer) | First ms | Median ms | p95 ms | "
+    print("| Threads | Cold load ms (read / parse / tokenizer / encoder / scorer [/ wait]) | First ms | Median ms | p95 ms | "
           "Peak RSS MB (VmHWM, bench) | Max PSS MB (in-app / dumpsys) |")
     print("| --- | --- | --- | --- | --- | --- | --- |")
     for t, r in sorted(runs.items(), key=lambda kv: int(kv[0])):
@@ -50,6 +50,8 @@ def main() -> None:
             print(f"| {t} | incomplete: {sorted(r)} |")
             continue
         parts = " / ".join(f"{lt.get(k, float('nan')):.0f}" for k in ("readFilesMs", "tokenizerParseMs", "tokenizerMs", "encoderMs", "scorerMs"))
+        if "sessionWaitMs" in lt:  # logs from before sessionWaitMs existed omit it
+            parts += f" / wait {lt['sessionWaitMs']:.0f}"
         mem = b["memory"]
         ds = pss_samples(t)
         print(f"| {t} | {lt['totalMs']:.0f} ({parts}) | {b['firstMs']:.0f} | {b['medianMs']:.1f} | {b['p95Ms']:.1f} | "

@@ -26,6 +26,7 @@ d('OnDeviceDecimaEngine on onnxruntime-node', () => {
 
   test('load reports timings and the graph inputs/outputs (SP-02)', () => {
     expect(engine.loadTimings.totalMs).toBeGreaterThan(0);
+    expect(engine.loadTimings.sessionWaitMs).toBeGreaterThanOrEqual(0);
     expect(engine.graphInfo.encoder.inputNames).toEqual(['input_ids', 'attention_mask']);
     expect(engine.graphInfo.scorer.outputNames).toEqual(['scores', 'z']);
   });
@@ -121,6 +122,60 @@ test('load() rejects when a session fails to create', async () => {
   if (!modelPresent) return;
   const failing = { Tensor: ort.Tensor, InferenceSession: { create: async () => { throw new Error('boom'); } } };
   await expect(OnDeviceDecimaEngine.load({ ort: failing, modelDir: MODEL_DIR, readText })).rejects.toThrow('boom');
+});
+
+describe('load() releases sessions it created when a later step fails (no model files)', () => {
+  // Smallest tokenizer.json the HF port accepts: a two-piece Unigram model, every pipeline stage null.
+  const MIN_TOKENIZER = JSON.stringify({
+    normalizer: null, pre_tokenizer: null, post_processor: null, decoder: null, added_tokens: [],
+    model: { type: 'Unigram', unk_id: 0, vocab: [['<unk>', 0], ['a', -1]] },
+  });
+  const MIN_CONFIG = JSON.stringify({ temperature: 1, ordinal: { ord_g_w: [], ord_g_b: 0, ord_gap_w: [], ord_gap_b: 0 } });
+  const minRead = async (p: string) => (p.endsWith('decima.json') ? MIN_CONFIG : p.endsWith('tokenizer.json') ? MIN_TOKENIZER : '{}');
+
+  const fakeSession = () => ({ inputNames: [], outputNames: [], run: async () => ({}), release: jest.fn(async () => {}) });
+  // No unhandled rejections: jest-circus replaces the host process's 'unhandledRejection' listeners with one that fails
+  // the running test (a process.on spy here would sit on the sandbox's own emitter and never fire), so each test
+  // flushes the macrotask queue before it ends. Verified by injecting `void Promise.reject(...)` into load()'s catch:
+  // both tests then fail with that error.
+  const flush = () => new Promise((r) => setTimeout(r, 0)).then(() => new Promise((r) => setImmediate(r)));
+
+  test('scorer create rejects → load rejects with that error and releases the encoder session', async () => {
+    const encoder = fakeSession();
+    const fakeOrt = {
+      Tensor: ort.Tensor,
+      InferenceSession: {
+        create: async (p: string) => {
+          if (p.endsWith('scorer.onnx')) throw new Error('scorer failed');
+          return encoder as never;
+        },
+      },
+    };
+    await expect(OnDeviceDecimaEngine.load({ ort: fakeOrt, modelDir: '/m', readText: minRead })).rejects.toThrow('scorer failed');
+    await flush();
+    expect(encoder.release).toHaveBeenCalledTimes(1);
+  });
+
+  test('readText rejects → load rejects and releases both sessions', async () => {
+    const sessions: Record<string, ReturnType<typeof fakeSession>> = { 'encoder.onnx': fakeSession(), 'scorer.onnx': fakeSession() };
+    const fakeOrt = {
+      Tensor: ort.Tensor,
+      InferenceSession: {
+        create: async (p: string) => {
+          await new Promise((r) => setTimeout(r, 10)); // still creating when the read fails
+          return sessions[p.split('/').pop()!] as never;
+        },
+      },
+    };
+    const failingRead = async (p: string) => {
+      if (p.endsWith('tokenizer.json')) throw new Error('read failed');
+      return minRead(p);
+    };
+    await expect(OnDeviceDecimaEngine.load({ ort: fakeOrt, modelDir: '/m', readText: failingRead })).rejects.toThrow('read failed');
+    await flush();
+    expect(sessions['encoder.onnx'].release).toHaveBeenCalledTimes(1);
+    expect(sessions['scorer.onnx'].release).toHaveBeenCalledTimes(1);
+  });
 });
 
 function stateOf(runName: string): string {

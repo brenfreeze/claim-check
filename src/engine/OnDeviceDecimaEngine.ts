@@ -41,11 +41,13 @@ export interface LoadTimings {
   tokenizerParseMs: number;
   /** building the Unigram model from the parsed JSON */
   tokenizerMs: number;
-  /** load start → session ready (overlaps the tokenizer stages) */
+  /** load start → session resolution observed on the JS thread (overlaps the tokenizer stages) */
   encoderMs: number;
-  /** load start → session ready (overlaps the tokenizer stages) */
+  /** load start → session resolution observed on the JS thread (overlaps the tokenizer stages) */
   scorerMs: number;
-  /** wall time */
+  /** time spent awaiting the sessions after the tokenizer finished (> 0 ⇒ sessions were the critical path) */
+  sessionWaitMs: number;
+  /** wall time of all load work */
   totalMs: number;
 }
 
@@ -84,27 +86,36 @@ export class OnDeviceDecimaEngine implements DecisionEngine {
     const sessions = Promise.all([encoderP, scorerP]);
     sessions.catch(() => {}); // surfaced by the await below; avoids an unhandled rejection while the tokenizer builds
 
-    const [cfgText, tokText, tokCfgText] = await Promise.all([
-      readText(join(modelDir, 'decima.json')),
-      readText(join(modelDir, 'tokenizer/tokenizer.json')),
-      readText(join(modelDir, 'tokenizer/tokenizer_config.json')),
-    ]);
-    const t1 = now();
-    const tokJson = JSON.parse(tokText);
-    const tp = now();
-    const tok = XlmrTokenizer.fromJson(tokJson, tokCfgText);
-    const t2 = now();
-    const [encoder, scorer] = await sessions;
-    const t3 = now();
-    const timings = {
-      readFilesMs: t1 - t0,
-      tokenizerParseMs: tp - t1,
-      tokenizerMs: t2 - tp,
-      encoderMs: encoder.ms,
-      scorerMs: scorer.ms,
-      totalMs: t3 - t0,
-    };
-    return new OnDeviceDecimaEngine(ort, encoder.s, scorer.s, tok, JSON.parse(cfgText), timings);
+    try {
+      const [cfgText, tokText, tokCfgText] = await Promise.all([
+        readText(join(modelDir, 'decima.json')),
+        readText(join(modelDir, 'tokenizer/tokenizer.json')),
+        readText(join(modelDir, 'tokenizer/tokenizer_config.json')),
+      ]);
+      const cfg: DecimaConfig = JSON.parse(cfgText); // tiny; parsed first so a malformed decima.json fails before the tokenizer build
+      const t1 = now();
+      const tokJson = JSON.parse(tokText);
+      const tp = now();
+      const tok = XlmrTokenizer.fromJson(tokJson, tokCfgText);
+      const t2 = now();
+      const [encoder, scorer] = await sessions;
+      const t3 = now();
+      const timings: LoadTimings = {
+        readFilesMs: t1 - t0,
+        tokenizerParseMs: tp - t1,
+        tokenizerMs: t2 - tp,
+        encoderMs: encoder.ms,
+        scorerMs: scorer.ms,
+        sessionWaitMs: t3 - t2,
+        totalMs: t3 - t0,
+      };
+      return new OnDeviceDecimaEngine(ort, encoder.s, scorer.s, tok, cfg, timings);
+    } catch (err) {
+      // Free whichever native sessions did get created, then surface the original failure.
+      const settled = await Promise.allSettled([encoderP, scorerP]);
+      for (const r of settled) if (r.status === 'fulfilled') void r.value.s.release().catch(() => {});
+      throw err;
+    }
   }
 
   /** Frees both ONNX Runtime sessions; the engine is unusable afterwards. */

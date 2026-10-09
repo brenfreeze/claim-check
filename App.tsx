@@ -85,7 +85,7 @@ export default function App() {
       const mem1 = memSnapshot();
       const info = { threads: n, timings: e.loadTimings, graph: e.graphInfo, memBefore: mem0, memAfter: mem1 };
       setLoadInfo(
-        `cold load ${fmt(e.loadTimings.totalMs, 0)} ms (read ${fmt(e.loadTimings.readFilesMs, 0)} · parse ${fmt(e.loadTimings.tokenizerParseMs, 0)} · tokenizer ${fmt(e.loadTimings.tokenizerMs, 0)} · encoder ${fmt(e.loadTimings.encoderMs, 0)} · scorer ${fmt(e.loadTimings.scorerMs, 0)})\n` +
+        `cold load ${fmt(e.loadTimings.totalMs, 0)} ms (read ${fmt(e.loadTimings.readFilesMs, 0)} · parse ${fmt(e.loadTimings.tokenizerParseMs, 0)} · tokenizer ${fmt(e.loadTimings.tokenizerMs, 0)} · encoder ${fmt(e.loadTimings.encoderMs, 0)} · scorer ${fmt(e.loadTimings.scorerMs, 0)} · wait ${fmt(e.loadTimings.sessionWaitMs, 0)})\n` +
           `encoder ${e.graphInfo.encoder.inputNames.join(',')} → ${e.graphInfo.encoder.outputNames.join(',')}\n` +
           `scorer ${e.graphInfo.scorer.inputNames.join(',')} → ${e.graphInfo.scorer.outputNames.join(',')}\n` +
           `RSS ${fmt(mem0.rssMb, 0)} → ${fmt(mem1.rssMb, 0)} MB, PSS ${fmt(mem1.pssMb, 0)} MB`,
