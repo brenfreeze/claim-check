@@ -24,26 +24,26 @@ export default function Scan() {
   const pick = async (useDemo = false) => {
     setPicking(true);
     setError(null);
-    let picked: string | null = null;
-    if (useDemo) picked = await demoScreenshotUri();
-    else if (Platform.OS !== 'web') {
-      const res = await ImagePicker.launchImageLibraryAsync({ mediaTypes: ['images'], quality: 1 });
-      if (res.canceled) {
-        setPicking(false);
-        if (!ocr) router.back();
-        return;
-      }
-      picked = res.assets[0]?.uri ?? null;
-    }
-    setUri(picked);
     try {
+      let picked: string | null = null;
+      if (useDemo) picked = await demoScreenshotUri();
+      else if (Platform.OS !== 'web') {
+        const res = await ImagePicker.launchImageLibraryAsync({ mediaTypes: ['images'], quality: 1 });
+        if (res.canceled) {
+          if (!ocr) router.back();
+          return;
+        }
+        picked = res.assets[0]?.uri ?? null;
+      }
+      setUri(picked);
       const out = await recognizeText(picked);
       setOcr(out);
       setChecked(out.sentences.map((s) => s.claimScore >= CLAIM_GATE));
     } catch (e) {
       setError(e instanceof Error ? e.message : String(e));
+    } finally {
+      setPicking(false);
     }
-    setPicking(false);
   };
 
   useEffect(() => {
