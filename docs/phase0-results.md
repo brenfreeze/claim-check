@@ -3,7 +3,7 @@
 2026-10-09 · Bren Aviador · run on an Android emulator. No physical phone was available.
 
 **Decision: the on-device engine works, with conditions. The model's Taglish quality fails, and that changes the product.**
-Decima-small runs on device and matches Python. Warm decisions are fast. Cold load (3.5–4.1 s) is over the 3 s target, and peak memory still needs a measurement on a release build. Accuracy is the blocker: on the 20 fixtures the model gets 5/10 English and 4/10 Taglish (targets ≥ 7 and ≥ 6), and it never once answers "supports". No engine swap fixes that, so the next decision is about the model or the task, not the runtime.
+Decima-small runs on device and matches Python. Warm decisions are fast. Cold load now meets the 3 s target on the emulator (1.5–1.7 s, was 3.5–4.1 s), and peak memory still needs a measurement on a release build. Accuracy is the blocker: on the 20 fixtures the model gets 5/10 English and 4/10 Taglish (targets ≥ 7 and ≥ 6), and it never once answers "supports". No engine swap fixes that, so the next decision is about the model or the task, not the runtime.
 
 ## Results
 
@@ -16,19 +16,33 @@ Device: `sdk_gphone64_arm64` emulator, Android 17 (API 37), 4 vCPU on an Apple M
 | Order-change flips | 0 | **0** (20 fixtures × 3 option orders, on device and in Python) |
 | Accuracy, English (of 10) | ≥ 7 | **5** ✗ |
 | Accuracy, Taglish (of 10) | ≥ 6 | **4** ✗ |
-| Median / p95 warm decision | ≤ 150 / ≤ 300 ms | **32 / 130 ms** at 2 threads (1T 43 / 80, 4T 34 / 102) |
-| Cold load | ≤ 3 s | **3.5–4.1 s** ✗ (2T 3.5 s): tokenizer build 2.1–2.6 s, file read 0.7–0.8 s, encoder session 0.45–0.65 s |
-| Peak memory | ≤ 500 MB | **Engine adds ~0.32 GB PSS**. The whole debug process peaks at 0.56–0.57 GB PSS (dumpsys) / 0.70 GB RSS (VmHWM). The debug build's baseline is 0.23 GB PSS before load, so a release build still needs measuring |
+| Median / p95 warm decision | ≤ 150 / ≤ 300 ms | **21 / 71 ms** at 2 threads (1T 31 / 66, 4T 35 / 78). Before the cold-load fix: 32 / 130 ms |
+| Cold load | ≤ 3 s | **1.5–1.7 s** ✓ (2T 1.6 s; before the fix 3.5–4.1 s, 2T 3.5 s): file read 0.8–1.1 s, tokenizer build 0.4–0.6 s (was 2.1–2.6 s). Both ORT sessions now build alongside them |
+| Peak memory | ≤ 500 MB | **Engine adds 0.25–0.28 GB PSS** (was ~0.32 GB). The whole debug process peaks at 0.49–0.51 GB PSS (dumpsys; was 0.56–0.57) / 0.63–0.66 GB RSS (VmHWM; was 0.70). The debug build's baseline is 0.23 GB PSS before load, so a release build still needs measuring |
 
-Per thread count (`scripts/summarize-device.py`; raw logs in `results/device/`):
+Per thread count after the cold-load fix (`scripts/summarize-device.py`; raw logs in `results/device/`). Encoder and scorer are now "load start → session ready" and overlap the read and tokenizer stages, so the stages don't sum to the total. Read + parse + tokenizer equals the total in every run, so the JS thread is the critical path. The encoder's ready time can't be stamped until that thread frees up, so it reads as the total.
+
+| Threads | Cold load ms (read / parse / tokenizer / encoder / scorer) | First ms | Median ms | p95 ms | Peak RSS MB (VmHWM, bench) | Max PSS MB (in-app / dumpsys) |
+| --- | --- | --- | --- | --- | --- | --- |
+| 1 | 1746 (1087 / 223 / 436 / 1746 / 433) | 135 | 31.0 | 65.9 | 655 | 517 / 510 |
+| 2 | 1596 (844 / 161 / 591 / 1596 / 299) | 121 | 21.4 | 70.6 | 627 | 484 / 491 |
+| 4 | 1451 (897 / 123 / 432 / 1451 / 509) | 321 | 35.1 | 78.4 | 627 | 482 / 486 |
+
+Engine memory at load (`memBefore` → `memAfter`): 1T +279 MB RSS / +279 MB PSS, 2T +254 / +253, 4T +249 / +248. Before the fix: +308 / +315, +338 / +337, +323 / +322.
+
+Host contention: none. A fine-tune run (`harness/finetune.py`) was using the host CPU/GPU until 21:27; this protocol started after it exited, and `pgrep -fl finetune` was empty before and after the run.
+
+The laptop reference (Python, ORT 1.24.4, 1 thread on the M1 Pro) gives a median of 23.8 ms and a p95 of 27.1 ms. Each M1 host core is faster than a mid-range phone core, so expect real-phone latency and cold load to be roughly 2–3× the emulator's. That still clears 150 ms median, but it would put cold load at roughly 3–5 s, so the 3 s target may still fail on a phone. Running this on a real phone is the first Phase 1 task.
+
+### Before the cold-load fix
+
+Commit c113692, before the trie-free tokenizer patch and the overlapped session creation. Stages were sequential and summed to the total.
 
 | Threads | Cold load ms (read / parse / tokenizer / encoder / scorer) | First ms | Median ms | p95 ms | Peak RSS MB | Max PSS MB (in-app / dumpsys) |
 | --- | --- | --- | --- | --- | --- | --- |
 | 1 | 4120 (805 / 142 / 2488 / 648 / 36) | 140 | 42.6 | 80.3 | 697 | 554 / 555 |
 | 2 | 3529 (748 / 144 / 2129 / 462 / 45) | 90 | 31.9 | 130.0 | 708 | 568 / 569 |
 | 4 | 3929 (679 / 146 / 2623 / 447 / 33) | 118 | 33.6 | 102.1 | 705 | 564 / 565 |
-
-The laptop reference (Python, ORT 1.24.4, 1 thread on the M1 Pro) gives a median of 23.8 ms and a p95 of 27.1 ms. Each M1 host core is faster than a mid-range phone core, so expect real-phone latency and cold load to be roughly 2–3× the emulator's. That still clears 150 ms median but pushes cold load further over 3 s. Running this on a real phone is the first Phase 1 task.
 
 ## Answers to the six questions
 
@@ -37,10 +51,10 @@ The laptop reference (Python, ORT 1.24.4, 1 thread on the M1 Pro) gives a median
    - Its legacy `unimodule.json` makes Expo autolinking skip it on Android, so `NativeModules.Onnxruntime` was null. The fix is a `react-native.config.js` that declares its Android platform.
 
    The encoder needs the `com.microsoft:MatMulNBits` contrib op, which the full `onnxruntime-android` AAR has.
-2. **Does the XLM-R tokenizer run in React Native?** Yes, in JS with `@huggingface/tokenizers` 0.2.0, which needs no polyfills. It matches HF transformers exactly on Node, on Hermes on the laptop, and on Hermes on device. The cost is load time: about 2.1–2.6 s on the emulator to build the Unigram model from the 17 MB `tokenizer.json`.
+2. **Does the XLM-R tokenizer run in React Native?** Yes, in JS with `@huggingface/tokenizers` 0.2.0, which needs no polyfills. It matches HF transformers exactly on Node, on Hermes on the laptop, and on Hermes on device. The cost is load time. Building the Unigram model from the 17 MB `tokenizer.json` took 2.1–2.6 s on the emulator. It now takes 0.4–0.6 s, because `patches/@huggingface+tokenizers+0.2.0.patch` drops the 250k-piece CharTrie build.
 3. **Is option scoring in the graph?** Yes. Late interaction lives in `scorer.onnx`, which takes the state and choice token states and returns a score per choice plus a `z` vector. Ported to TypeScript: input templating (`query: {question}\n{state}` and `passage: {question} {option}`, NFC normalization, Python-style `strip`, plus the long-question rendering), temperature 0.9356, softmax, the ordinal head for `score`, and the System One mapping and rounding.
 4. **Do on-device probabilities match Python?** Yes: max Δ is 0.0154 against Python on ORT 1.24 and 0.0000 against Python on ORT 1.31, the version the Android runtime actually resolved to. Separately, Decima's own batched `system_one` path drifts from its single-decision path by up to 0.006, because padding changes the int8 encoder output. The engine follows the single-decision path.
-5. **Latency, cold load and memory?** See the tables above. Latency passes comfortably. Cold load fails, and the tokenizer build is the main cost. Memory is about 0.32 GB for the engine on top of the app.
+5. **Latency, cold load and memory?** See the tables above. Latency passes comfortably. Cold load passes on the emulator: 1.6 s at 2 threads (≤ 3 s), down from 3.5 s. Now the file read is the main cost. Memory is 0.25–0.28 GB for the engine on top of the app, down from about 0.32 GB.
 6. **Is Taglish accuracy good enough?** No. See below.
 
 ## Accuracy detail
@@ -88,7 +102,7 @@ Caveats: n = 20, and I drafted the labels from Rappler and VERA Files fact-check
    - run verdicts on a stronger engine and keep Decima for routing.
 
    First grow the fixture set beyond 20 items and confirm the labels.
-2. **Cold load.** Build the tokenizer once at app start in the background, or ship a pre-processed compact vocab instead of the 17 MB `tokenizer.json`. Re-measure on a real phone.
+2. **Cold load: met on the emulator.** It's 1.6 s at 2 threads (1.5–1.7 s across 1/2/4), against ≤ 3 s, down from 3.5 s. Re-measure on a real phone, where 2–3× would put it at about 3–5 s. If it misses there, build the engine at app start in the background, or ship a compact vocab instead of the 17 MB `tokenizer.json` to cut the 0.8–1.1 s read.
 3. **Pin `onnxruntime-android`.** The RN package resolves `latest.integration`, so the native runtime can change under the app between builds.
 4. **Memory.** Measure a release build on a real mid-range phone.
 5. **iOS.** Untested: no Xcode and no paid Apple account. The `mem-probe` Swift code and the ORT pod path haven't been compiled yet.
