@@ -22,12 +22,18 @@
       "package": "com.claimcheck.app"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro",
+      "output": "single"
     },
     "plugins": [
       "expo-dev-client",
       "onnxruntime-react-native",
-      "./plugins/with-scene-lifecycle"
-    ]
+      "./plugins/with-scene-lifecycle",
+      "expo-router",
+      "expo-splash-screen",
+      "expo-font"
+    ],
+    "scheme": "claimcheck"
   }
 }
