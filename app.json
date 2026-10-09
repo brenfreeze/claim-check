@@ -9,7 +9,10 @@
     "ios": {
       "supportsTablet": true,
       "bundleIdentifier": "com.claimcheck.app",
-      "appleTeamId": "RK25HYS4GC"
+      "appleTeamId": "RK25HYS4GC",
+      "infoPlist": {
+        "NSPhotoLibraryUsageDescription": "CheckitFirst reads the screenshot you pick to find claims. It never leaves your phone."
+      }
     },
     "android": {
       "adaptiveIcon": {

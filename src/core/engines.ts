@@ -1,8 +1,12 @@
-// Decision-engine choices for Settings and the factory the pipeline uses. createEngine is a mock until the
-// engine session wires OnDeviceDecimaEngine / LlmDecisionEngine(appleLlmBackend) / the HTTP engine.
+// Decision-engine choices for Settings and the factory the pipeline uses. On-device Decima (ft3) and the Apple
+// on-device model are real; the LAN and hosted engines are still mocks (the HTTP engine isn't built).
+import * as ort from 'onnxruntime-react-native';
 import { Platform } from 'react-native';
-import { appleLlmAvailability } from '../../modules/apple-llm';
+import { appleLlmAvailability, appleLlmBackend } from '../../modules/apple-llm';
+import { LlmDecisionEngine, OnDeviceDecimaEngine } from '../engine';
 import type { DecisionEngine } from '../engine/types';
+import { FACT_CHECK_INSTRUCTIONS } from '../spike/llmProtocol';
+import { modelDir, modelPresent, readText, sessionPath } from '../spike/modelStore';
 import type { EngineChoice, EngineOption } from './checkTypes';
 
 const ON_DEVICE_PRIVACY = 'Your text never leaves this phone. Every match and judgment runs on-device.';
@@ -58,10 +62,32 @@ export function effectiveEngine(choice: EngineChoice, lanUrl: string): EngineOpt
   return picked && picked.available ? picked : options[0];
 }
 
+const THREADS = Number(process.env.EXPO_PUBLIC_THREADS) || 2;
+let decima: Promise<OnDeviceDecimaEngine> | null = null;
+
+/** Loads Decima once per app run from the model files the spike downloaded to the phone. */
+function loadDecima(): Promise<OnDeviceDecimaEngine> {
+  if (!modelPresent()) throw new Error('Model not on device — open Settings → Developer → Phase 0 spike to download');
+  decima ??= OnDeviceDecimaEngine.load({
+    ort,
+    modelDir: modelDir().uri,
+    readText,
+    sessionPath,
+    sessionOptions: { intraOpNumThreads: THREADS, interOpNumThreads: 1, graphOptimizationLevel: 'all', executionProviders: ['cpu'] },
+  }).catch((e) => {
+    decima = null;
+    throw e;
+  });
+  return decima;
+}
+
 export async function createEngine(choice: EngineChoice, _cfg?: { lanUrl?: string }): Promise<DecisionEngine> {
-  const id = choice === 'decima-local' ? 'decima-local' : choice === 'apple-on-device' ? 'apple-on-device' : 'http';
+  if (choice === 'decima-local') return loadDecima();
+  if (choice === 'apple-on-device') {
+    return new LlmDecisionEngine({ backend: appleLlmBackend({ permissive: true }), domainInstructions: FACT_CHECK_INSTRUCTIONS });
+  }
   return {
-    id,
+    id: 'http',
     systemOne: async () => {
       throw new Error('mock engine: systemOne is wired by the engine session');
     },
