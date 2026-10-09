@@ -22,7 +22,7 @@ import numpy as np
 import onnxruntime as ort
 from decima.runtime import DecimaOnnx
 from decima.types import Question
-from finetune import OPTIONS, QUESTION, mnli, synthetic_split, taglish_dev
+from finetune import FC_PAIRS, OPTIONS, QUESTION, factcheck_split, mnli, synthetic_split, taglish_dev
 
 ROOT = Path(__file__).resolve().parent.parent
 ORDERS = {"canonical": [0, 1, 2], "reversed": [2, 1, 0], "rotated": [1, 2, 0]}
@@ -34,7 +34,8 @@ def predict(rt: DecimaOnnx, st: str, opts: list[str]) -> tuple[str, list[float]]
     return opts[int(np.argmax(p))], p.tolist()
 
 
-def eval_model(path: Path, fixtures: list[dict], dev: list[dict], mnli_val: list[dict], tl_dev: list[dict]) -> dict:
+def eval_model(path: Path, fixtures: list[dict], dev: list[dict], mnli_val: list[dict], tl_dev: list[dict],
+               fc_dev: list[dict] | None = None) -> dict:
     rt = DecimaOnnx(path, threads=1)
     io = {g: ([i.name for i in s.get_inputs()], [o.name for o in s.get_outputs()]) for g, s in (("encoder", rt.enc), ("scorer", rt.sc))}
     items, conf, flips = [], Counter(), 0
@@ -53,10 +54,16 @@ def eval_model(path: Path, fixtures: list[dict], dev: list[dict], mnli_val: list
     dev_acc = np.mean([predict(rt, e["state"], OPTIONS)[0] == e["label"] for e in dev])
     mnli_acc = np.mean([predict(rt, e["state"], OPTIONS)[0] == e["label"] for e in mnli_val])
     pred_counts = Counter(r["pred"] for r in items)
+    fc = None
+    if fc_dev:
+        fp = [(predict(rt, e["state"], OPTIONS)[0], e) for e in fc_dev]
+        fc = {"acc": float(np.mean([p == e["label"] for p, e in fp])), "n": len(fp),
+              "bySrc": {s: float(np.mean([p == e["label"] for p, e in fp if e["src"] == s])) for s in sorted({e["src"] for e in fc_dev})},
+              "byLabel": {l: float(np.mean([p == e["label"] for p, e in fp if e["label"] == l])) for l in OPTIONS}}
     return {"path": str(path.relative_to(ROOT)), "io": io, "fixtures": {"accuracy": acc, "orderFlips": flips,
             "confusion": {f"{a}->{b}": n for (a, b), n in sorted(conf.items())}, "predicted": dict(pred_counts), "items": items},
             "synthDevAcc": float(dev_acc), "mnliValAcc": float(mnli_acc), "taglishDevAcc": tl_acc, "taglishDevBySrc": tl_by_src,
-            "nDev": len(dev), "nMnli": len(mnli_val), "nTaglishDev": len(tl_dev)}
+            "nDev": len(dev), "nMnli": len(mnli_val), "nTaglishDev": len(tl_dev), "factcheckDev": fc}
 
 
 def main() -> None:
@@ -74,24 +81,25 @@ def main() -> None:
     _, dev = synthetic_split(random.Random(args.seed))
     mnli_val = mnli("validation_matched", 67)
     tl_dev = taglish_dev(args.seed)
+    fc_dev = factcheck_split()[1] if FC_PAIRS.exists() else []
     models = {} if args.no_base else {"base (shipped int8)": ROOT / "models/decima-small/onnx/int8"}
     models["finetuned"] = ROOT / "models/finetune" / (args.int8 or f"{args.run}/onnx-int8")
     for kv in args.extra:
         k, v = kv.split("=", 1)
         models[k] = ROOT / v
-    res = {name: eval_model(p, fixtures, dev, mnli_val, tl_dev) for name, p in models.items() if (p / "encoder.onnx").exists()}
+    res = {name: eval_model(p, fixtures, dev, mnli_val, tl_dev, fc_dev) for name, p in models.items() if (p / "encoder.onnx").exists()}
     res["_meta"] = {"onnxruntime": ort.__version__, "seed": args.seed, "fixturesEvaluated": not args.no_fixtures}
     out = ROOT / "models/finetune" / (args.out or f"{args.run}/eval.json")
     out.write_text(json.dumps(res, indent=1, ensure_ascii=False))
 
     base_io = json.loads((ROOT / "models/finetune/ft1/eval.json").read_text())["base (shipped int8)"]["io"]
-    print(f"{'model':<26} {'en/10':>5} {'tl/10':>5} {'flips':>5} {'synth-dev':>9} {'tl-dev':>7} {'mnli-val':>8}  predicted  io-match")
+    print(f"{'model':<26} {'en/10':>5} {'tl/10':>5} {'flips':>5} {'synth-dev':>9} {'tl-dev':>7} {'mnli-val':>8} {'fc-dev':>6}  predicted  io-match")
     for name, r in res.items():
         if name.startswith("_"):
             continue
         f = r["fixtures"]
         print(f"{name:<26} {f['accuracy']['en']:>5} {f['accuracy']['tl']:>5} {f['orderFlips']:>5} {r['synthDevAcc']:>9.3f} "
-              f"{r['taglishDevAcc']:>7.3f} {r['mnliValAcc']:>8.3f}  {f['predicted']}  {json.loads(json.dumps(r['io'])) == base_io}  {r['taglishDevBySrc']}")
+              f"{r['taglishDevAcc']:>7.3f} {r['mnliValAcc']:>8.3f} {(r['factcheckDev'] or {}).get('acc', float('nan')):>6.3f}  {f['predicted']}  {json.loads(json.dumps(r['io'])) == base_io}  {r['taglishDevBySrc']} {(r['factcheckDev'] or {}).get('bySrc')} {(r['factcheckDev'] or {}).get('byLabel')}")
     for name in ("base (shipped int8)", "finetuned"):
         if name in res:
             print(f"\n{name} confusion (label->pred): {res[name]['fixtures']['confusion']}")

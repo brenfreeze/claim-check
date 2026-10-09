@@ -50,3 +50,6 @@ results/device/metro-*.log
 
 # machine-translated MNLI (CC BY-SA parts; regenerate with harness/translate_mnli.py)
 harness/data/mnli_tl.jsonl
+
+# ft3: mined fact-check text (VERA Files) — local only, never commit (public repo)
+harness/data/factcheck/

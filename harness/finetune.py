@@ -30,6 +30,7 @@ ROOT = Path(__file__).resolve().parent.parent
 BASE = ROOT / "models" / "decima-small" / "pytorch"
 SYNTH = Path(__file__).resolve().parent / "data" / "synthetic_ph.json"
 MNLI_TL = Path(__file__).resolve().parent / "data" / "mnli_tl.jsonl"  # translate_mnli.py (opus-mt-en-tl)
+FC_PAIRS = Path(__file__).resolve().parent / "data" / "factcheck" / "pairs.jsonl"  # build_factcheck_pairs.py (ft3, git-ignored)
 VARIANTS = ("tl/tl", "tl/en", "en/tl")  # claim language / evidence language
 QUESTION = "Does the evidence support the claim?"
 OPTIONS = ["supports", "contradicts", "unrelated"]
@@ -117,6 +118,17 @@ def taglish_dev(split_seed: int = 13) -> list[dict]:
     return out + [e for e in sdev if e["state"].split("\nEvidence: ")[0][len("Claim: "):] in non_en]
 
 
+def factcheck_split() -> tuple[list[dict], list[dict]]:
+    """Mined VERA Files pairs (ft3), split by article in build_factcheck_pairs.py (no article in both)."""
+    rows = [json.loads(l) for l in FC_PAIRS.read_text().splitlines() if l.strip()]
+    ex = lambda r: {"state": state(r["claim"], r["evidence"]), "label": r["label"],
+                    "src": f"fc:{'en' if r['claimLang'] == 'en' and r['evidenceLang'] == 'en' else 'tl'}", "article": r["article"]}
+    train = [ex(r) for r in rows if r["split"] == "train"]
+    dev = [ex(r) for r in rows if r["split"] == "dev"]
+    assert not {e["article"] for e in train} & {e["article"] for e in dev}
+    return train, dev
+
+
 def make_batch(exs: list[dict], cfg, tok, device: str, rng: random.Random | None):
     """Like inference: one state per example, its options rendered with the question; option order shuffled when rng."""
     states, choices, gold = [], [], []
@@ -167,6 +179,9 @@ def main() -> None:
     ap.add_argument("--split-seed", type=int, default=13, help="synthetic train/dev split (fixed across training seeds)")
     ap.add_argument("--tl-pairs", type=int, default=0, help="translated MNLI train pairs to use (0 = none, ft1 recipe)")
     ap.add_argument("--tl-variants-per-pair", type=int, default=2, help="of tl/tl, tl/en, en/tl, sampled per pair")
+    ap.add_argument("--fc-weight", type=int, default=0, help="ft3: weight of the mined fact-check train pairs (0 = not used)")
+    ap.add_argument("--tl-offset", type=int, default=0, help="first translated MNLI train pair to use")
+    ap.add_argument("--select", choices=["taglish", "fc"], default="taglish", help="dev set that picks the checkpoint")
     ap.add_argument("--mnli-guard", type=float, default=0.70, help="min fp32 MNLI-val acc for a checkpoint to be selectable")
     args = ap.parse_args()
 
@@ -181,25 +196,33 @@ def main() -> None:
     tl_train = []
     if args.tl_pairs:
         tl_pairs, _ = mnli_tl_split()
-        for r in tl_pairs[: args.tl_pairs]:
+        for r in tl_pairs[args.tl_offset : args.tl_offset + args.tl_pairs]:
             for v in rng.sample(VARIANTS, args.tl_variants_per_pair):
                 tl_train.append(tl_examples(r, v))
-    train = mnli_train + tl_train + synth_train * args.synth_weight
+    fc_train, fc_dev = factcheck_split() if args.fc_weight else ([], [])
+    train = mnli_train + tl_train + synth_train * args.synth_weight + fc_train * args.fc_weight
     tl_dev = taglish_dev(args.split_seed)
     mnli_val = mnli("validation_matched", 67)
-    print(f"train: mnli-en {len(mnli_train)} + mnli-tl/mixed {len(tl_train)} + synth {len(synth_train)}×{args.synth_weight} = {len(train)}; "
+    print(f"train: mnli-en {len(mnli_train)} + mnli-tl/mixed {len(tl_train)} + synth {len(synth_train)}×{args.synth_weight} "
+          f"+ factcheck {len(fc_train)}×{args.fc_weight} = {len(train)}; fc dev {len(fc_dev)}; "
           f"synth dev {len(synth_dev)}, taglish dev {len(tl_dev)}, mnli val {len(mnli_val)}", flush=True)
 
     tok = AutoTokenizer.from_pretrained(BASE / "encoder")
     model = DecimaModel.load(BASE, device=device)
     log = {"args": vars(args), "device": device, "sizes": {"mnli": len(mnli_train), "mnli_tl": len(tl_train), "synth_train": len(synth_train),
-           "synth_dev": len(synth_dev), "taglish_dev": len(tl_dev), "mnli_val": len(mnli_val)}, "evals": []}
+           "synth_dev": len(synth_dev), "taglish_dev": len(tl_dev), "mnli_val": len(mnli_val), "fc_train": len(fc_train),
+           "fc_dev": len(fc_dev)}, "evals": []}
 
     def dev_all(tag: str) -> dict:
         r = {"synth": evaluate(model, synth_dev, tok, device), "taglish": evaluate(model, tl_dev, tok, device),
              "mnli_val": evaluate(model, mnli_val, tok, device)}
+        if fc_dev:
+            r["fc"] = evaluate(model, fc_dev, tok, device)
+            for src in ("fc:en", "fc:tl"):
+                r[src] = evaluate(model, [e for e in fc_dev if e["src"] == src], tok, device)["acc"]
         print(f"{tag} synth-dev {r['synth']['acc']:.3f} | taglish-dev {r['taglish']['acc']:.3f} nll {r['taglish']['nll']:.3f} "
-              f"| mnli-val {r['mnli_val']['acc']:.3f}", flush=True)
+              f"| mnli-val {r['mnli_val']['acc']:.3f}" + (f" | fc-dev {r['fc']['acc']:.3f} (en {r['fc:en']:.3f} tl {r['fc:tl']:.3f}) "
+              f"nll {r['fc']['nll']:.3f}" if fc_dev else ""), flush=True)
         return r
 
     base_dev = dev_all("base   ")
@@ -216,8 +239,9 @@ def main() -> None:
     total, warmup = steps_per_epoch * args.epochs, 30
     sched = torch.optim.lr_scheduler.LambdaLR(opt, lambda s: min(1.0, (s + 1) / warmup) * max(0.0, (total - s) / total))
 
-    def key(r: dict) -> tuple:  # select on Taglish dev, MNLI-val as a guardrail
-        return (r["mnli_val"]["acc"] >= args.mnli_guard, r["taglish"]["acc"], -r["taglish"]["nll"])
+    def key(r: dict) -> tuple:  # select on Taglish dev (ft2) or fact-check dev (ft3), MNLI-val as a guardrail
+        sel = r["fc"] if args.select == "fc" else r["taglish"]
+        return (r["mnli_val"]["acc"] >= args.mnli_guard, sel["acc"], -sel["nll"])
 
     best = key(base_dev)
     best_epoch = 0
@@ -254,7 +278,7 @@ def main() -> None:
 
     log["best_epoch"] = best_epoch
     (out / "train_log.json").write_text(json.dumps(log, indent=1))
-    print(f"best epoch on taglish dev (mnli-guarded): {best_epoch} (0 = base); checkpoints in {out}/epoch<n>", flush=True)
+    print(f"best epoch on {args.select} dev (mnli-guarded): {best_epoch} (0 = base); checkpoints in {out}/epoch<n>", flush=True)
 
 
 if __name__ == "__main__":
