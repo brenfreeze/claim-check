@@ -8,7 +8,8 @@
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.claimcheck.app"
+      "bundleIdentifier": "com.claimcheck.app",
+      "appleTeamId": "RK25HYS4GC"
     },
     "android": {
       "adaptiveIcon": {
@@ -25,7 +26,8 @@
     },
     "plugins": [
       "expo-dev-client",
-      "onnxruntime-react-native"
+      "onnxruntime-react-native",
+      "./plugins/with-scene-lifecycle"
     ]
   }
 }
