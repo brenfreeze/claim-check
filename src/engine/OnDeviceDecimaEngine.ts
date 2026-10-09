@@ -41,8 +41,11 @@ export interface LoadTimings {
   tokenizerParseMs: number;
   /** building the Unigram model from the parsed JSON */
   tokenizerMs: number;
+  /** load start → session ready (overlaps the tokenizer stages) */
   encoderMs: number;
+  /** load start → session ready (overlaps the tokenizer stages) */
   scorerMs: number;
+  /** wall time */
   totalMs: number;
 }
 
@@ -74,6 +77,13 @@ export class OnDeviceDecimaEngine implements DecisionEngine {
 
   static async load({ ort, modelDir, readText, sessionOptions, sessionPath = (p) => p }: LoadOptions): Promise<OnDeviceDecimaEngine> {
     const t0 = now();
+    // Session creation runs natively off the JS thread: start both first, then read + build the tokenizer meanwhile.
+    const timed = (p: Promise<InferenceSession>) => p.then((s) => ({ s, ms: now() - t0 }));
+    const encoderP = timed(ort.InferenceSession.create(sessionPath(join(modelDir, 'encoder.onnx')), sessionOptions));
+    const scorerP = timed(ort.InferenceSession.create(sessionPath(join(modelDir, 'scorer.onnx')), sessionOptions));
+    const sessions = Promise.all([encoderP, scorerP]);
+    sessions.catch(() => {}); // surfaced by the await below; avoids an unhandled rejection while the tokenizer builds
+
     const [cfgText, tokText, tokCfgText] = await Promise.all([
       readText(join(modelDir, 'decima.json')),
       readText(join(modelDir, 'tokenizer/tokenizer.json')),
@@ -84,12 +94,17 @@ export class OnDeviceDecimaEngine implements DecisionEngine {
     const tp = now();
     const tok = XlmrTokenizer.fromJson(tokJson, tokCfgText);
     const t2 = now();
-    const encoder = await ort.InferenceSession.create(sessionPath(join(modelDir, 'encoder.onnx')), sessionOptions);
+    const [encoder, scorer] = await sessions;
     const t3 = now();
-    const scorer = await ort.InferenceSession.create(sessionPath(join(modelDir, 'scorer.onnx')), sessionOptions);
-    const t4 = now();
-    const timings = { readFilesMs: t1 - t0, tokenizerParseMs: tp - t1, tokenizerMs: t2 - tp, encoderMs: t3 - t2, scorerMs: t4 - t3, totalMs: t4 - t0 };
-    return new OnDeviceDecimaEngine(ort, encoder, scorer, tok, JSON.parse(cfgText), timings);
+    const timings = {
+      readFilesMs: t1 - t0,
+      tokenizerParseMs: tp - t1,
+      tokenizerMs: t2 - tp,
+      encoderMs: encoder.ms,
+      scorerMs: scorer.ms,
+      totalMs: t3 - t0,
+    };
+    return new OnDeviceDecimaEngine(ort, encoder.s, scorer.s, tok, JSON.parse(cfgText), timings);
   }
 
   /** Frees both ONNX Runtime sessions; the engine is unusable afterwards. */

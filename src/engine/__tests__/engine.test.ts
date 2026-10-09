@@ -89,6 +89,40 @@ test('release() frees both sessions; a released engine rejects decide()', async 
   await expect(e.decide('x', { text: 'q?', choices: ['a', 'b'], kind: 'choose' })).rejects.toThrow();
 });
 
+test('load() starts both session creations before the tokenizer files are read', async () => {
+  const events: string[] = [];
+  const fakeSession = { inputNames: [], outputNames: [], run: async () => ({}), release: async () => {} };
+  const fakeOrt = {
+    Tensor: ort.Tensor,
+    InferenceSession: {
+      create: async (p: string) => {
+        events.push(`create:${p.split('/').pop()}`);
+        await new Promise((r) => setTimeout(r, 20));
+        events.push(`created:${p.split('/').pop()}`);
+        return fakeSession as never;
+      },
+    },
+  };
+  const realRead = readText;
+  const fakeRead = async (p: string) => {
+    events.push(`read:${p.split('/').pop()}`);
+    return realRead(p);
+  };
+  if (!modelPresent) return;
+  const e = await OnDeviceDecimaEngine.load({ ort: fakeOrt, modelDir: MODEL_DIR, readText: fakeRead });
+  const firstRead = events.findIndex((x) => x.startsWith('read:'));
+  expect(events.indexOf('create:encoder.onnx')).toBeLessThan(firstRead);
+  expect(events.indexOf('create:scorer.onnx')).toBeLessThan(firstRead);
+  const t = e.loadTimings;
+  expect(t.totalMs).toBeGreaterThanOrEqual(Math.max(t.readFilesMs, t.tokenizerMs, t.encoderMs, t.scorerMs));
+});
+
+test('load() rejects when a session fails to create', async () => {
+  if (!modelPresent) return;
+  const failing = { Tensor: ort.Tensor, InferenceSession: { create: async () => { throw new Error('boom'); } } };
+  await expect(OnDeviceDecimaEngine.load({ ort: failing, modelDir: MODEL_DIR, readText })).rejects.toThrow('boom');
+});
+
 function stateOf(runName: string): string {
   return reference.items.find((it) => runName.startsWith(it.id + '/'))!.state;
 }
