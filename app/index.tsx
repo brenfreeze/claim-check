@@ -1,5 +1,5 @@
 import * as Clipboard from 'expo-clipboard';
-import { Redirect, router } from 'expo-router';
+import { Redirect, router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { effectiveEngine } from '../src/core/engines';
@@ -19,7 +19,9 @@ const AUTORUN = process.env.EXPO_PUBLIC_AUTORUN === '1';
 
 export default function Home() {
   const shared = useSharedText();
-  const [text, setText] = useState(shared ?? '');
+  // claimcheck://?text=… (and /?text=… on web) pre-fills the box: demo links and quick reruns.
+  const { text: linked } = useLocalSearchParams<{ text?: string }>();
+  const [text, setText] = useState(shared ?? linked ?? '');
   const settings = useSettings();
   const engine = effectiveEngine(settings.engine, settings.lanUrl);
   const recent = useRecentChecks(5);

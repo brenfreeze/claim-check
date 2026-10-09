@@ -32,7 +32,7 @@ export default function SettingsScreen() {
 
   return (
     <Screen gap={22}>
-      <ScreenHeader title="Settings" right={<EngineBadge label={current.badge} icon={false} />} />
+      <ScreenHeader title="Settings" right={<EngineBadge label={shortBadge(current.badge)} icon={false} />} />
 
       <View style={{ gap: 10 }}>
         <SectionLabel>Decision engine</SectionLabel>
@@ -129,6 +129,12 @@ export default function SettingsScreen() {
   );
 }
 
+/** "On-device · Decima-small · 21 ms" → "On-device · 21 ms" (the Settings header is narrower). */
+const shortBadge = (badge: string) => {
+  const parts = badge.split(' · ');
+  return parts.length > 2 ? [parts[0], parts[parts.length - 1]].join(' · ') : badge;
+};
+
 function ToggleRow({ label, value, onChange, last, bare }: { label: string; value: boolean; onChange: (v: boolean) => void; last?: boolean; bare?: boolean }) {
   return (
     <View style={[styles.rowBetween, { minHeight: 44, gap: 12 }, !bare && styles.groupRow, !bare && !last && styles.divider]}>
@@ -139,6 +145,7 @@ function ToggleRow({ label, value, onChange, last, bare }: { label: string; valu
         onValueChange={onChange}
         trackColor={{ false: color.borderStrong, true: color.ink }}
         thumbColor="#FFFFFF"
+        {...({ activeThumbColor: '#FFFFFF' } as object)} // react-native-web only
         ios_backgroundColor={color.borderStrong}
       />
     </View>

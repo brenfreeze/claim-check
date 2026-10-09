@@ -54,17 +54,25 @@ export async function* runCheck(input: string, opts: RunCheckOptions): AsyncIter
   let done = 0;
   for (const p of pending) {
     const decisions = p.seed?.decisions ?? 8;
-    for (let k = 0; k < decisions; k++) {
-      await wait(60);
+    // three progress ticks per claim (few timers, so throttled background tabs still stream)
+    for (const share of [3, 3, decisions - 6]) {
+      await wait(share * 60);
       if (aborted()) return;
-      done++;
-      if (k % 3 === 2 || k === decisions - 1) yield { type: 'progress', stage: 'match', done, total, avgMs: 21 };
+      done += share;
+      yield { type: 'progress', stage: 'match', done, total, avgMs: 21 };
     }
     const claim = toClaim(p.id, p.original, opts.engineChoice, opts.gate, p.seed);
     claims.push(claim);
     yield { type: 'claim', claim };
   }
-  yield { type: 'stage', stage: 'match', status: 'done', summary: `${claims.length} claims matched`, meta: `${total} decisions · avg 21 ms` };
+  const matched = claims.filter((c) => c.evidence.some((e) => e.kind === 'factcheck')).length;
+  yield {
+    type: 'stage',
+    stage: 'match',
+    status: 'done',
+    summary: `${matched} of ${claims.length} claims have a saved fact-check`,
+    meta: `${total} decisions · avg 21 ms`,
+  };
 
   yield { type: 'stage', stage: 'aggregate', status: 'active', summary: `Anything under ${opts.gate.toFixed(2)} becomes Unverified` };
   await wait(300);

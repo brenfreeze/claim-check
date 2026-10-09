@@ -18,37 +18,41 @@ export function ClaimCard({ claim, gate, checkId, onPress }: { claim: ClaimResul
   const unverified = claim.verdict === 'unverified';
   const fc = matchedFactcheck(claim);
   const noSavedMatch = unverified && claim.path === 'offline-match' && !fc;
+  const enrichable = unverified && !!claim.enrichment && !(claim.path === 'live-search' && claim.enrichment.status === 'done');
+  // The pressable area and the enrichment button are siblings: a button can't nest inside another button.
   return (
-    <Pressable accessibilityRole="button" accessibilityHint="Opens the evidence for this claim" onPress={onPress}>
-      {({ pressed }) => (
-        <Card dashed={unverified} style={pressed && { opacity: 0.85 }}>
-          <View style={styles.cardTop}>
-            <VerdictChip verdict={claim.verdict} />
-            <Text style={styles.score}>{noSavedMatch ? 'no saved match' : confidenceLabel(claim, gate)}</Text>
-          </View>
-          <Text style={type.claimCard}>{claim.text}</Text>
-          {unverified ? (
-            <Text style={styles.reason}>{claim.reason}</Text>
-          ) : (
-            <Text style={styles.quote}>“{truncate(claim.original, 52)}”</Text>
-          )}
-          {fc ? <FactcheckBlock source={fc} related={unverified} /> : null}
-          {unverified && claim.enrichment ? (
-            <EnrichmentControl checkId={checkId} claim={claim} />
-          ) : (
-            <View style={styles.cardFooter}>
-              <Text style={styles.footerText} numberOfLines={1}>
-                {claim.path === 'offline-match' ? 'Matched on this phone' : sourceSummary(claim.evidence)}
-              </Text>
-              <View style={styles.evidenceLink}>
-                <Text style={styles.evidenceLinkText}>Evidence</Text>
-                <ChevronRight size={14} color={color.link} strokeWidth={2} />
-              </View>
+    <Card dashed={unverified}>
+      <Pressable
+        accessibilityRole="button"
+        accessibilityHint="Opens the evidence for this claim"
+        onPress={onPress}
+        style={({ pressed }) => [{ gap: 10 }, pressed && { opacity: 0.7 }]}
+      >
+        <View style={styles.cardTop}>
+          <VerdictChip verdict={claim.verdict} />
+          <Text style={styles.score}>{noSavedMatch ? 'no saved match' : confidenceLabel(claim, gate)}</Text>
+        </View>
+        <Text style={type.claimCard}>{claim.text}</Text>
+        {unverified ? (
+          <Text style={styles.reason}>{claim.reason}</Text>
+        ) : (
+          <Text style={styles.quote}>“{truncate(claim.original, 52)}”</Text>
+        )}
+        {fc ? <FactcheckBlock source={fc} related={unverified} /> : null}
+        {enrichable ? null : (
+          <View style={styles.cardFooter}>
+            <Text style={styles.footerText} numberOfLines={1}>
+              {claim.path === 'offline-match' ? 'Matched on this phone' : sourceSummary(claim.evidence)}
+            </Text>
+            <View style={styles.evidenceLink}>
+              <Text style={styles.evidenceLinkText}>Evidence</Text>
+              <ChevronRight size={14} color={color.link} strokeWidth={2} />
             </View>
-          )}
-        </Card>
-      )}
-    </Pressable>
+          </View>
+        )}
+      </Pressable>
+      {enrichable ? <EnrichmentControl checkId={checkId} claim={claim} /> : null}
+    </Card>
   );
 }
 
