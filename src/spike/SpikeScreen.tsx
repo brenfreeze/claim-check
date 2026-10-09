@@ -7,6 +7,7 @@ import { Button, Platform, ScrollView, StyleSheet, Text, TextInput, View } from 
 import { appleLlmAvailability, appleLlmBackend } from '../../modules/apple-llm';
 import { memSnapshot } from '../../modules/mem-probe';
 import { FACT_CHECK_INSTRUCTIONS, runLlmFixtures, type LlmFixtureReport } from './llmProtocol';
+import { MODEL_VARIANT } from './reference';
 import { benchmark, runFixtures, type BenchReport, type FixtureReport } from './phase0';
 import { downloadModel, listModelFiles, modelDir, modelPresent, readText, sessionPath } from './modelStore';
 import { LlmDecisionEngine, OnDeviceDecimaEngine, type Decision } from '../engine';
@@ -141,7 +142,7 @@ export default function SpikeScreen() {
     });
 
   useEffect(() => {
-    log('device', deviceInfo());
+    log('device', { ...deviceInfo(), modelVariant: MODEL_VARIANT });
     if (!AUTORUN) return;
     if (AUTORUN_ENGINE === 'apple') {
       (async () => {
@@ -167,7 +168,7 @@ export default function SpikeScreen() {
   return (
     <ScrollView contentContainerStyle={styles.page}>
       <StatusBar style="auto" />
-      <Text style={styles.h1}>Phase 0 · Decima on device</Text>
+      <Text style={styles.h1}>Phase 0 · Decima on device ({MODEL_VARIANT})</Text>
       <Text style={styles.mono}>{JSON.stringify(deviceInfo())}</Text>
       <Text style={[styles.status, status.includes('FAILED') && styles.bad]}>{status}</Text>
 

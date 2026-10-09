@@ -2,7 +2,7 @@
 // flips across the three option orders, latency and refusals, on the same fixtures and orders as the Decima run.
 // Two framings: one-step (the 3-way verdict question) and two-step (a relevance noul first, then supports/contradicts).
 import type { LlmDecisionEngine } from '../engine';
-import reference from '../../fixtures/phase0.reference.json';
+import { reference } from './reference';
 
 const now = () => globalThis.performance?.now() ?? Date.now();
 const RELEVANCE = 'The evidence is about the same claim, event or announcement as the claim.';

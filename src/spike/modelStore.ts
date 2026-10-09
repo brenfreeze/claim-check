@@ -2,6 +2,7 @@
 //   python3 -m http.server 8765 --directory models/decima-small/onnx/int8
 // The Android emulator reaches the laptop at 10.0.2.2; a phone on the same Wi-Fi uses the laptop's LAN IP.
 import { Directory, File, Paths } from 'expo-file-system';
+import { MODEL_VARIANT } from './reference';
 
 export const MODEL_FILES = [
   'decima.json',
@@ -11,7 +12,7 @@ export const MODEL_FILES = [
   'encoder.onnx',
 ] as const;
 
-export const modelDir = () => new Directory(Paths.document, 'decima-small-int8');
+export const modelDir = () => new Directory(Paths.document, MODEL_VARIANT === 'ft3' ? 'decima-ft3-int8' : 'decima-small-int8');
 
 export interface ModelFileInfo {
   name: string;

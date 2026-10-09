@@ -3,7 +3,7 @@
 import type { OnDeviceDecimaEngine } from '../engine';
 import { choiceTexts, stateText } from '../engine';
 import { memSnapshot, resetMemPeak } from '../../modules/mem-probe';
-import reference from '../../fixtures/phase0.reference.json';
+import { reference } from './reference';
 
 type Ref = typeof reference;
 type RefItem = Ref['items'][number];

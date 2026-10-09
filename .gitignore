@@ -53,3 +53,6 @@ harness/data/mnli_tl.jsonl
 
 # ft3: mined fact-check text (VERA Files) — local only, never commit (public repo)
 harness/data/factcheck/
+
+# controller scratch (briefs, SDD workspaces)
+.superpowers/

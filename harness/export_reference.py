@@ -107,8 +107,10 @@ def run_one(rt: DecimaOnnx, state: str, question: str, options: list[str]) -> di
 def main() -> None:
     ap = argparse.ArgumentParser()
     ap.add_argument("--model", default=str(ROOT / "models" / "decima-small" / "onnx" / "int8"))
+    ap.add_argument("--out", default=str(OUT), help="reference JSON to write (default: the base model's, used by Jest)")
     args = ap.parse_args()
     model = Path(args.model)
+    out_path = Path(args.out)
 
     fx = json.loads(FIXTURES.read_text())
     question, options = fx["question"], fx["options"]
@@ -205,9 +207,9 @@ def main() -> None:
         "orderFlips": sum(not i["orderInvariant"] for i in items),
         "laptopLatencyMs": {"median": statistics.median(ts), "p95": ts[int(0.95 * len(ts)) - 1], "n": len(ts)},
     }
-    OUT.write_text(json.dumps(out, ensure_ascii=False, indent=1))
+    out_path.write_text(json.dumps(out, ensure_ascii=False, indent=1))
     print(f"\naccuracy {accuracy}  orderFlips={out['orderFlips']}  laptop median/p95 ms "
-          f"{out['laptopLatencyMs']['median']:.1f}/{out['laptopLatencyMs']['p95']:.1f}\nwrote {OUT.relative_to(ROOT)}")
+          f"{out['laptopLatencyMs']['median']:.1f}/{out['laptopLatencyMs']['p95']:.1f}\nwrote {out_path}")
 
 
 if __name__ == "__main__":
