@@ -1,7 +1,7 @@
 import { runCheck, enrichClaim } from '../../core/checkPipeline';
 import type { CheckEvent } from '../../core/checkTypes';
 import type { DecisionEngine } from '../../engine/types';
-import { SAMPLE_POST } from '../../core/mockData';
+import { SAMPLE_POST } from './samplePost';
 import { initialCheck, reduceCheck, stillPending, type CheckState } from '../checkReducer';
 
 const engine = { id: 'decima-local', systemOne: async () => ({}) } as unknown as DecisionEngine;

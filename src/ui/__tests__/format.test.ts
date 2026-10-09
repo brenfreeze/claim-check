@@ -1,5 +1,5 @@
 import { detectLanguage, splitSentences, writingSignals } from '../../core/text';
-import { SAMPLE_POST } from '../../core/mockData';
+import { SAMPLE_POST } from './samplePost';
 import { confidenceLabel, corpusLine, ratingVerdict, recentMeta, relativeTime, sourceSummary, verdictTotals } from '../format';
 
 const now = new Date('2026-10-10T12:00:00Z');
