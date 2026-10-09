@@ -5,6 +5,9 @@ import { createStore, useStore } from './store';
 const simulatedOffline = createStore(false);
 const reachable = createStore(true);
 
+// No reachability probe: NetInfo's default pings clients3.google.com, a network call the offline path must not make.
+// Connected to a network counts as online; enrichment reports a failure if the internet isn't actually there.
+NetInfo.configure({ reachabilityShouldRun: () => false });
 NetInfo.addEventListener((s) => reachable.set(s.isConnected === true && s.isInternetReachable !== false));
 
 export function setSimulatedOffline(on: boolean): void {

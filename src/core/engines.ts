@@ -56,10 +56,13 @@ export function engineOptions(lanUrl: string): EngineOption[] {
 }
 
 /** The option a check actually runs on: the saved choice, or Decima when that is unavailable here. */
+/** Only on-device Decima runs checks for now: the Apple model errors on multi-sentence posts, LAN/hosted aren't built. */
+const DECIMA_ONLY = true;
+
 export function effectiveEngine(choice: EngineChoice, lanUrl: string): EngineOption {
   const options = engineOptions(lanUrl);
   const picked = options.find((o) => o.id === choice);
-  return picked && picked.available ? picked : options[0];
+  return picked && picked.available && !DECIMA_ONLY ? picked : options[0];
 }
 
 const THREADS = Number(process.env.EXPO_PUBLIC_THREADS) || 2;
