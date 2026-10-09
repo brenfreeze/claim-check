@@ -1,0 +1,35 @@
+{
+  "name": "claim-check",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "dependencies": {
+    "@huggingface/tokenizers": "^0.2.0",
+    "expo": "~57.0.27",
+    "expo-dev-client": "~57.0.19",
+    "expo-file-system": "~57.0.7",
+    "expo-status-bar": "~57.0.1",
+    "onnxruntime-react-native": "^1.24.3",
+    "react": "19.2.3",
+    "react-native": "0.86.3"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^26.6.4",
+    "@types/react": "~19.2.2",
+    "jest": "^29.7.0",
+    "onnxruntime-node": "^1.24.3",
+    "patch-package": "^8.0.1",
+    "ts-jest": "^29.4.14",
+    "typescript": "~6.0.3"
+  },
+  "scripts": {
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web",
+    "test": "jest",
+    "reference": "cd harness && uv run python export_reference.py",
+    "postinstall": "patch-package"
+  },
+  "private": true
+}

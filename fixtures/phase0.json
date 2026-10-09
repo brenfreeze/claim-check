@@ -1,0 +1,136 @@
+{
+  "description": "Phase 0 fixtures: 10 English + 10 Taglish/Filipino claim-evidence pairs from real PH fact-checks (Rappler, VERA Files), hand-labelled. Evidence is quoted verbatim from the source; claimSource says whether the claim is the viral post's own words (verbatim) or a restatement of a finding in the article (paraphrase). Unrelated pairs take evidence from a different article (or a non-addressing passage of a same-topic one).",
+  "drafted": "2026-10-09",
+  "reviewStatus": "draft: labels need human review",
+  "question": "Does the evidence support the claim?",
+  "options": ["supports", "contradicts", "unrelated"],
+  "items": [
+    {
+      "id": "en-01", "lang": "en", "label": "contradicts", "claimSource": "verbatim",
+      "claim": "Department of the Interior and Local Government (DILG) Secretary Jonvic Remulla has been removed from office.",
+      "evidence": "Remulla was not removed from his post. He remains as the DILG secretary, according to the department’s official website.",
+      "source": "https://rappler.com/philippines/jonvic-remulla-remains-dilg-chief"
+    },
+    {
+      "id": "en-02", "lang": "en", "label": "contradicts", "claimSource": "paraphrase",
+      "claim": "An earthquake is forecast to hit the Philippines on September 21 to 22, with risk as high as 95% in Manila and Mindanao.",
+      "evidence": "Scientific authorities, including the Philippine Institute of Volcanology and Seismology (PHIVOLCS), have repeatedly stated that earthquakes cannot be predicted, as no technology exists anywhere in the world capable of forecasting the exact date, time, or location of a seismic event.",
+      "source": "https://verafiles.org/articles/fact-check-earthquakes-cannot-be-predicted-viral-risk-prediction-map-fake"
+    },
+    {
+      "id": "en-03", "lang": "en", "label": "contradicts", "claimSource": "paraphrase",
+      "claim": "The bill postponing the November 2 barangay and Sangguniang Kabataan elections (BSKE) became a law on September 21.",
+      "evidence": "No official government announcement or credible media report shows that the bill has already been signed into law. Palace Press Officer Claire Castro also said Marcos will review the provisions of the bill before making a decision.",
+      "source": "https://www.rappler.com/newsbreak/fact-check/no-barangay-sangguniang-kabataan-postponement-september-22-2026/"
+    },
+    {
+      "id": "en-04", "lang": "en", "label": "contradicts", "claimSource": "paraphrase",
+      "claim": "Interior Secretary Jonvic Remulla threatened Muslims and Visayans and called himself the “modern Duterte.”",
+      "evidence": "There are no quotes or news reports containing actual statements from Remulla intimidating Muslims and Visayans. Neither has Remulla issued any similar statement through his social media accounts.",
+      "source": "https://verafiles.org/articles/fact-check-jonvic-remulla-quote-vs-muslims-and-visayans-fake"
+    },
+    {
+      "id": "en-05", "lang": "en", "label": "supports", "claimSource": "paraphrase",
+      "claim": "Former president Rodrigo Duterte remains detained in The Hague while he awaits his ICC trial.",
+      "evidence": "The former president remains detained in the ICC facility in The Hague, Netherlands, awaiting the start of his full trial scheduled to begin in November.",
+      "source": "https://www.rappler.com/newsbreak/fact-check/ai-generated-video-rodrigo-duterte-release-july-2026/"
+    },
+    {
+      "id": "en-06", "lang": "en", "label": "supports", "claimSource": "paraphrase",
+      "claim": "The Ateneo de Zamboanga shooting was livestreamed on Facebook.",
+      "evidence": "The shooting was livestreamed on Facebook, with the video staying up for around 14 minutes before being taken down. Senator Risa Hontiveros criticized Meta for this and warned of the broader threat of nihilistic violent extremism in a Senate hearing on August 20.",
+      "source": "https://www.rappler.com/newsbreak/fact-check/no-nationwide-facebook-ban-september-10-2026/"
+    },
+    {
+      "id": "en-07", "lang": "en", "label": "supports", "claimSource": "paraphrase",
+      "claim": "Comelec is continuing its preparations for the November 2 barangay and SK elections.",
+      "evidence": "The chair also noted that unless such a law is passed, the filing of certificates of candidacy scheduled from September 28 to October 5 will push through. The commission also said that it will continue its preparation for the BSKE, in line with the provisions of Republic Act No. 12232 setting the date of elections on November 2.",
+      "source": "https://www.rappler.com/newsbreak/fact-check/no-barangay-sangguniang-kabataan-postponement-september-22-2026/"
+    },
+    {
+      "id": "en-08", "lang": "en", "label": "unrelated", "claimSource": "paraphrase",
+      "claim": "Former president Duterte will be released from ICC detention this July 2026.",
+      "evidence": "In a press release on July 13, the US State Department said, “The campaign will feature a whole-of-government response to systematically disable the ICC’s ability to operate, target American servicemen or officials, or otherwise threaten American sovereignty.”",
+      "source": "https://www.rappler.com/newsbreak/fact-check/ai-generated-video-rodrigo-duterte-release-july-2026/",
+      "note": "hard unrelated: same topic (ICC), evidence does not address a release"
+    },
+    {
+      "id": "en-09", "lang": "en", "label": "unrelated", "claimSource": "paraphrase",
+      "claim": "PHIVOLCS has released a map forecasting where the next earthquake will hit.",
+      "evidence": "He was reported instead as encouraging a peaceful parliamentary election in the Bangsamoro Autonomous Region in Muslim Mindanao, which was held last Sept. 14.",
+      "source": "https://verafiles.org/articles/fact-check-jonvic-remulla-quote-vs-muslims-and-visayans-fake",
+      "claimFrom": "https://verafiles.org/articles/fact-check-earthquakes-cannot-be-predicted-viral-risk-prediction-map-fake"
+    },
+    {
+      "id": "en-10", "lang": "en", "label": "unrelated", "claimSource": "paraphrase",
+      "claim": "The Senate approved a bill fixing the term of barangay and SK officials to five years.",
+      "evidence": "Officials from the Cybercrime Investigation and Coordinating Center (CICC) and the Department of Information and Communications Technology (DICT) had previously raised the possibility of blocking the platform over child safety concerns following the Zamboanga school shooting.",
+      "source": "https://www.rappler.com/newsbreak/fact-check/no-nationwide-facebook-ban-september-10-2026/",
+      "claimFrom": "https://www.rappler.com/newsbreak/fact-check/no-barangay-sangguniang-kabataan-postponement-september-22-2026/"
+    },
+    {
+      "id": "tl-01", "lang": "tl", "variant": "taglish", "evidenceLang": "en", "label": "contradicts", "claimSource": "verbatim",
+      "claim": "Breaking news: September 10 start na Facebook ban na sa Pinas. Meron na penalty.",
+      "evidence": "There is no official government announcement confirming a nationwide ban starting September 10 or any penalty for Facebook use in the Philippines. No credible media outlet has reported about this supposed ban or penalty scheme either.",
+      "source": "https://www.rappler.com/newsbreak/fact-check/no-nationwide-facebook-ban-september-10-2026/"
+    },
+    {
+      "id": "tl-02", "lang": "tl", "variant": "taglish", "evidenceLang": "taglish", "label": "contradicts", "claimSource": "verbatim",
+      "claim": "Good news ‘to mga idol sa lahat ng mga DDS: Bongbong Marcos may plano na mag-resign.",
+      "evidence": "“Option ba ito? The President is still working and keeps on working for the country, so hindi option sa administration, sa Pangulo, ang pagbibitiw,” said Castro.",
+      "source": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-jr-no-resignation-plan/"
+    },
+    {
+      "id": "tl-03", "lang": "tl", "variant": "filipino", "evidenceLang": "filipino", "label": "contradicts", "claimSource": "paraphrase",
+      "claim": "May ipinapamahaging P150,000 na ayuda para sa mga OFW na uuwi sa Pilipinas dahil sa giyera ng United States at Israel laban sa Iran.",
+      "evidence": "“PAALALA SA ATING MGA KABABAYAN. May kumakalat na impormasyon online na nagsasabing may ibinibigay na ₱150,000 financial assistance mula sa DMW at OWWA. Ang balitang ito ay HINDI TOTOO.”",
+      "source": "https://verafiles.org/articles/walang-ayudang-p150k-sa-uuwing-ofws-galing-digmaan-sa-middle-east"
+    },
+    {
+      "id": "tl-04", "lang": "tl", "variant": "taglish", "evidenceLang": "taglish", "label": "contradicts", "claimSource": "verbatim",
+      "claim": "Comelec, kinansel na ang filing of candidacy ng mga tatakbo para sa barangay election.",
+      "evidence": "“Tuloy na tuloy ang (BSKE) eleksyon hanggang sa araw na ‘to, sapagkat ‘yun po ang batas.” The chair also noted that unless such a law is passed, the filing of certificates of candidacy scheduled from September 28 to October 5 will push through.",
+      "source": "https://www.rappler.com/newsbreak/fact-check/no-barangay-sangguniang-kabataan-postponement-september-22-2026/"
+    },
+    {
+      "id": "tl-05", "lang": "tl", "variant": "taglish", "evidenceLang": "filipino", "label": "supports", "claimSource": "paraphrase",
+      "claim": "Pinalitan na si Bato sa Senate Justice committee dahil lagi siyang absent.",
+      "evidence": "Dahil sa patuloy na pag-absent ni Bato, pinalitan siya ni Senador Joel Villanueva noong nakaraang buwan bilang miyembro ng Senate Committee on Justice and Human Rights.",
+      "source": "https://verafiles.org/articles/fact-check-hindi-tinanggal-sa-senado-si-bato"
+    },
+    {
+      "id": "tl-06", "lang": "tl", "variant": "taglish", "evidenceLang": "filipino", "label": "supports", "claimSource": "paraphrase",
+      "claim": "Nagbabala ang PSA na scam yung 25K ayuda para sa mga may national ID.",
+      "evidence": "Ilang beses nang binalaan ng Philippine Statistics Authority ang publiko na hindi sila nagbibigay ng nasabing ayuda.",
+      "source": "https://verafiles.org/articles/fact-check-walang-25k-ayuda-para-sa-mga-may-national-id"
+    },
+    {
+      "id": "tl-07", "lang": "tl", "variant": "taglish", "evidenceLang": "filipino", "label": "supports", "claimSource": "paraphrase",
+      "claim": "Si Tito Sotto pa rin ang Senate President, hindi natuloy ang pagpapalit sa kanya.",
+      "evidence": "Sa ambush interview, sinabi ni Sotto na napigilan ng Senate Majority ang pagtatangkang palitan siya bilang Senate President.",
+      "source": "https://verafiles.org/articles/fact-check-hindi-bagong-senate-president-si-loren-legarda"
+    },
+    {
+      "id": "tl-08", "lang": "tl", "variant": "filipino", "evidenceLang": "filipino", "label": "unrelated", "claimSource": "verbatim",
+      "claim": "BATO DELA ROSA, TINANGGAL SA SENADO MATAPOS ANG 4 NA BUWANG PAGABSENT.",
+      "evidence": "Pinaliwanag ng ahensiya na may iba pa namang benepisyo para sa mga miyembro ng OWWA at mga pamilya nila, gaya ng ayuda para sa mga nagigipit, pangkabuhayan para sa mga umuwing OFW, kasama rin ang iba’t ibang training, scholarship, at upskilling opportunities.",
+      "source": "https://verafiles.org/articles/walang-ayudang-p150k-sa-uuwing-ofws-galing-digmaan-sa-middle-east",
+      "claimFrom": "https://verafiles.org/articles/fact-check-hindi-tinanggal-sa-senado-si-bato"
+    },
+    {
+      "id": "tl-09", "lang": "tl", "variant": "taglish", "evidenceLang": "filipino", "label": "unrelated", "claimSource": "verbatim",
+      "claim": "Mainit-init pang balita, PRRD makakauwi na sa Pilipinas ngayong buwan ng Hulyo 2026.",
+      "evidence": "Ayon sa Konstitusyon, may kapangyarihan ang Senado na disiplinahin ang mga miyembro nito. Puwedeng suspindihin o tanggalin ang isang senador sa pamamagitan ng pagboto ng hindi bababa sa 16 na senador.",
+      "source": "https://verafiles.org/articles/fact-check-hindi-tinanggal-sa-senado-si-bato",
+      "claimFrom": "https://www.rappler.com/newsbreak/fact-check/ai-generated-video-rodrigo-duterte-release-july-2026/"
+    },
+    {
+      "id": "tl-10", "lang": "tl", "variant": "filipino", "evidenceLang": "filipino", "label": "unrelated", "claimSource": "verbatim",
+      "claim": "May national ID ka na ba? Bibigyan namin kayo ng 25,000 pesos cash assistance mula sa aming management.",
+      "evidence": "Ang clip na ginamit sa video ay galing sa balita ng BusinessWorld noong June 19, 2025, na kasagsagan noon ng matagal nang giyera ng Israel at Iran.",
+      "source": "https://verafiles.org/articles/walang-ayudang-p150k-sa-uuwing-ofws-galing-digmaan-sa-middle-east",
+      "claimFrom": "https://verafiles.org/articles/fact-check-walang-25k-ayuda-para-sa-mga-may-national-id",
+      "note": "hard unrelated: same topic (fake ayuda), evidence is about a different aid claim"
+    }
+  ]
+}

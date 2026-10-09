@@ -1,0 +1,1167 @@
+{
+ "A prd": {
+  "accuracy": {
+   "en": 5,
+   "tl": 4
+  },
+  "predicted": {
+   "supports": 0,
+   "contradicts": 3,
+   "unrelated": 17
+  },
+  "rows": [
+   {
+    "id": "en-01",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.0629,
+     "contradicts": 0.5734,
+     "unrelated": 0.3637
+    }
+   },
+   {
+    "id": "en-02",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.0232,
+     "contradicts": 0.7665,
+     "unrelated": 0.2104
+    }
+   },
+   {
+    "id": "en-03",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0347,
+     "contradicts": 0.2336,
+     "unrelated": 0.7317
+    }
+   },
+   {
+    "id": "en-04",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0241,
+     "contradicts": 0.2649,
+     "unrelated": 0.7109
+    }
+   },
+   {
+    "id": "en-05",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0355,
+     "contradicts": 0.1439,
+     "unrelated": 0.8206
+    }
+   },
+   {
+    "id": "en-06",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0346,
+     "contradicts": 0.054,
+     "unrelated": 0.9114
+    }
+   },
+   {
+    "id": "en-07",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0477,
+     "contradicts": 0.0415,
+     "unrelated": 0.9108
+    }
+   },
+   {
+    "id": "en-08",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0196,
+     "contradicts": 0.0739,
+     "unrelated": 0.9065
+    }
+   },
+   {
+    "id": "en-09",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0286,
+     "contradicts": 0.1884,
+     "unrelated": 0.783
+    }
+   },
+   {
+    "id": "en-10",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0226,
+     "contradicts": 0.0983,
+     "unrelated": 0.8791
+    }
+   },
+   {
+    "id": "tl-01",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.0783,
+     "contradicts": 0.4805,
+     "unrelated": 0.4412
+    }
+   },
+   {
+    "id": "tl-02",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0218,
+     "contradicts": 0.1704,
+     "unrelated": 0.8078
+    }
+   },
+   {
+    "id": "tl-03",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.2483,
+     "contradicts": 0.2068,
+     "unrelated": 0.5448
+    }
+   },
+   {
+    "id": "tl-04",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.033,
+     "contradicts": 0.1282,
+     "unrelated": 0.8388
+    }
+   },
+   {
+    "id": "tl-05",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.1615,
+     "contradicts": 0.2998,
+     "unrelated": 0.5387
+    }
+   },
+   {
+    "id": "tl-06",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0403,
+     "contradicts": 0.1719,
+     "unrelated": 0.7878
+    }
+   },
+   {
+    "id": "tl-07",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.1102,
+     "contradicts": 0.156,
+     "unrelated": 0.7338
+    }
+   },
+   {
+    "id": "tl-08",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0334,
+     "contradicts": 0.0513,
+     "unrelated": 0.9153
+    }
+   },
+   {
+    "id": "tl-09",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.054,
+     "contradicts": 0.0819,
+     "unrelated": 0.8642
+    }
+   },
+   {
+    "id": "tl-10",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0622,
+     "contradicts": 0.0913,
+     "unrelated": 0.8466
+    }
+   }
+  ]
+ },
+ "B evidence-first": {
+  "accuracy": {
+   "en": 6,
+   "tl": 4
+  },
+  "predicted": {
+   "supports": 2,
+   "contradicts": 2,
+   "unrelated": 16
+  },
+  "rows": [
+   {
+    "id": "en-01",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.1195,
+     "contradicts": 0.6804,
+     "unrelated": 0.2001
+    }
+   },
+   {
+    "id": "en-02",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.013,
+     "contradicts": 0.1243,
+     "unrelated": 0.8627
+    }
+   },
+   {
+    "id": "en-03",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0839,
+     "contradicts": 0.3699,
+     "unrelated": 0.5462
+    }
+   },
+   {
+    "id": "en-04",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0146,
+     "contradicts": 0.0893,
+     "unrelated": 0.896
+    }
+   },
+   {
+    "id": "en-05",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0671,
+     "contradicts": 0.3759,
+     "unrelated": 0.557
+    }
+   },
+   {
+    "id": "en-06",
+    "lang": "en",
+    "label": "supports",
+    "pred": "supports",
+    "p": {
+     "supports": 0.74,
+     "contradicts": 0.0901,
+     "unrelated": 0.1699
+    }
+   },
+   {
+    "id": "en-07",
+    "lang": "en",
+    "label": "supports",
+    "pred": "supports",
+    "p": {
+     "supports": 0.5692,
+     "contradicts": 0.2692,
+     "unrelated": 0.1616
+    }
+   },
+   {
+    "id": "en-08",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0133,
+     "contradicts": 0.0693,
+     "unrelated": 0.9174
+    }
+   },
+   {
+    "id": "en-09",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0502,
+     "contradicts": 0.1384,
+     "unrelated": 0.8114
+    }
+   },
+   {
+    "id": "en-10",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.021,
+     "contradicts": 0.0667,
+     "unrelated": 0.9123
+    }
+   },
+   {
+    "id": "tl-01",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.2284,
+     "contradicts": 0.2414,
+     "unrelated": 0.5302
+    }
+   },
+   {
+    "id": "tl-02",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0256,
+     "contradicts": 0.1564,
+     "unrelated": 0.818
+    }
+   },
+   {
+    "id": "tl-03",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0252,
+     "contradicts": 0.0545,
+     "unrelated": 0.9203
+    }
+   },
+   {
+    "id": "tl-04",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.0673,
+     "contradicts": 0.4801,
+     "unrelated": 0.4526
+    }
+   },
+   {
+    "id": "tl-05",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.2252,
+     "contradicts": 0.3395,
+     "unrelated": 0.4353
+    }
+   },
+   {
+    "id": "tl-06",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0451,
+     "contradicts": 0.103,
+     "unrelated": 0.8519
+    }
+   },
+   {
+    "id": "tl-07",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.2517,
+     "contradicts": 0.3382,
+     "unrelated": 0.4101
+    }
+   },
+   {
+    "id": "tl-08",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.038,
+     "contradicts": 0.1972,
+     "unrelated": 0.7647
+    }
+   },
+   {
+    "id": "tl-09",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0179,
+     "contradicts": 0.0454,
+     "unrelated": 0.9367
+    }
+   },
+   {
+    "id": "tl-10",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.1079,
+     "contradicts": 0.06,
+     "unrelated": 0.8321
+    }
+   }
+  ]
+ },
+ "C nli-native": {
+  "accuracy": {
+   "en": 6,
+   "tl": 4
+  },
+  "predicted": {
+   "supports": 2,
+   "contradicts": 4,
+   "unrelated": 14
+  },
+  "rows": [
+   {
+    "id": "en-01",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "entailment": 0.0604,
+     "neutral": 0.1985,
+     "contradiction": 0.7411
+    }
+   },
+   {
+    "id": "en-02",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.015,
+     "neutral": 0.8047,
+     "contradiction": 0.1803
+    }
+   },
+   {
+    "id": "en-03",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.077,
+     "neutral": 0.5012,
+     "contradiction": 0.4217
+    }
+   },
+   {
+    "id": "en-04",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0134,
+     "neutral": 0.9054,
+     "contradiction": 0.0812
+    }
+   },
+   {
+    "id": "en-05",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0457,
+     "neutral": 0.518,
+     "contradiction": 0.4363
+    }
+   },
+   {
+    "id": "en-06",
+    "lang": "en",
+    "label": "supports",
+    "pred": "supports",
+    "p": {
+     "entailment": 0.7325,
+     "neutral": 0.1366,
+     "contradiction": 0.1309
+    }
+   },
+   {
+    "id": "en-07",
+    "lang": "en",
+    "label": "supports",
+    "pred": "supports",
+    "p": {
+     "entailment": 0.516,
+     "neutral": 0.1535,
+     "contradiction": 0.3305
+    }
+   },
+   {
+    "id": "en-08",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0163,
+     "neutral": 0.9104,
+     "contradiction": 0.0733
+    }
+   },
+   {
+    "id": "en-09",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0499,
+     "neutral": 0.7617,
+     "contradiction": 0.1883
+    }
+   },
+   {
+    "id": "en-10",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0256,
+     "neutral": 0.8992,
+     "contradiction": 0.0752
+    }
+   },
+   {
+    "id": "tl-01",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.2172,
+     "neutral": 0.5406,
+     "contradiction": 0.2421
+    }
+   },
+   {
+    "id": "tl-02",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.027,
+     "neutral": 0.806,
+     "contradiction": 0.167
+    }
+   },
+   {
+    "id": "tl-03",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0332,
+     "neutral": 0.8964,
+     "contradiction": 0.0704
+    }
+   },
+   {
+    "id": "tl-04",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "entailment": 0.0622,
+     "neutral": 0.349,
+     "contradiction": 0.5889
+    }
+   },
+   {
+    "id": "tl-05",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "contradicts",
+    "p": {
+     "entailment": 0.178,
+     "neutral": 0.3562,
+     "contradiction": 0.4658
+    }
+   },
+   {
+    "id": "tl-06",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0497,
+     "neutral": 0.7783,
+     "contradiction": 0.172
+    }
+   },
+   {
+    "id": "tl-07",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "contradicts",
+    "p": {
+     "entailment": 0.277,
+     "neutral": 0.2901,
+     "contradiction": 0.433
+    }
+   },
+   {
+    "id": "tl-08",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0318,
+     "neutral": 0.7557,
+     "contradiction": 0.2125
+    }
+   },
+   {
+    "id": "tl-09",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0215,
+     "neutral": 0.932,
+     "contradiction": 0.0465
+    }
+   },
+   {
+    "id": "tl-10",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "entailment": 0.0803,
+     "neutral": 0.8619,
+     "contradiction": 0.0578
+    }
+   }
+  ]
+ },
+ "D described": {
+  "accuracy": {
+   "en": 5,
+   "tl": 4
+  },
+  "predicted": {
+   "supports": 0,
+   "contradicts": 3,
+   "unrelated": 17
+  },
+  "rows": [
+   {
+    "id": "en-01",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.0604,
+     "contradicts": 0.5977,
+     "unrelated": 0.342
+    }
+   },
+   {
+    "id": "en-02",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.0168,
+     "contradicts": 0.7766,
+     "unrelated": 0.2066
+    }
+   },
+   {
+    "id": "en-03",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0328,
+     "contradicts": 0.2498,
+     "unrelated": 0.7174
+    }
+   },
+   {
+    "id": "en-04",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0219,
+     "contradicts": 0.2823,
+     "unrelated": 0.6958
+    }
+   },
+   {
+    "id": "en-05",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0389,
+     "contradicts": 0.1657,
+     "unrelated": 0.7954
+    }
+   },
+   {
+    "id": "en-06",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0441,
+     "contradicts": 0.0654,
+     "unrelated": 0.8905
+    }
+   },
+   {
+    "id": "en-07",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0453,
+     "contradicts": 0.0424,
+     "unrelated": 0.9122
+    }
+   },
+   {
+    "id": "en-08",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0206,
+     "contradicts": 0.0854,
+     "unrelated": 0.8941
+    }
+   },
+   {
+    "id": "en-09",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0303,
+     "contradicts": 0.2285,
+     "unrelated": 0.7411
+    }
+   },
+   {
+    "id": "en-10",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.023,
+     "contradicts": 0.1092,
+     "unrelated": 0.8678
+    }
+   },
+   {
+    "id": "tl-01",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.064,
+     "contradicts": 0.4988,
+     "unrelated": 0.4371
+    }
+   },
+   {
+    "id": "tl-02",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0225,
+     "contradicts": 0.2114,
+     "unrelated": 0.7661
+    }
+   },
+   {
+    "id": "tl-03",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.2329,
+     "contradicts": 0.2022,
+     "unrelated": 0.565
+    }
+   },
+   {
+    "id": "tl-04",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0346,
+     "contradicts": 0.1518,
+     "unrelated": 0.8136
+    }
+   },
+   {
+    "id": "tl-05",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.1854,
+     "contradicts": 0.2942,
+     "unrelated": 0.5203
+    }
+   },
+   {
+    "id": "tl-06",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0383,
+     "contradicts": 0.1846,
+     "unrelated": 0.7771
+    }
+   },
+   {
+    "id": "tl-07",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.1332,
+     "contradicts": 0.1723,
+     "unrelated": 0.6946
+    }
+   },
+   {
+    "id": "tl-08",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.032,
+     "contradicts": 0.0515,
+     "unrelated": 0.9166
+    }
+   },
+   {
+    "id": "tl-09",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0547,
+     "contradicts": 0.0912,
+     "unrelated": 0.8541
+    }
+   },
+   {
+    "id": "tl-10",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0706,
+     "contradicts": 0.096,
+     "unrelated": 0.8334
+    }
+   }
+  ]
+ },
+ "E nli-described": {
+  "accuracy": {
+   "en": 6,
+   "tl": 4
+  },
+  "predicted": {
+   "supports": 2,
+   "contradicts": 4,
+   "unrelated": 14
+  },
+  "rows": [
+   {
+    "id": "en-01",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.067,
+     "contradicts": 0.7566,
+     "unrelated": 0.1764
+    }
+   },
+   {
+    "id": "en-02",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.015,
+     "contradicts": 0.169,
+     "unrelated": 0.816
+    }
+   },
+   {
+    "id": "en-03",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0829,
+     "contradicts": 0.3904,
+     "unrelated": 0.5267
+    }
+   },
+   {
+    "id": "en-04",
+    "lang": "en",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0145,
+     "contradicts": 0.0836,
+     "unrelated": 0.9018
+    }
+   },
+   {
+    "id": "en-05",
+    "lang": "en",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0489,
+     "contradicts": 0.3995,
+     "unrelated": 0.5516
+    }
+   },
+   {
+    "id": "en-06",
+    "lang": "en",
+    "label": "supports",
+    "pred": "supports",
+    "p": {
+     "supports": 0.7639,
+     "contradicts": 0.1205,
+     "unrelated": 0.1155
+    }
+   },
+   {
+    "id": "en-07",
+    "lang": "en",
+    "label": "supports",
+    "pred": "supports",
+    "p": {
+     "supports": 0.5715,
+     "contradicts": 0.2888,
+     "unrelated": 0.1396
+    }
+   },
+   {
+    "id": "en-08",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0161,
+     "contradicts": 0.0633,
+     "unrelated": 0.9207
+    }
+   },
+   {
+    "id": "en-09",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0564,
+     "contradicts": 0.1962,
+     "unrelated": 0.7474
+    }
+   },
+   {
+    "id": "en-10",
+    "lang": "en",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0275,
+     "contradicts": 0.0741,
+     "unrelated": 0.8984
+    }
+   },
+   {
+    "id": "tl-01",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.2238,
+     "contradicts": 0.22,
+     "unrelated": 0.5562
+    }
+   },
+   {
+    "id": "tl-02",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0288,
+     "contradicts": 0.18,
+     "unrelated": 0.7912
+    }
+   },
+   {
+    "id": "tl-03",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0292,
+     "contradicts": 0.0617,
+     "unrelated": 0.9091
+    }
+   },
+   {
+    "id": "tl-04",
+    "lang": "tl",
+    "label": "contradicts",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.0689,
+     "contradicts": 0.5601,
+     "unrelated": 0.3709
+    }
+   },
+   {
+    "id": "tl-05",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.19,
+     "contradicts": 0.4803,
+     "unrelated": 0.3297
+    }
+   },
+   {
+    "id": "tl-06",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0426,
+     "contradicts": 0.1485,
+     "unrelated": 0.8089
+    }
+   },
+   {
+    "id": "tl-07",
+    "lang": "tl",
+    "label": "supports",
+    "pred": "contradicts",
+    "p": {
+     "supports": 0.2872,
+     "contradicts": 0.4289,
+     "unrelated": 0.2838
+    }
+   },
+   {
+    "id": "tl-08",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0337,
+     "contradicts": 0.1956,
+     "unrelated": 0.7707
+    }
+   },
+   {
+    "id": "tl-09",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0214,
+     "contradicts": 0.0434,
+     "unrelated": 0.9352
+    }
+   },
+   {
+    "id": "tl-10",
+    "lang": "tl",
+    "label": "unrelated",
+    "pred": "unrelated",
+    "p": {
+     "supports": 0.0973,
+     "contradicts": 0.063,
+     "unrelated": 0.8396
+    }
+   }
+  ]
+ }
+}
