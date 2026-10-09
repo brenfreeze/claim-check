@@ -51,6 +51,13 @@ Libre na ang sakay sa MRT para sa lahat ng estudyante simula Lunes.
 - Laptop eval: best p(supports) 0.05, so no false match.
 - Deep link: `claimcheck://?text=Libre%20na%20ang%20sakay%20sa%20MRT%20para%20sa%20lahat%20ng%20estudyante%20simula%20Lunes.`
 
+### 4. Scan a screenshot (on-device OCR)
+
+- On Home, tap **"Or try the demo screenshot →"**, or open Scan and tap **Use demo screenshot**. This reads `assets/demo/demo-screenshot.png` with Apple Vision on the phone.
+- To show the real upload path, AirDrop that PNG to the phone, save it to Photos, then tap **Scan screenshot** and pick it.
+- Expected detected sentences: the WALANG PASOK sentence and the MRT sentence are checked; "I-share niyo na…" and the page chrome are not.
+- **Check 2 claims** → WALANG PASOK = **Contradicted** (Rappler); MRT = **Unverified**.
+
 ## Airplane-mode checklist
 
 - [ ] Airplane mode **on**, or Settings → Developer → **Simulate offline** on.
@@ -60,6 +67,7 @@ Libre na ang sakay sa MRT para sa lahat ng estudyante simula Lunes.
 - [ ] Input 2 → Contradicted, AFP card, rating pill MISLEADING.
 - [ ] Input 3 → Unverified, "No known fact-check", enrichment shows **Queued for recheck**.
 - [ ] Metro log shows **no** `[net-guard]` lines during the checks.
+- [ ] Scan → Use demo screenshot → Check 2 claims, offline.
 - [ ] Airplane mode **off** (or Simulate offline off): input 3's queued enrichment runs on its own and shows "Online check" results.
 
 ## Latency (fill in on the device)
