@@ -1,0 +1,14 @@
+{
+  "builtAt": "2026-10-09T19:34:09.263Z",
+  "count": 2611,
+  "perPublisher": {
+    "VERA Files": 838,
+    "Rappler": 929,
+    "AFP Fact Check": 844
+  },
+  "perRating": {
+    "false": 2151,
+    "misleading": 459,
+    "true": 1
+  }
+}

@@ -2,6 +2,9 @@
   "extends": "expo/tsconfig.base",
   "compilerOptions": {
     "strict": true,
-    "types": ["jest", "node"]
+    "types": ["jest", "node"],
+    // scripts/pull-factchecks.ts imports factcheck-normalize with a .ts extension, as required to run it via
+    // `node --experimental-strip-types`; noEmit is already set, so this only affects type-checking.
+    "allowImportingTsExtensions": true
   }
 }
