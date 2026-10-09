@@ -6,7 +6,7 @@ import { useSettings } from '../../src/core/settings';
 import { stillPending } from '../../src/ui/checkReducer';
 import { cancelCheck, retryCheck, useCheck } from '../../src/ui/checkStore';
 import { PipelineStepper, type StepperStep } from '../../src/ui/components/panels';
-import { Button, ListGroup, Meta, Row, Screen, SectionLabel } from '../../src/ui/components/primitives';
+import { Button, goHome, ListGroup, Meta, Row, Screen, SectionLabel } from '../../src/ui/components/primitives';
 import { NotFound } from '../../src/ui/components/NotFound';
 import { EngineBadge, VerdictChip } from '../../src/ui/components/verdict';
 import { plural } from '../../src/ui/format';
@@ -17,9 +17,11 @@ export default function Analyzing() {
   const check = useCheck(id);
   const settings = useSettings();
 
-  // Finished: replace this screen with Results.
+  // Finished: let the stepper show every step done, then hand over to Results (fades; see app/_layout.tsx).
   useEffect(() => {
-    if (check?.status === 'done') router.replace(`/results/${check.id}`);
+    if (check?.status !== 'done') return;
+    const t = setTimeout(() => router.replace(`/results/${check.id}`), 700);
+    return () => clearTimeout(t);
   }, [check?.status, check?.id]);
 
   if (!check) return <NotFound />;
@@ -40,7 +42,7 @@ export default function Analyzing() {
   const waiting = stillPending(check);
   const cancel = () => {
     cancelCheck(check.id);
-    router.replace('/');
+    goHome();
   };
 
   return (
@@ -76,7 +78,7 @@ export default function Analyzing() {
               }}
               style={{ flex: 1 }}
             />
-            <Button label="Back" height={44} onPress={() => router.replace('/')} style={{ flex: 1 }} />
+            <Button label="Back" height={44} onPress={goHome} style={{ flex: 1 }} />
           </View>
         </View>
       ) : (

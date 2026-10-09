@@ -1,7 +1,6 @@
-import { router } from 'expo-router';
 import { Text } from 'react-native';
 import { color, font, type } from '../tokens';
-import { Button, Screen, ScreenHeader } from './primitives';
+import { Button, goHome, Screen, ScreenHeader } from './primitives';
 
 /** Unknown check or claim id (e.g. after a reload: history is in memory only). */
 export function NotFound() {
@@ -11,7 +10,7 @@ export function NotFound() {
       <Text style={[type.body, { color: color.inkSecondary, fontFamily: font.body }]}>
         This check is no longer available. Checks are kept only while the app is open.
       </Text>
-      <Button label="Back to Home" variant="primary" onPress={() => router.replace('/')} />
+      <Button label="Back to Home" variant="primary" onPress={goHome} />
     </Screen>
   );
 }

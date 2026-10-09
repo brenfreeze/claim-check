@@ -8,7 +8,7 @@ import { useCheck } from '../../src/ui/checkStore';
 import { ClaimCard } from '../../src/ui/components/claims';
 import { NotFound } from '../../src/ui/components/NotFound';
 import { OfflineBanner, SignalsPanel } from '../../src/ui/components/panels';
-import { Card, IconButton, Meta, Screen, ScreenHeader } from '../../src/ui/components/primitives';
+import { Card, goHome, IconButton, Meta, Screen, ScreenHeader } from '../../src/ui/components/primitives';
 import { corpusLine, ENGINE_NAME, plural, relativeTime, seconds, SOURCE_LABEL, VERDICT_LABEL, verdictTotals } from '../../src/ui/format';
 import { ChipIcon, ShareIcon, ShieldIcon } from '../../src/ui/icons';
 import { color, font, radius, type } from '../../src/ui/tokens';
@@ -34,7 +34,7 @@ export default function Results() {
     <Screen>
       <ScreenHeader
         title="Results"
-        onBack={() => router.replace('/')}
+        onBack={goHome}
         right={
           <IconButton label="Share results" onPress={() => void Share.share({ message: shareText(check) })} disabled={!claims.length}>
             <ShareIcon size={20} />

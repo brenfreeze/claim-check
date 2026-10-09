@@ -27,9 +27,13 @@ export default function Home() {
   const recent = useRecentChecks(5);
   const corpus = corpusInfo();
 
+  // Re-read on change, not only at mount: a link or share can arrive while Home is already open.
   useEffect(() => {
     if (shared) setText(shared);
   }, [shared]);
+  useEffect(() => {
+    if (linked) setText(linked);
+  }, [linked]);
 
   if (AUTORUN) return <Redirect href="/spike" />;
 

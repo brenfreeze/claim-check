@@ -54,8 +54,15 @@ export function ScreenHeader({ title, titleStyle, right, onBack, backLabel = 'Ba
   );
 }
 
+/** Back as a pop animation; with no history (deep link, reload) fall back to Home. */
 export function goBack() {
   if (router.canGoBack()) router.back();
+  else router.dismissTo('/');
+}
+
+/** Pop back to Home (Results / Analyzing exits), animating as a pop rather than a forward push. */
+export function goHome() {
+  if (router.canDismiss()) router.dismissTo('/');
   else router.replace('/');
 }
 

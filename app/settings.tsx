@@ -14,6 +14,10 @@ import { relativeTime } from '../src/ui/format';
 import { ChevronRight, ShieldIcon } from '../src/ui/icons';
 import { color, font, radius } from '../src/ui/tokens';
 
+// Hidden for now: only on-device Decima runs checks (the Apple model fails on multi-sentence inputs; LAN/hosted
+// engines aren't built). The picker and its options stay in code for when they are.
+const SHOW_ENGINE_PICKER = false;
+
 const SOURCES: { key: keyof Settings['factcheckSources']; label: string }[] = [
   { key: 'verafiles', label: 'Vera Files' },
   { key: 'rappler', label: 'Rappler' },
@@ -34,20 +38,22 @@ export default function SettingsScreen() {
     <Screen gap={22}>
       <ScreenHeader title="Settings" right={<EngineBadge label={shortBadge(current.badge)} icon={false} />} />
 
-      <View style={{ gap: 10 }}>
-        <SectionLabel>Decision engine</SectionLabel>
-        <View style={{ gap: 8 }} accessibilityRole="radiogroup">
-          {options.map((o) => (
-            <EngineOptionRow key={o.id} option={o} selected={o.id === current.id} onSelect={() => setSettings({ engine: o.id })} />
-          ))}
-        </View>
-        {!saved.available ? (
-          <Text style={styles.note}>
-            {saved.name} isn't available here ({saved.unavailableReason}). Checks use {current.name}.
-          </Text>
+      {SHOW_ENGINE_PICKER ? (
+        <View style={{ gap: 10 }}>
+          <SectionLabel>Decision engine</SectionLabel>
+          <View style={{ gap: 8 }} accessibilityRole="radiogroup">
+            {options.map((o) => (
+              <EngineOptionRow key={o.id} option={o} selected={o.id === current.id} onSelect={() => setSettings({ engine: o.id })} />
+            ))}
+          </View>
+          {!saved.available ? (
+            <Text style={styles.note}>
+              {saved.name} isn't available here ({saved.unavailableReason}). Checks use {current.name}.
+            </Text>
         ) : null}
         <ToggleRow label="Compare with hosted Jev side by side" value={s.compareHosted} onChange={(v) => setSettings({ compareHosted: v })} bare />
       </View>
+      ) : null}
 
       <View style={{ gap: 10 }}>
         <SectionLabel>On-device model</SectionLabel>

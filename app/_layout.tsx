@@ -44,7 +44,11 @@ export default function RootLayout() {
   return (
     <SafeAreaProvider>
       <StatusBar style="dark" />
-      <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: color.bg } }} />
+      <Stack screenOptions={{ headerShown: false, contentStyle: { backgroundColor: color.bg } }}>
+        {/* Analyzing → Results and Retry replace the screen in place: fade, don't slide like a new push. */}
+        <Stack.Screen name="check/[id]" options={{ animation: 'fade' }} />
+        <Stack.Screen name="results/[id]" options={{ animation: 'fade' }} />
+      </Stack>
     </SafeAreaProvider>
   );
 }
