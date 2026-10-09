@@ -1,9 +1,9 @@
 import * as ImagePicker from 'expo-image-picker';
-import { router } from 'expo-router';
+import { router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Image, Platform, Pressable, StyleSheet, Text, View } from 'react-native';
 import type { OcrResult } from '../src/core/checkTypes';
-import { recognizeText } from '../src/core/ocr';
+import { demoScreenshotUri, recognizeText } from '../src/core/ocr';
 import { startCheck } from '../src/ui/checkStore';
 import { Button, Meta, Screen, ScreenHeader, SectionLabel } from '../src/ui/components/primitives';
 import { plural } from '../src/ui/format';
@@ -13,15 +13,20 @@ import { color, font, radius } from '../src/ui/tokens';
 const CLAIM_GATE = 0.5;
 
 export default function Scan() {
+  // /scan?demo=1 skips the photo picker and reads the bundled demo screenshot with the same on-device OCR
+  const { demo } = useLocalSearchParams<{ demo?: string }>();
   const [uri, setUri] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(null);
   const [ocr, setOcr] = useState<OcrResult | null>(null);
   const [checked, setChecked] = useState<boolean[]>([]);
   const [picking, setPicking] = useState(true);
 
-  const pick = async () => {
+  const pick = async (useDemo = false) => {
     setPicking(true);
+    setError(null);
     let picked: string | null = null;
-    if (Platform.OS !== 'web') {
+    if (useDemo) picked = await demoScreenshotUri();
+    else if (Platform.OS !== 'web') {
       const res = await ImagePicker.launchImageLibraryAsync({ mediaTypes: ['images'], quality: 1 });
       if (res.canceled) {
         setPicking(false);
@@ -31,14 +36,18 @@ export default function Scan() {
       picked = res.assets[0]?.uri ?? null;
     }
     setUri(picked);
-    const out = await recognizeText(picked);
-    setOcr(out);
-    setChecked(out.sentences.map((s) => s.claimScore >= CLAIM_GATE));
+    try {
+      const out = await recognizeText(picked);
+      setOcr(out);
+      setChecked(out.sentences.map((s) => s.claimScore >= CLAIM_GATE));
+    } catch (e) {
+      setError(e instanceof Error ? e.message : String(e));
+    }
     setPicking(false);
   };
 
   useEffect(() => {
-    void pick();
+    void pick(demo === '1');
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -78,6 +87,10 @@ export default function Scan() {
           </View>
         )}
       </Pressable>
+
+      <Button label="Use demo screenshot" height={40} onPress={() => void pick(true)} />
+
+      {error ? <Meta style={{ color: color.verdict.contradicted.fg }}>{error}</Meta> : null}
 
       <View style={styles.rowBetween}>
         <SectionLabel>Detected sentences</SectionLabel>

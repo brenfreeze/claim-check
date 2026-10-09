@@ -11,7 +11,7 @@ import { startCheck, useRecentChecks } from '../src/ui/checkStore';
 import { Button, IconButton, Meta, Screen, SectionLabel } from '../src/ui/components/primitives';
 import { EngineBadge, InfoPill } from '../src/ui/components/verdict';
 import { plural, recentMeta, relativeTime } from '../src/ui/format';
-import { CameraIcon, ChevronRight, ClipboardIcon, ShareIcon, SlidersIcon } from '../src/ui/icons';
+import { CameraIcon, ChevronRight, ClipboardIcon, SlidersIcon } from '../src/ui/icons';
 import { color, font, radius, type } from '../src/ui/tokens';
 
 // The Phase 0 device protocol (EXPO_PUBLIC_AUTORUN=1) still launches straight into the spike screen.
@@ -49,7 +49,7 @@ export default function Home() {
     <Screen>
       <View style={styles.header}>
         <View style={styles.brand}>
-          <Text style={styles.wordmark}>Claim-Check</Text>
+          <Text style={styles.wordmark}>CheckitFirst</Text>
           <View style={styles.region}>
             <Text style={styles.regionText}>PH</Text>
           </View>
@@ -69,7 +69,7 @@ export default function Home() {
           Check what you just read.
         </Text>
         <Text style={styles.lede}>
-          Paste a post, share it from Facebook, or scan a screenshot. Every claim is matched against saved fact-checks, right on this
+          Paste a post or scan a screenshot. Every claim is matched against saved fact-checks, right on this
           phone.
         </Text>
       </View>
@@ -99,10 +99,10 @@ export default function Home() {
         <Button label="Paste" icon={<ClipboardIcon />} onPress={() => void paste()} style={{ flex: 1 }} />
       </View>
 
-      <View style={styles.hint}>
-        <ShareIcon size={16} color={color.inkMuted} />
-        <Text style={styles.hintText}>Or tap Share → Claim-Check in Facebook, Chrome or X.</Text>
-      </View>
+      <Pressable accessibilityRole="button" onPress={() => router.push('/scan?demo=1')} style={styles.hint}>
+        <CameraIcon size={16} color={color.inkMuted} />
+        <Text style={styles.hintText}>Or try the demo screenshot →</Text>
+      </Pressable>
 
       {recent.length ? (
         <View style={{ gap: 8, marginTop: 2 }}>

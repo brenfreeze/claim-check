@@ -1,4 +1,6 @@
 import ExpoModulesCore
+import UIKit
+import Vision
 #if canImport(FoundationModels)
 import FoundationModels
 #endif
@@ -39,7 +41,31 @@ public class AppleLlmModule: Module {
       #endif
       throw AppleLlmUnavailable()
     }
+
+    // On-device OCR (Apple Vision) for the Scan screen: text lines top to bottom, each with its normalized top edge and
+    // height so JS can group lines into paragraphs. Language correction is off: it "fixes" Tagalog words into English.
+    AsyncFunction("recognizeText") { (uri: String) async throws -> [[String: Any]] in
+      let url = uri.hasPrefix("file://") ? URL(string: uri) : URL(fileURLWithPath: uri)
+      guard let url = url, let data = try? Data(contentsOf: url), let image = UIImage(data: data)?.cgImage else {
+        throw OcrImageUnreadable()
+      }
+      return try await Task.detached(priority: .userInitiated) { () throws -> [[String: Any]] in
+        let request = VNRecognizeTextRequest()
+        request.recognitionLevel = .accurate
+        request.usesLanguageCorrection = false
+        try VNImageRequestHandler(cgImage: image, options: [:]).perform([request])
+        return (request.results ?? []).compactMap { obs -> [String: Any]? in
+          guard let top = obs.topCandidates(1).first else { return nil }
+          let box = obs.boundingBox
+          return ["text": top.string, "top": 1 - box.maxY, "height": box.height, "left": box.minX]
+        }
+      }.value
+    }
   }
+}
+
+struct OcrImageUnreadable: Error, CustomStringConvertible {
+  var description: String { "Could not read the screenshot" }
 }
 
 struct AppleLlmUnavailable: Error, CustomStringConvertible {

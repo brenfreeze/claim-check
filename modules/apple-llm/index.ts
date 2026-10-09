@@ -4,6 +4,15 @@ import type { LlmBackend } from '../../src/engine';
 interface AppleLlmNative {
   availability(): { available: boolean; reason: string };
   respond(instructions: string, prompt: string, permissive: boolean): Promise<string>;
+  recognizeText(uri: string): Promise<OcrLine[]>;
+}
+
+/** One OCR line; top/height/left are fractions of the image size, top measured from the top edge. */
+export interface OcrLine {
+  text: string;
+  top: number;
+  height: number;
+  left: number;
 }
 
 // iOS only; null on Android (the module isn't built there).
@@ -21,4 +30,10 @@ export function appleLlmBackend({ permissive = true } = {}): LlmBackend {
       return native.respond(instructions, prompt, permissive);
     },
   };
+}
+
+/** On-device OCR with Apple Vision (iOS only). */
+export function recognizeTextLines(uri: string): Promise<OcrLine[]> {
+  if (!native) return Promise.reject(new Error('On-device OCR is not available on this platform'));
+  return native.recognizeText(uri);
 }
