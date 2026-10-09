@@ -1,5 +1,5 @@
 // Builds the XLM-R tokenizer from tokenizer.json and reports construction time and heap growth (Node).
-//   node scripts/bench-tokenizer.js
+//   node --expose-gc scripts/bench-tokenizer.js
 const fs = require('fs');
 const path = require('path');
 const { Tokenizer } = require('@huggingface/tokenizers');

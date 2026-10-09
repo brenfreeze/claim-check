@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 # Tokenizer parity on a real Hermes VM (laptop): src/engine tokenizer + text rendering vs the Python reference.
 #   scripts/hermes-tokenizer-parity.sh      (needs ~/.jsvu/bin/hermes: npx --yes jsvu --os=mac64arm --engines=hermes)
+# Also needs network on first run (`npx --yes esbuild@0.25` is fetched, not a project dependency), and relies on
+# @babel/core + the four @babel/plugin-transform-* plugins below being present transitively via Expo (not declared
+# in package.json) — if an Expo upgrade drops one, add it as a devDependency.
 set -euo pipefail
 cd "$(dirname "$0")/.."
 HERMES="${HERMES:-$HOME/.jsvu/bin/hermes}"

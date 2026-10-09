@@ -16,7 +16,7 @@ Device: `sdk_gphone64_arm64` emulator, Android 17 (API 37), 4 vCPU on an Apple M
 | Order-change flips | 0 | **0** (20 fixtures × 3 option orders, on device and in Python) |
 | Accuracy, English (of 10) | ≥ 7 | **5** ✗ |
 | Accuracy, Taglish (of 10) | ≥ 6 | **4** ✗ |
-| Median / p95 warm decision | ≤ 150 / ≤ 300 ms | **21 / 71 ms** at 2 threads (1T 31 / 66, 4T 35 / 78). Before the cold-load fix: 32 / 130 ms |
+| Median / p95 warm decision | ≤ 150 / ≤ 300 ms | **21 / 71 ms** at 2 threads (1T 31 / 66, 4T 35 / 78). Before the cold-load fix: 32 / 130 ms. That gain is mostly native `encodeState`, which this work didn't change, so it's likely run-to-run/host variance rather than an effect of the fix |
 | Cold load | ≤ 3 s | **1.5–1.7 s** ✓ (2T 1.6 s; before the fix 3.5–4.1 s, 2T 3.5 s): file read 0.8–1.1 s, tokenizer build 0.4–0.6 s (was 2.1–2.6 s). Both ORT sessions now build alongside them |
 | Peak memory | ≤ 500 MB | **Engine adds 0.25–0.28 GB PSS** (was ~0.32 GB). The whole debug process peaks at 0.49–0.51 GB PSS (dumpsys; was 0.56–0.57) / 0.63–0.66 GB RSS (VmHWM; was 0.70). The debug build's baseline is 0.23 GB PSS before load, so a release build still needs measuring |
 
@@ -90,9 +90,10 @@ Caveats: n = 20, and I drafted the labels from Rappler and VERA Files fact-check
 
 ## What Phase 1 inherits
 
-- `src/engine/`: the `DecisionEngine` contract from the parent PRD, `OnDeviceDecimaEngine` (ORT injected, so the same class runs on Node and React Native), the tokenizer, input rendering, post-processing, the System One mapping, and `release()`. Jest: 416 tests (`npm test`), covering SP-03 to SP-06 and SP-10 against `fixtures/phase0.reference.json`.
+- `src/engine/`: the `DecisionEngine` contract from the parent PRD, `OnDeviceDecimaEngine` (ORT injected, so the same class runs on Node and React Native), the tokenizer, input rendering, post-processing, the System One mapping, and `release()`. Jest: 421 tests (`npm test`), covering SP-03 to SP-06 and SP-10 against `fixtures/phase0.reference.json`.
 - `fixtures/phase0.json`, plus the Python reference harness `harness/export_reference.py` (`npm run reference`).
 - `patches/onnxruntime-react-native+1.24.3.patch` and `react-native.config.js`, both needed for any Android build.
+- `patches/@huggingface+tokenizers+0.2.0.patch` (trie-free Unigram), version-locked to 0.2.0 (both patched packages are pinned exactly in `package.json`). It is what takes the tokenizer build from 2.1–2.6 s to 0.4–0.6 s on the emulator. Re-run `scripts/hermes-tokenizer-parity.sh` after any tokenizer upgrade; a Jest guard fails if the patch is not applied.
 
 ## Conditions and open items
 
@@ -111,7 +112,7 @@ Caveats: n = 20, and I drafted the labels from Rappler and VERA Files fact-check
 ## Reproduce
 
 ```bash
-npm install                         # applies the onnxruntime-react-native patch
+npm install                         # applies both patches (onnxruntime-react-native, @huggingface/tokenizers)
 uvx --from 'huggingface_hub[cli]' hf download amyrmahdy/decima-small --include 'onnx/int8/*' --local-dir models/decima-small
 npm run reference                   # Python reference → fixtures/phase0.reference.json
 npm test                            # engine vs reference on onnxruntime-node

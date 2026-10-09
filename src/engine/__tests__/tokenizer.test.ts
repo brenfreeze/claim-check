@@ -42,3 +42,11 @@ test('batch padding: pad id 1, mask 0 on padding, rows padded to the longest', (
   expect(ids[0].slice(short.length).every((x) => x === 1)).toBe(true);
   expect(mask[0]).toEqual([...short.map(() => 1), ...Array(width - short.length).fill(0)]);
 });
+
+test('patches/@huggingface+tokenizers+0.2.0.patch is applied (trie-free Unigram)', () => {
+  // XlmrTokenizer keeps the HF Tokenizer in private `tok`; its Unigram model is `.model`. Unpatched 0.2.0 builds a
+  // 250k-piece CharTrie (`trie`) and has no `max_piece_chars`. If this fails, run `npm install` (postinstall applies it).
+  const model = (tok as any).tok.model;
+  expect(model.max_piece_chars).toBe(16);
+  expect(model.trie).toBeUndefined();
+});
