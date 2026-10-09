@@ -76,6 +76,10 @@ export function FactcheckBlock({ source, related }: { source: EvidenceSource; re
         </Text>
         {source.claimReview ? <RatingPill rating={source.claimReview.rating} small /> : null}
       </View>
+      {/* ClaimReview summaries are often cut short at the source ("…"); the full text lives on the publisher's page */}
+      <Text accessibilityRole="link" onPress={() => void Linking.openURL(source.url)} suppressHighlighting style={styles.fcLink}>
+        Read full fact-check on {source.domain} ↗
+      </Text>
     </View>
   );
 }
@@ -193,6 +197,7 @@ const styles = StyleSheet.create({
   failed: { fontFamily: font.body, fontSize: 12.5, color: color.verdict.contradicted.fg },
   publisher: { fontFamily: font.bodySemibold, fontSize: 14.5, color: color.ink },
   domain: { fontFamily: font.mono, fontSize: 11, color: color.inkMuted },
+  fcLink: { fontFamily: font.bodyMedium, fontSize: 13, color: color.link },
   snippet: { fontFamily: font.body, fontSize: 13.5, lineHeight: 20, color: color.inkBody },
   mark: { backgroundColor: '#FFF1A8' },
   stance: { fontFamily: font.bodySemibold, fontSize: 12.5 },
