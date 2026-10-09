@@ -11,6 +11,8 @@ dependencies = [
 train = [
     "datasets>=5.1.0",
     "onnx>=1.23.2",
+    "sacremoses>=0.2.0",
     "safetensors>=0.8.0",
+    "sentencepiece>=0.2.2",
     "torch>=2.14.1",
 ]

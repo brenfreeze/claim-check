@@ -47,3 +47,6 @@ __pycache__/
 
 # device protocol scratch
 results/device/metro-*.log
+
+# machine-translated MNLI (CC BY-SA parts; regenerate with harness/translate_mnli.py)
+harness/data/mnli_tl.jsonl
