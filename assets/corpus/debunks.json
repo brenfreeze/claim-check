@@ -190,16 +190,6 @@
     "lang": "en"
   },
   {
-    "id": "1cszeez",
-    "claim": "A video shows President Ferdinand Marcos Jr. privately telling his cousin, former House speaker Martin Romualdez, that his arrest is only for show, and that he would be acquitted as long as he stays silent.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2026-09-23",
-    "url": "https://www.rappler.com/newsbreak/fact-check/ai-video-ferdinand-marcos-jr-martin-romualdez-arrest-staged/",
-    "summary": "FACT CHECK: Video of Marcos saying Romualdez's arrest is ...",
-    "lang": "en"
-  },
-  {
     "id": "xkr47b",
     "claim": "Palace Press Officer Claire Castro said President Ferdinand Marcos Jr. will run for vice president in the 2028 elections, but does not want to have incumbent Vice President Sara Duterte to serve as president.",
     "rating": "false",
@@ -210,6 +200,16 @@
     "lang": "en"
   },
   {
+    "id": "1cszeez",
+    "claim": "A video shows President Ferdinand Marcos Jr. privately telling his cousin, former House speaker Martin Romualdez, that his arrest is only for show, and that he would be acquitted as long as he stays silent.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2026-09-23",
+    "url": "https://www.rappler.com/newsbreak/fact-check/ai-video-ferdinand-marcos-jr-martin-romualdez-arrest-staged/",
+    "summary": "FACT CHECK: Video of Marcos saying Romualdez's arrest is ...",
+    "lang": "en"
+  },
+  {
     "id": "1cqkk9z",
     "claim": "Former president Rodrigo Duterte is asking for support for his daughter, Sara Duterte, who is facing an impeachment trial.",
     "rating": "false",
@@ -217,16 +217,6 @@
     "date": "2026-09-23",
     "url": "https://verafiles.org/articles/fact-check-clip-of-duterte-seeking-support-for-daughter-vp-sara-ai-manipulated",
     "summary": "Clip of Duterte seeking support for VP Sara AI-MANIPULATED",
-    "lang": "en"
-  },
-  {
-    "id": "1qtij2",
-    "claim": "Naga City Mayor Leni Robredo challenged Vice President Sara Duterte to a debate for the 2028 presidential elections.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2026-09-23",
-    "url": "https://www.rappler.com/newsbreak/fact-check/no-video-announce-leni-robredo-presidential-debate-sara-duterte/",
-    "summary": "FACT CHECK: No video of Robredo announcing presidential ...",
     "lang": "en"
   },
   {
@@ -437,16 +427,6 @@
     "date": "2026-09-01",
     "url": "https://factcheck.afp.com/doc.afp.com.C6QV6CQ",
     "summary": "Video shows orangutans moved to rehabilitation centre, not evacuated from Indonesian wildfires",
-    "lang": "en"
-  },
-  {
-    "id": "k6ceef",
-    "claim": "Sara Duterte leads 2028 presidential preference survey with 45% in Luzon, 70% in Visayas, and 80% in Mindanao.",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2026-09-01",
-    "url": "https://verafiles.org/articles/fact-check-survey-graphic-on-sara-duterte-2028-lead-ai-generated-2",
-    "summary": "FACT CHECK: Survey graphic on Sara Duterte 2028 lead AI ...",
     "lang": "en"
   },
   {
@@ -1050,6 +1030,16 @@
     "lang": "en"
   },
   {
+    "id": "12dfyj2",
+    "claim": "Former Ako Bicol representative Zaldy Co has resurfaced to defend critics of the Marcos administration, saying dissenters are being intimidated and abducted to suppress the truth behind the flood control corruption scandal.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2026-06-25",
+    "url": "https://www.rappler.com/newsbreak/fact-check/zaldy-co-video-marcos-admin-harassing-critics-ai-generated/",
+    "summary": "FACT CHECK: Video of Zaldy Co claiming Marcos gov't is harassing ...",
+    "lang": "en"
+  },
+  {
     "id": "d81i5h",
     "claim": "No budget has been allotted to help victims of the June 8 earthquake in Mindanao because they are Duterte supporters.",
     "rating": "false",
@@ -1340,16 +1330,6 @@
     "lang": "en"
   },
   {
-    "id": "47tlp6",
-    "claim": "The World Bank testified in the impeachment case of Vice President Sara Duterte.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2026-05-18",
-    "url": "https://www.rappler.com/newsbreak/fact-check/world-bank-did-not-testify-vice-president-sara-duterte-impeachment/",
-    "summary": "FACT CHECK: World Bank did not testify in House impeachment ...",
-    "lang": "en"
-  },
-  {
     "id": "krqae3",
     "claim": "Photos of air conditioners gifted to 4Ps households in the Philippines.",
     "rating": "false",
@@ -1547,6 +1527,16 @@
     "date": "2026-04-20",
     "url": "https://factcheck.afp.com/doc.afp.com.A7PV4G3",
     "summary": "Posts share altered image to falsely accuse media of hiding ...",
+    "lang": "en"
+  },
+  {
+    "id": "1grr7iq",
+    "claim": "Philippine presidential office confirms President Marcos has colon cancer",
+    "rating": "false",
+    "publisher": "AFP Fact Check",
+    "date": "2026-04-20",
+    "url": "https://factcheck.afp.com/doc.afp.com.A7PY6G3",
+    "summary": "Fabricated graphic misuses news outlet logos to spread false claim ...",
     "lang": "en"
   },
   {
@@ -1940,16 +1930,6 @@
     "lang": "en"
   },
   {
-    "id": "xdw7pm",
-    "claim": "Judges of the International Criminal Court (ICC) walked out during the opening statement of lawyer Joel Butuyan on the first day of former president Rodrigo Duterte’s confirmation of charges hearing at The Hague, Netherlands.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2026-02-26",
-    "url": "https://www.rappler.com/newsbreak/fact-check/icc-judges-not-walk-out-joel-butuyan-rodrigo-duterte-case/",
-    "summary": "FACT CHECK: ICC judges did not walk out during Joel Butuyan's ...",
-    "lang": "en"
-  },
-  {
     "id": "1yfnxq5",
     "claim": "An old photo of former president Rodrigo Duterte holding an assault rifle was presented at the confirmation of charges hearing at the International Criminal Court (ICC) to show that he was behind the extrajudicial killings.",
     "rating": "misleading",
@@ -2170,16 +2150,6 @@
     "lang": "en"
   },
   {
-    "id": "1at6h54",
-    "claim": "Former president Rodrigo Duterte was allowed to leave the International Criminal Court (ICC) detention center for an hour to be with his family, as seen in a photo of him and his daughter, Vice President Sara Duterte.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2026-02-02",
-    "url": "https://www.rappler.com/newsbreak/fact-check/rodrigo-duterte-not-leave-icc-detention-one-hour-photo-ai-generated/",
-    "summary": "FACT CHECK: Duterte did not leave ICC detention for one hour ...",
-    "lang": "en"
-  },
-  {
     "id": "wuq59y",
     "claim": "Photos on social media show President Ferdinand Marcos Jr. lying in a hospital bed with a ventilator.",
     "rating": "false",
@@ -2207,16 +2177,6 @@
     "date": "2026-01-29",
     "url": "https://www.rappler.com/newsbreak/fact-check/veronica-kitty-duterte-rodrigo-health/",
     "summary": "FACT CHECK: Photo of Kitty Duterte ‘in tears’ due to father’s health is altered",
-    "lang": "en"
-  },
-  {
-    "id": "oq6n5k",
-    "claim": "Work and classes will be suspended from January 28 to 31 because of a “super flu” outbreak.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2026-01-28",
-    "url": "https://www.rappler.com/newsbreak/fact-check/no-class-work-suspensions-super-flu-outbreak-january-2026/",
-    "summary": "FACT CHECK: No class, work suspensions because of 'super flu ...",
     "lang": "en"
   },
   {
@@ -2297,16 +2257,6 @@
     "date": "2026-01-12",
     "url": "https://factcheck.afp.com/doc.afp.com.89UX8T3",
     "summary": "Fabricated Trump quote on detained Philippine ex-leader misleads online",
-    "lang": "en"
-  },
-  {
-    "id": "1qpycm8",
-    "claim": "Iulia Motoc, presiding judge of the International Criminal Court (ICC) Pre-Trial Chamber I handling the case of former Philippine president Rodrigo Duterte, is dead.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2026-01-09",
-    "url": "https://www.rappler.com/newsbreak/fact-check/icc-judge-iulia-motoc-alive/",
-    "summary": "FACT CHECK: ICC judge Iulia Motoc is alive",
     "lang": "en"
   },
   {
@@ -2450,6 +2400,16 @@
     "lang": "en"
   },
   {
+    "id": "uuf2oz",
+    "claim": "Steven Wolfe, the International Criminal Court (ICC)’s chief medical officer, recommends the release of former president Rodrigo Duterte for humanitarian and medical reasons.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-12-10",
+    "url": "https://www.rappler.com/newsbreak/fact-check/quote-card-rodrigo-duterte-health-cites-fake-doctor/",
+    "summary": "FACT CHECK: Quote card about Duterte's health cites fake doctor",
+    "lang": "en"
+  },
+  {
     "id": "qlbsoz",
     "claim": "President Ferdinand Marcos Jr. was rushed to the hospital due to a medical emergency.",
     "rating": "false",
@@ -2567,6 +2527,16 @@
     "date": "2025-12-04",
     "url": "https://www.rappler.com/newsbreak/fact-check/tropical-depression-wilma-not-super-typhoon-2025/",
     "summary": "FACT CHECK: Wilma is a tropical depression, not super typhoon",
+    "lang": "en"
+  },
+  {
+    "id": "rq7haz",
+    "claim": "Kabataan Party-list representative Renee Co is now criticizing the administration of President Ferdinand Jr. after flipping sides due to the issue of her “uncle” Zaldy Co.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-12-03",
+    "url": "https://www.rappler.com/newsbreak/fact-check/kabataan-representative-renee-co-critical-marcos-zaldy-co/",
+    "summary": "FACT CHECK: Kabataan Representative Renee Co critical of ...",
     "lang": "en"
   },
   {
@@ -2707,16 +2677,6 @@
     "date": "2025-11-20",
     "url": "https://factcheck.afp.com/doc.afp.com.84N6663",
     "summary": "CDC edits website to include false claims about vaccines and autism",
-    "lang": "en"
-  },
-  {
-    "id": "hb4h6l",
-    "claim": "The International Criminal Court (ICC) has no jurisdiction over the Philippine drug war cases concerning former president Rodrigo Duterte and Senator Ronald “Bato” dela Rosa.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-11-19",
-    "url": "https://www.rappler.com/newsbreak/fact-check/icc-jurisdiction-ph-drug-war-cases/",
-    "summary": "FACT CHECK: ICC has jurisdiction over PH drug war cases",
     "lang": "en"
   },
   {
@@ -2970,6 +2930,16 @@
     "lang": "en"
   },
   {
+    "id": "5kl7g2",
+    "claim": "President Ferdinand Marcos Jr. gave the “Special Presidential Award” to Filipina tennis star Alexandra Eala after she reached her career-high world ranking at No. 54.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-10-21",
+    "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-jr-no-presidential-award-tennis-star-alex-eala/",
+    "summary": "FACT CHECK: No 'Special Presidential Award' from Marcos to ...",
+    "lang": "en"
+  },
+  {
     "id": "19f5hup",
     "claim": "Former president Rodrigo Duterte is set to be released from his detention at the International Criminal Court (ICC) after the Supreme Court (SC) ruled in his favor and dismissed the petitions filed by human rights groups against him.",
     "rating": "false",
@@ -3140,16 +3110,6 @@
     "lang": "en"
   },
   {
-    "id": "1bdf23y",
-    "claim": "Senate President Vicente “Tito” Sotto III has confirmed the continuation of impeachment proceedings against Vice President Sara Duterte.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-09-26",
-    "url": "https://www.rappler.com/newsbreak/fact-check/plan-by-tito-sotto-revive-sara-duterte-impeachment-case/",
-    "summary": "FACT CHECK: No 'confirmed' plan by Sotto to revive Sara Duterte ...",
-    "lang": "en"
-  },
-  {
     "id": "skgx1f",
     "claim": "Former president Rodrigo Duterte has returned home to the Philippines, as shown in a video of himself with his daughter, Veronica “Kitty” Duterte.",
     "rating": "false",
@@ -3157,6 +3117,16 @@
     "date": "2025-09-26",
     "url": "https://www.rappler.com/newsbreak/fact-check/rodrigo-duterte-homecoming-video-use-old-clip-kitty-duterte/",
     "summary": "FACT CHECK: Duterte 'homecoming' video misuses old clip by ...",
+    "lang": "en"
+  },
+  {
+    "id": "1bdf23y",
+    "claim": "Senate President Vicente “Tito” Sotto III has confirmed the continuation of impeachment proceedings against Vice President Sara Duterte.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-09-26",
+    "url": "https://www.rappler.com/newsbreak/fact-check/plan-by-tito-sotto-revive-sara-duterte-impeachment-case/",
+    "summary": "FACT CHECK: No 'confirmed' plan by Sotto to revive Sara Duterte ...",
     "lang": "en"
   },
   {
@@ -3187,6 +3157,16 @@
     "date": "2025-09-25",
     "url": "https://factcheck.afp.com/doc.afp.com.767A2NQ",
     "summary": "No link between MMR vaccine and autism, despite researcher's arrest",
+    "lang": "en"
+  },
+  {
+    "id": "8db1iw",
+    "claim": "President Ferdinand Marcos Jr. gave Filipina tennis star Alexandra Eala a $100,000 bonus to support her participation at the Korea Open.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-09-24",
+    "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-bongbong-marcos-jr-give-tennis-star-alex-eala-100000-bonus/",
+    "summary": "FACT CHECK: Marcos did not give tennis star Alex Eala $100,000 ...",
     "lang": "en"
   },
   {
@@ -3287,16 +3267,6 @@
     "date": "2025-09-05",
     "url": "https://factcheck.afp.com/doc.afp.com.73JN7WE",
     "summary": "RFK Jr. repeats vaccine misinformation in Congressional testimony",
-    "lang": "en"
-  },
-  {
-    "id": "nlnchc",
-    "claim": "The Department of Social Welfare and Development (DSWD) announced the September 2025 payout schedule for its Unconditional Cash Transfer (UCT) program.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-09-03",
-    "url": "https://www.rappler.com/newsbreak/fact-check/post-september-payout-unconditional-cash-transfer-fake/",
-    "summary": "FACT CHECK: Post on September payout for Unconditional Cash ...",
     "lang": "en"
   },
   {
@@ -3507,16 +3477,6 @@
     "date": "2025-08-08",
     "url": "https://factcheck.afp.com/doc.afp.com.68YP6WE",
     "summary": "Social media posts misleadingly describe lenacapavir as a vaccine",
-    "lang": "en"
-  },
-  {
-    "id": "1d7925u",
-    "claim": "The House committee on good government and public accountability ended its probe on Vice President Sara Duterte’s alleged misuse of confidential funds last June due to a lack of evidence.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-08-07",
-    "url": "https://www.rappler.com/newsbreak/fact-check/house-panel-probe-closure-did-not-clear-sara-duterte-fund-misuse/",
-    "summary": "FACT CHECK: House panel probe closure didn't 'clear' Sara Duterte ...",
     "lang": "en"
   },
   {
@@ -3866,7 +3826,7 @@
     "publisher": "Rappler",
     "date": "2025-07-07",
     "url": "https://www.rappler.com/newsbreak/fact-check/house-representatives-did-not-withdraw-sara-duterte-impeachment-case/",
-    "summary": "FACT CHECK: House did not withdraw impeachment articles vs Sara Duterte",
+    "summary": "FACT CHECK: House did not withdraw impeachment articles vs ...",
     "lang": "en"
   },
   {
@@ -4040,6 +4000,16 @@
     "lang": "en"
   },
   {
+    "id": "16o565r",
+    "claim": "US President Donald Trump imposed sanctions on four International Criminal Court (ICC) judges because of former Philippine president Rodrigo Duterte's crimes against humanity case.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-06-19",
+    "url": "https://www.rappler.com/newsbreak/fact-check/rodrigo-duterte-not-reason-for-us-sanctions-icc-judges/",
+    "summary": "FACT CHECK: Duterte not the reason for US sanctions on ICC judges",
+    "lang": "en"
+  },
+  {
     "id": "1fdft6s",
     "claim": "A video features a woman saying the House of Representatives pushed for Vice President Sara Duterte’s impeachment not because of any corruption allegations, but to foil her 2028 presidential ambitions.",
     "rating": "false",
@@ -4057,16 +4027,6 @@
     "date": "2025-06-19",
     "url": "https://www.rappler.com/newsbreak/fact-check/rodrigo-duterte-detained-icc-not-bound-for-malaysia/",
     "summary": "FACT CHECK: Duterte still detained at the ICC, not bound for Malaysia",
-    "lang": "en"
-  },
-  {
-    "id": "16o565r",
-    "claim": "US President Donald Trump imposed sanctions on four International Criminal Court (ICC) judges because of former Philippine president Rodrigo Duterte's crimes against humanity case.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-06-19",
-    "url": "https://www.rappler.com/newsbreak/fact-check/rodrigo-duterte-not-reason-for-us-sanctions-icc-judges/",
-    "summary": "FACT CHECK: Duterte not the reason for US sanctions on ICC judges",
     "lang": "en"
   },
   {
@@ -4117,16 +4077,6 @@
     "date": "2025-06-18",
     "url": "https://www.rappler.com/newsbreak/fact-check/sara-duterte-ovp-not-zero-budget-2025/",
     "summary": "FACT CHECK: Duterte’s OVP not working with 'zero budget' for 2025",
-    "lang": "en"
-  },
-  {
-    "id": "c9tzqe",
-    "claim": "Senators from the 19th Congress resigned from office amid the impeachment trial of Vice President Sara Duterte.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-06-18",
-    "url": "https://www.rappler.com/newsbreak/fact-check/senators-did-not-resign-sara-duterte-impeachment-trial/",
-    "summary": "FACT CHECK: Senators did not resign amid Sara Duterte's impeachment trial",
     "lang": "en"
   },
   {
@@ -4210,16 +4160,6 @@
     "lang": "en"
   },
   {
-    "id": "75onml",
-    "claim": "Former President Rodrigo Duterte is now on interim release from his detention center in The Hague, Netherlands.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-06-13",
-    "url": "https://www.rappler.com/newsbreak/fact-check/no-decision-yet-duterte-interim-release-request/",
-    "summary": "FACT CHECK: No decision yet on Duterte's interim release request",
-    "lang": "en"
-  },
-  {
     "id": "jy2o6p",
     "claim": "A TV Patrol social media card shows former president Rodrigo Duterte aboard a plane, claiming his return from the Netherlands after his case at the International Criminal Court (ICC) has been dismissed.",
     "rating": "false",
@@ -4230,6 +4170,16 @@
     "lang": "en"
   },
   {
+    "id": "75onml",
+    "claim": "Former President Rodrigo Duterte is now on interim release from his detention center in The Hague, Netherlands.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-06-13",
+    "url": "https://www.rappler.com/newsbreak/fact-check/no-decision-yet-duterte-interim-release-request/",
+    "summary": "FACT CHECK: No decision yet on Duterte's interim release request",
+    "lang": "en"
+  },
+  {
     "id": "1vzdjis",
     "claim": "Former President Rodrigo Duterte has been allowed to return to the Philippines by the International Criminal Court (ICC).",
     "rating": "false",
@@ -4237,6 +4187,16 @@
     "date": "2025-06-12",
     "url": "https://www.rappler.com/newsbreak/fact-check/icc-not-yet-released-duterte-return-philippines/",
     "summary": "FACT CHECK: ICC has not yet released Duterte to return to PH",
+    "lang": "en"
+  },
+  {
+    "id": "j2vveh",
+    "claim": "Ang Department of Social Welfare and Development ay namimigay ng P2,000 hanggang P6,000 sa mga estudyante kada Sabado mula June 7 hanggang 28.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2025-06-11",
+    "url": "https://verafiles.org/articles/fact-check-ang-dswd-ay-hindi-namimigay-ng-ayuda-sa-mga-estudyante",
+    "summary": "FACT CHECK: Ang DSWD ay HINDI namimigay ng ayuda sa mga ...",
     "lang": "en"
   },
   {
@@ -4300,16 +4260,6 @@
     "lang": "en"
   },
   {
-    "id": "w3pyha",
-    "claim": "Chiz Escudero killed Duterte impeachment case",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2025-06-05",
-    "url": "https://verafiles.org/articles/fact-check-escudero-did-not-dismiss-duterte-impeachment-case",
-    "summary": "Escudero did not kill Duterte impeachment case",
-    "lang": "en"
-  },
-  {
     "id": "254yr3",
     "claim": "Graphic bearing the logos of ABS-CBN News and TV Patrol says Rodrigo Duterte is returning to the Philippines.",
     "rating": "false",
@@ -4317,6 +4267,16 @@
     "date": "2025-06-05",
     "url": "https://verafiles.org/articles/fact-check-graphic-saying-duterte-will-return-to-ph-fake",
     "summary": "FAKE ABS-CBN graphic used to claim Duterte returning to PH",
+    "lang": "en"
+  },
+  {
+    "id": "w3pyha",
+    "claim": "Chiz Escudero killed Duterte impeachment case",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2025-06-05",
+    "url": "https://verafiles.org/articles/fact-check-escudero-did-not-dismiss-duterte-impeachment-case",
+    "summary": "Escudero did not kill Duterte impeachment case",
     "lang": "en"
   },
   {
@@ -4460,6 +4420,16 @@
     "lang": "en"
   },
   {
+    "id": "92dkoq",
+    "claim": "Davao City 1st District Representative Paolo Duterte has replaced current House Speaker Martin Romualdez as speaker.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-05-28",
+    "url": "https://www.rappler.com/newsbreak/fact-check/paolo-duterte-not-new-house-speaker/",
+    "summary": "FACT CHECK: Paolo Duterte not new House Speaker",
+    "lang": "en"
+  },
+  {
     "id": "14fmbop",
     "claim": "A link supposedly allows motorists to check online if they have violations under the reimplemented No Contact Apprehension Program by the MMDA.",
     "rating": "false",
@@ -4510,14 +4480,14 @@
     "lang": "en"
   },
   {
-    "id": "1lbjtxv",
-    "claim": "Over 17 million Filipinos had their ballots invalidated due to overvoting for senators.",
+    "id": "1s206t0",
+    "claim": "Ang DepEd ay hindi na tatanggap ng mga estudyanteng kinder at grade 11",
     "rating": "false",
     "publisher": "VERA Files",
-    "date": "2025-05-23",
-    "url": "https://verafiles.org/articles/fact-check-14-million-people-overvoted-for-senators-on-may-12-not-16-17-million",
-    "summary": "1.4 million people overvoted on May 12, NOT 16-17 million",
-    "lang": "en"
+    "date": "2025-05-26",
+    "url": "https://verafiles.org/articles/fact-check-hindi-tinanggal-ng-deped-ang-kindergarten-at-grade-11",
+    "summary": "FACT CHECK: HINDI tinanggal ng DepEd ang kindergarten at grade 11",
+    "lang": "fil"
   },
   {
     "id": "1vk6bcr",
@@ -4557,6 +4527,16 @@
     "date": "2025-05-23",
     "url": "https://www.rappler.com/newsbreak/fact-check/rodrigo-duterte-sand-sculpture-image-ai-generated/",
     "summary": "FACT CHECK: Duterte sand sculpture image is AI-generated",
+    "lang": "en"
+  },
+  {
+    "id": "zdflvc",
+    "claim": "Ferdinand “Bongbong” Marcos Jr. is the original author of the Universal Access to Quality Tertiary Education Act.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2025-05-22",
+    "url": "https://verafiles.org/articles/fact-check-marcos-not-original-author-of-free-college-tuition-law",
+    "summary": "FACT CHECK: Marcos NOT 'original author' of free college tuition law",
     "lang": "en"
   },
   {
@@ -4770,13 +4750,23 @@
     "lang": "en"
   },
   {
-    "id": "dow5ux",
-    "claim": "Video shows the arrival of former president Rodrigo Duterte at the Manila International Airport.",
+    "id": "14ziwbf",
+    "claim": "Mamimigay ng limang libong pisong ayuda si Bong Go sa mga bumoto sa kanya nitong May 12.",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2025-05-15",
-    "url": "https://verafiles.org/articles/fact-check-old-clips-used-to-show-duterte-arrival-at-manila-international-airport",
-    "summary": "FACT CHECK: OLD clips used to show Duterte arrival at Manila ...",
+    "url": "https://verafiles.org/articles/fact-check-walang-5k-ayuda-para-sa-mga-bumoto-kay-bong-go",
+    "summary": "FACT CHECK: WALANG ₱5K ayuda para sa mga bumoto kay Bong ...",
+    "lang": "en"
+  },
+  {
+    "id": "7j2d5e",
+    "claim": "Pinagbigyan ng International Criminal Court (ICC) na pauwiin si dating pangulong Rodrigo Duterte sa Pilipinas.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2025-05-15",
+    "url": "https://verafiles.org/articles/fact-check-satire-ang-kumakalat-na-picture-na-nagsasabing-pinagbigyan-ng-icc-na-pauwiin-si-duterte",
+    "summary": "SATIRE na 'pinagbigyan' ng ICC na pauwiin si Duterte",
     "lang": "en"
   },
   {
@@ -4790,6 +4780,16 @@
     "lang": "en"
   },
   {
+    "id": "dow5ux",
+    "claim": "Video shows the arrival of former president Rodrigo Duterte at the Manila International Airport.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2025-05-15",
+    "url": "https://verafiles.org/articles/fact-check-old-clips-used-to-show-duterte-arrival-at-manila-international-airport",
+    "summary": "FACT CHECK: OLD clips used to show Duterte arrival at Manila ...",
+    "lang": "en"
+  },
+  {
     "id": "hbltj2",
     "claim": "Former president Rodrigo Duterte's case was junked by the International Criminal Court and he will be released soon, according to the ICC website.",
     "rating": "false",
@@ -4797,16 +4797,6 @@
     "date": "2025-05-15",
     "url": "https://verafiles.org/articles/fact-check-icc-did-not-junk-charges-vs-duterte",
     "summary": "Duterte charges NOT junked by ICC",
-    "lang": "en"
-  },
-  {
-    "id": "7j2d5e",
-    "claim": "Pinagbigyan ng International Criminal Court (ICC) na pauwiin si dating pangulong Rodrigo Duterte sa Pilipinas.",
-    "rating": "misleading",
-    "publisher": "VERA Files",
-    "date": "2025-05-15",
-    "url": "https://verafiles.org/articles/fact-check-satire-ang-kumakalat-na-picture-na-nagsasabing-pinagbigyan-ng-icc-na-pauwiin-si-duterte",
-    "summary": "SATIRE na 'pinagbigyan' ng ICC na pauwiin si Duterte",
     "lang": "en"
   },
   {
@@ -5690,16 +5680,6 @@
     "lang": "en"
   },
   {
-    "id": "1jthmqh",
-    "claim": "Quote cards from Fox News feature statements from personalities expressing support for former Philippine president Rodrigo Duterte following his arrest and transfer to the International Criminal Court (ICC).\n\nOne of the quote cards features an alleged statement from a certain Representative Peter Russo: “Mr. Duterte’s arrest was political suicide. The ICC violated simple human rights by arresting this humble man who stood up for his country from the evil we call drugs. The ICC must release him at all costs.”\n\nThe second quote card is attributed to Louis Marlowe Litt, who is described as a corporate attorney: “Wrongfully accused? Classic case of power play. The ICC has got it all wrong — this isn’t justice, it’s a political hit job. I do not and will not support President Marcos. Free PRRD! Philippines, you just got Litt up!”",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-03-25",
-    "url": "https://www.rappler.com/newsbreak/fact-check/fake-fox-news-quote-cards-defend-rodrigo-duterte-fictional-character/",
-    "summary": "FACT CHECK: Fake ‘Fox News’ quote cards defending Duterte cite fictional characters",
-    "lang": "en"
-  },
-  {
     "id": "1ccec4w",
     "claim": "Former president Rodrigo Duterte never ordered deaths in the war on drugs and his directive only focused on criminals who violently resisted arrest.",
     "rating": "false",
@@ -5707,6 +5687,16 @@
     "date": "2025-03-25",
     "url": "https://www.rappler.com/newsbreak/fact-check/rodrigo-duterte-drug-war-order-not-limited-suspects-resisted-arrest/",
     "summary": "FACT CHECK: Duterte drug war orders not limited to suspects resisting arrest",
+    "lang": "en"
+  },
+  {
+    "id": "1jthmqh",
+    "claim": "Quote cards from Fox News feature statements from personalities expressing support for former Philippine president Rodrigo Duterte following his arrest and transfer to the International Criminal Court (ICC).\n\nOne of the quote cards features an alleged statement from a certain Representative Peter Russo: “Mr. Duterte’s arrest was political suicide. The ICC violated simple human rights by arresting this humble man who stood up for his country from the evil we call drugs. The ICC must release him at all costs.”\n\nThe second quote card is attributed to Louis Marlowe Litt, who is described as a corporate attorney: “Wrongfully accused? Classic case of power play. The ICC has got it all wrong — this isn’t justice, it’s a political hit job. I do not and will not support President Marcos. Free PRRD! Philippines, you just got Litt up!”",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-03-25",
+    "url": "https://www.rappler.com/newsbreak/fact-check/fake-fox-news-quote-cards-defend-rodrigo-duterte-fictional-character/",
+    "summary": "FACT CHECK: Fake ‘Fox News’ quote cards defending Duterte cite fictional characters",
     "lang": "en"
   },
   {
@@ -5720,16 +5710,6 @@
     "lang": "en"
   },
   {
-    "id": "18sy07h",
-    "claim": "Judge Tomoko Akane, president of the International Criminal Court (ICC), has ordered the release of former Philippine president Rodrigo Duterte ahead of his birthday on March 28, along with the dismissal of his crimes against humanity charges.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-03-24",
-    "url": "https://www.rappler.com/newsbreak/fact-check/no-order-icc-president-release-rodrigo-duterte-birthday/",
-    "summary": "FACT CHECK: No order from ICC president to release Duterte ahead of his birthday",
-    "lang": "en"
-  },
-  {
     "id": "16pelq9",
     "claim": "Harvey Specter, a lawyer accredited by the International Criminal Court (ICC) and founder of a top New York City law firm, said the following statement in a quote card circulating online:\n\n“The case of Mr. Duterte is peculiar in such a way that the International Criminal Court lacks jurisdiction on the matter. The requisites required under International Law are not complied with.”\n\n“Filipinos still have the chance to bring home Mr. Duterte prior to September 2025, under the principle of Rigor Mortis. I encourage everyone to call on Mr. Duterte’s counsel to comply with the Rigor Mortis requirements.”",
     "rating": "false",
@@ -5737,6 +5717,16 @@
     "date": "2025-03-24",
     "url": "https://www.rappler.com/newsbreak/fact-check/harvey-spencer-quote-card-duterte-arrest/",
     "summary": "FACT CHECK: Quote card on Duterte arrest cites fictional lawyer Harvey Specter",
+    "lang": "en"
+  },
+  {
+    "id": "18sy07h",
+    "claim": "Judge Tomoko Akane, president of the International Criminal Court (ICC), has ordered the release of former Philippine president Rodrigo Duterte ahead of his birthday on March 28, along with the dismissal of his crimes against humanity charges.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-03-24",
+    "url": "https://www.rappler.com/newsbreak/fact-check/no-order-icc-president-release-rodrigo-duterte-birthday/",
+    "summary": "FACT CHECK: No order from ICC president to release Duterte ahead of his birthday",
     "lang": "en"
   },
   {
@@ -5830,16 +5820,6 @@
     "lang": "en"
   },
   {
-    "id": "1a60jxc",
-    "claim": "Liza Araneta-Marcos is friends with ICC Judges Socorro Flores and Iulia Motoc",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2025-03-19",
-    "url": "https://verafiles.org/articles/fact-check-liza-araneta-marcos-photo-with-icc-judges-false",
-    "summary": "FACT CHECK: Liza Araneta-Marcos photo with ICC judges FALSE",
-    "lang": "en"
-  },
-  {
     "id": "15dm1vl",
     "claim": "Officials of the Moro National Liberation Front (MNLF) and Moro Islamic Liberation Front (MILF) have joined forces to plot against the administration of President Ferdinand Marcos Jr. following the arrest of former president Rodrigo Duterte.",
     "rating": "false",
@@ -5850,16 +5830,6 @@
     "lang": "en"
   },
   {
-    "id": "1rl6dof",
-    "claim": "The Philippine National Police released a memo explicitly forbidding police officers from voicing out support for former President Rodrigo Duterte.",
-    "rating": "misleading",
-    "publisher": "VERA Files",
-    "date": "2025-03-19",
-    "url": "https://verafiles.org/articles/fact-check-no-pnp-memo-preventing-cops-from-supporting-duterte-online",
-    "summary": "FACT CHECK: NO PNP memo preventing cops from supporting ...",
-    "lang": "en"
-  },
-  {
     "id": "1dmqakq",
     "claim": "Fictional characters Annalise Keating, Elle Woods, Saul Goodman, Harvey Specter, Johnny Sins, and Atty. Rober Kardashian issued statements criticizing the ICC and defending former president Rodrigo Duterte following his March 11 arrest in connection with drug-related killings in the Philippines",
     "rating": "false",
@@ -5867,6 +5837,16 @@
     "date": "2025-03-19",
     "url": "https://verafiles.org/articles/fact-check-annalise-keating-elle-woods-other-fictional-characters-did-not-defend-duterte-vs-icc",
     "summary": "FACT CHECK: Annalise Keating, Elle Woods, other fictional ...",
+    "lang": "en"
+  },
+  {
+    "id": "1rl6dof",
+    "claim": "The Philippine National Police released a memo explicitly forbidding police officers from voicing out support for former President Rodrigo Duterte.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2025-03-19",
+    "url": "https://verafiles.org/articles/fact-check-no-pnp-memo-preventing-cops-from-supporting-duterte-online",
+    "summary": "FACT CHECK: NO PNP memo preventing cops from supporting ...",
     "lang": "en"
   },
   {
@@ -5960,16 +5940,6 @@
     "lang": "en"
   },
   {
-    "id": "ccvbbj",
-    "claim": "The ICC dismissed drug war charges against Duterte",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2025-03-18",
-    "url": "https://verafiles.org/articles/fact-check-icc-charges-vs-duterte-not-dismissed",
-    "summary": "FACT CHECK: ICC charges vs Duterte NOT dismissed",
-    "lang": "en"
-  },
-  {
     "id": "13wleg",
     "claim": "Rodrigo Duterte was “kidnapped” and not legally arrested, in relation to his case at the International Criminal Court.",
     "rating": "false",
@@ -5980,13 +5950,13 @@
     "lang": "en"
   },
   {
-    "id": "11ol0zn",
-    "claim": "Video shows marches in Quiapo and Cebu showing support for former president Rodrigo Duterte.",
+    "id": "ccvbbj",
+    "claim": "The ICC dismissed drug war charges against Duterte",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2025-03-18",
-    "url": "https://verafiles.org/articles/fact-check-clips-show-catholic-processions-not-protests-for-duterte",
-    "summary": "FACT CHECK: Clips show Catholic processions NOT protests for ...",
+    "url": "https://verafiles.org/articles/fact-check-icc-charges-vs-duterte-not-dismissed",
+    "summary": "FACT CHECK: ICC charges vs Duterte NOT dismissed",
     "lang": "en"
   },
   {
@@ -5997,6 +5967,16 @@
     "date": "2025-03-18",
     "url": "https://verafiles.org/articles/fact-check-trump-statement-on-duterte-arrest-fake",
     "summary": "FACT CHECK: There are NO reports of Trump and Putin defending ...",
+    "lang": "en"
+  },
+  {
+    "id": "11ol0zn",
+    "claim": "Video shows marches in Quiapo and Cebu showing support for former president Rodrigo Duterte.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2025-03-18",
+    "url": "https://verafiles.org/articles/fact-check-clips-show-catholic-processions-not-protests-for-duterte",
+    "summary": "FACT CHECK: Clips show Catholic processions NOT protests for ...",
     "lang": "en"
   },
   {
@@ -6190,6 +6170,16 @@
     "lang": "en"
   },
   {
+    "id": "15fogz7",
+    "claim": "US President Donald Trump made public statements through various news outlets condemning former Philippine President Rodrigo Duterte’s arrest over a warrant issued by the International Criminal Court (ICC).",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-03-13",
+    "url": "https://www.rappler.com/newsbreak/fact-check/donald-trump-statement-rodrigo-duterte-icc-arrest-fake-quote-card/",
+    "summary": "FACT CHECK: Quote cards of Trump's statements on Duterte arrest are fake",
+    "lang": "en"
+  },
+  {
     "id": "m58so8",
     "claim": "Comedian and television host Vice Ganda said the following statement in a quote card circulating online after the arrest of former president Rodrigo Duterte:\n\n“I don't want to be hypocritical, let's admit that during FPRRD's time, most addicts changed their lives, most criminals gave up, because they were afraid of Duterte. You go out at night confidently because you know that the criminals have been reduced.\n\nIf Duterte hadn't led the pandemic, we would all be dead. Duterte used all the government funds just to get us through the pandemic.”",
     "rating": "false",
@@ -6207,16 +6197,6 @@
     "date": "2025-03-13",
     "url": "https://www.rappler.com/newsbreak/fact-check/videos-crowd-hong-kong-impeach-sara-duterte-now-fake/",
     "summary": "FACT CHECK: Video of crowd chanting ‘Impeach Sara Now’ in Hong Kong is fake",
-    "lang": "en"
-  },
-  {
-    "id": "15fogz7",
-    "claim": "US President Donald Trump made public statements through various news outlets condemning former Philippine President Rodrigo Duterte’s arrest over a warrant issued by the International Criminal Court (ICC).",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-03-13",
-    "url": "https://www.rappler.com/newsbreak/fact-check/donald-trump-statement-rodrigo-duterte-icc-arrest-fake-quote-card/",
-    "summary": "FACT CHECK: Quote cards of Trump's statements on Duterte arrest are fake",
     "lang": "en"
   },
   {
@@ -6337,7 +6317,7 @@
     "date": "2025-02-28",
     "url": "https://verafiles.org/articles/fact-check-no-duterte-chants-at-alyansa-proclamation-rally",
     "summary": "No Duterte chants at Marcos slate Ilocos rally",
-    "lang": "fil"
+    "lang": "en"
   },
   {
     "id": "19eu2os",
@@ -6367,16 +6347,6 @@
     "date": "2025-02-28",
     "url": "https://verafiles.org/articles/fact-check-us-did-not-bomb-chinese-vessels-in-west-philippine-sea",
     "summary": "U.S. did not bomb China ships in WPS",
-    "lang": "en"
-  },
-  {
-    "id": "152y9lb",
-    "claim": "DepEd is giving out P 8,000 cash assistance to students in all levels and TESDA, ALS enrollees",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2025-02-27",
-    "url": "https://verafiles.org/articles/fact-check-another-fake-deped-cash-assistance-promo",
-    "summary": "FAKE DepEd cash assistance spreads online again",
     "lang": "en"
   },
   {
@@ -6417,6 +6387,16 @@
     "date": "2025-02-27",
     "url": "https://www.rappler.com/newsbreak/fact-check/photo-rodrigo-duterte-wearing-judicial-robe-fake/",
     "summary": "FACT CHECK: Photo of Duterte wearing judicial robe is fake",
+    "lang": "en"
+  },
+  {
+    "id": "152y9lb",
+    "claim": "DepEd is giving out P 8,000 cash assistance to students in all levels and TESDA, ALS enrollees",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2025-02-27",
+    "url": "https://verafiles.org/articles/fact-check-another-fake-deped-cash-assistance-promo",
+    "summary": "FAKE DepEd cash assistance spreads online again",
     "lang": "en"
   },
   {
@@ -6520,6 +6500,16 @@
     "lang": "en"
   },
   {
+    "id": "1780v8y",
+    "claim": "The Church of Jesus Christ of Latter-day Saints, formerly known as the Mormon Church, released a statement saying they “stand and protect” Vice President Sara Duterte.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2025-02-16",
+    "url": "https://www.rappler.com/newsbreak/fact-check/church-of-jesus-christ-backing-sara-duterte-february-2025/",
+    "summary": "FACT CHECK: No statement from Church of Jesus Christ backing ...",
+    "lang": "en"
+  },
+  {
     "id": "1td6chl",
     "claim": "The beneficiaries of the Pantawid Pamilyang Pilipino Program (4Ps) can check if they are included in the February 2025 payout by looking up their names on a website that supposedly lists them.",
     "rating": "false",
@@ -6527,16 +6517,6 @@
     "date": "2025-02-14",
     "url": "https://www.rappler.com/newsbreak/fact-check/4ps-beneficiaries-website-february-2025/",
     "summary": "FACT CHECK: Website showing 4Ps February 2025 beneficiaries is ...",
-    "lang": "en"
-  },
-  {
-    "id": "kaxqpn",
-    "claim": "The Supreme Court (SC) has issued a ruling declaring the impeachment against Vice President Sara Duterte as invalid.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2025-02-13",
-    "url": "https://www.rappler.com/newsbreak/fact-check/supreme-court-ruling-sara-duterte-impeachment-february-2025/",
-    "summary": "FACT CHECK: No SC ruling declaring Sara Duterte’s impeachment invalid",
     "lang": "en"
   },
   {
@@ -6940,16 +6920,6 @@
     "lang": "en"
   },
   {
-    "id": "1ca67y0",
-    "claim": "Ipinagbabawal ng batas ang pagtalakay ng confidential funds.",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2024-11-27",
-    "url": "https://verafiles.org/articles/fact-check-pahayag-ni-sara-duterte-na-pinagbabawal-ng-batas-na-talakayin-ang-confidential-funds-hindi-totoo",
-    "summary": "FACT CHECK: Pahayag ni Sara Duterte na pinagbabawal ng batas ...",
-    "lang": "en"
-  },
-  {
     "id": "1wbrslg",
     "claim": "Former president Rodrigo Duterte has filed a \"1 billion libel case\" against former senator Antonio Trillanes IV following the latter’s allegations that drug-related funds were funneled into the Duterte family bank accounts.",
     "rating": "false",
@@ -7246,7 +7216,7 @@
     "publisher": "Rappler",
     "date": "2024-11-08",
     "url": "https://www.rappler.com/newsbreak/fact-check/wind-speed-not-sole-factor-determining-degree-storm-damage/",
-    "summary": "FACT CHECK: Wind speed not sole factor in determining degree of storm damage",
+    "summary": "FACT CHECK: Wind speed not sole factor in determining degree of ...",
     "lang": "en"
   },
   {
@@ -7720,6 +7690,16 @@
     "lang": "en"
   },
   {
+    "id": "1r3mu8d",
+    "claim": "Si dating pangulong Rodrigo Duterte ay “laging kontra sa mga ilegal na aktibidad.”",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2024-09-25",
+    "url": "https://verafiles.org/articles/fact-check-pahayag-ni-bong-go-sa-hindi-pumapayag-si-duterte-sa-mga-ilegal-na-aktibidad-nangangailangan-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Bong Go sa ‘hindi pumapayag’ si Duterte sa mga ilegal na aktibidad nangangailangan ng konteksto",
+    "lang": "fil"
+  },
+  {
     "id": "1r0t3ha",
     "claim": "Ipinakikita ng video na maraming nagrally para suportahan ang mga Duterte",
     "rating": "false",
@@ -7727,6 +7707,16 @@
     "date": "2024-09-24",
     "url": "https://verafiles.org/articles/fact-check-ito-ay-video-ng-mga-katoliko-sa-east-timor-hindi-ng-isang-pro-duterte-rally",
     "summary": "FACT CHECK: Ito ay video ng mga Katoliko sa East Timor, HINDI ng isang pro-Duterte rally",
+    "lang": "fil"
+  },
+  {
+    "id": "b94wzc",
+    "claim": "Inilarawan ni Senador Christopher Lawrence “Bong” Go si Michael Yang bilang isang negosyanteng Tsino na “iniuugnay” kay dating pangulong Rodrigo Duterte.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2024-09-20",
+    "url": "https://verafiles.org/articles/fact-check-bong-go-minaliit-ang-kaugnayan-ni-duterte-kay-michael-yang",
+    "summary": "Bong Go minaliit ang 'kaugnayan' ni Duterte kay Michael Yang",
     "lang": "fil"
   },
   {
@@ -7837,6 +7827,16 @@
     "date": "2024-09-11",
     "url": "https://www.rappler.com/newsbreak/fact-check/afp-not-withdraw-support-marcos/",
     "summary": "FACT CHECK: AFP did not withdraw support for Marcos",
+    "lang": "en"
+  },
+  {
+    "id": "1gmpwus",
+    "claim": "Walang budget ang Davao City para pondohan ang mga proyekto para sa pagtugon sa COVID-19 noong 2020.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2024-09-10",
+    "url": "https://verafiles.org/articles/fact-check-pahayag-ni-vp-duterte-sa-pondo-ng-davao-city-para-sa-covid-19-nangangailangan-ng-konteksto",
+    "summary": "Pahayag ni VP Duterte sa pondo ng Davao City para sa COVID ...",
     "lang": "en"
   },
   {
@@ -8040,6 +8040,16 @@
     "lang": "en"
   },
   {
+    "id": "1twfpa9",
+    "claim": "Ang pagpapaunlad ng imprastraktura ng administrasyon ay nananatiling tuloy-tuloy, strategic at nasa iskedyul.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2024-08-06",
+    "url": "https://verafiles.org/articles/fact-check-pahayag-ni-marcos-na-on-schedule-ang-infrastructure-program-kailangan-ng-konteksto",
+    "summary": "Nangangailangan ng konteksto ang pahayag ni Marcos sa ...",
+    "lang": "en"
+  },
+  {
     "id": "4xeb9h",
     "claim": "Photo shows aftermath of Typhoon Gaemi on Taipei's Renai Road.",
     "rating": "false",
@@ -8190,6 +8200,16 @@
     "lang": "en"
   },
   {
+    "id": "iuy5ei",
+    "claim": "Sinabi ni Sen. Ronald Dela Rosa na hindi kailangang imbestigahan ng International Criminal Court ang mga pagpatay na may kaugnayan sa droga sa ilalim ng administrasyong Duterte kung isasaalang-alang na ilang pulis na sangkot ang kinasuhan at ang ilan ay nahatulan.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2024-07-18",
+    "url": "https://verafiles.org/articles/fact-check-pahayag-ni-dela-rosa-na-hindi-kailangan-ang-icc-probe-dahil-nahatulan-ang-mga-may-salang-pulis-kailangan-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Dela Rosa na hindi kailangan ang ICC probe dahil nahatulan ang mga may salang pulis KAILANGAN NG KONTEKSTO",
+    "lang": "fil"
+  },
+  {
     "id": "9s19bl",
     "claim": "Video shows the United States military in the West Philippine Sea.",
     "rating": "misleading",
@@ -8337,16 +8357,6 @@
     "date": "2024-06-20",
     "url": "https://factcheck.afp.com/doc.afp.com.34XJ69E",
     "summary": "Recent study did not prove Covid-19 vaccines caused excess deaths",
-    "lang": "en"
-  },
-  {
-    "id": "suc0ta",
-    "claim": "Dozens of warships heading to disputed South China Sea waters",
-    "rating": "false",
-    "publisher": "AFP Fact Check",
-    "date": "2024-06-20",
-    "url": "https://factcheck.afp.com/doc.afp.com.34X68NX",
-    "summary": "Old photos falsely shared as 'warships from all over the world ...",
     "lang": "en"
   },
   {
@@ -8510,6 +8520,16 @@
     "lang": "en"
   },
   {
+    "id": "15aaydl",
+    "claim": "Mayor Alice Guo has exposed President Bongbong Marcos, First Lady Liza Araneta-Marcos and Speaker Martin Romualdez for being involved with Philippine Offshore Gaming Operators.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2024-06-05",
+    "url": "https://verafiles.org/articles/fact-check-alice-guo-did-not-expose-marcos-ties-to-pogo",
+    "summary": "FACT CHECK: Alice Guo DID NOT expose Marcos ties to POGO",
+    "lang": "en"
+  },
+  {
     "id": "137zsih",
     "claim": "The Commission on Higher Education (CHED) is accepting applications for its 2024 scholarship program, open to elementary, high school, senior high school, and college students.",
     "rating": "false",
@@ -8588,6 +8608,26 @@
     "url": "https://verafiles.org/articles/fact-check-marcos-did-not-threaten-chinese-official",
     "summary": "NO Marcos threat on Chinese foreign spox",
     "lang": "en"
+  },
+  {
+    "id": "2as97f",
+    "claim": "Naghahanda ang Department of Justice ng maikling paliwanag tungkol sa mga legal na opsyon na maaaring gawin ni Pangulong Ferdinand Marcos Jr. sakaling maglabas ang International Criminal Court ng warrant of arrest para sa mga natukoy sa imbestigasyon nito sa mga pagpatay na may kaugnayan sa droga sa panahon ng administrasyong Duterte.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2024-05-21",
+    "url": "https://verafiles.org/articles/fact-check-pahayag-ng-doj-spox-kung-ano-ang-gagawin-sa-icc-arrest-warrant-nangangailangan-ng-konteksto",
+    "summary": "FACT CHECK: Nangangailangan ng konteksto ang pahayag ni Clavano sa ICC arrest warrants",
+    "lang": "fil"
+  },
+  {
+    "id": "zyzsdq",
+    "claim": "Namimigay ang Department of Health ng libreng medical insurance sa mga senior citizen",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2024-05-20",
+    "url": "https://verafiles.org/articles/fact-check-peke-ang-ads-tungkol-sa-doh-insurance-para-sa-seniors",
+    "summary": "DOH walang libreng medical insurance sa seniors",
+    "lang": "fil"
   },
   {
     "id": "5n1sqm",
@@ -8690,6 +8730,16 @@
     "lang": "en"
   },
   {
+    "id": "p1zlvb",
+    "claim": "Ang Department of Education ay namimigay raw ng ayuda para sa mga estudyanteng ga-graduate.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2024-05-10",
+    "url": "https://verafiles.org/articles/peke-ang-posts-tungkol-sa-deped-na-namimigay-ng-ayuda-sa-mga-ga-graduate",
+    "summary": "VERA FILES FACT CHECK: PEKE ang posts tungkol sa DepEd na namimigay ng ayuda sa mga ga-graduate",
+    "lang": "fil"
+  },
+  {
     "id": "5osor8",
     "claim": "All public school students, including those in college, who will graduate in 2024 are eligible for P8,000 cash assistance from the Department of Education (DepEd).",
     "rating": "false",
@@ -8698,16 +8748,6 @@
     "url": "https://www.rappler.com/newsbreak/posts-deped-cash-aid-graduating-students-fake/",
     "summary": "FACT CHECK: Posts on DepEd cash aid for graduating students are fake",
     "lang": "en"
-  },
-  {
-    "id": "1639yux",
-    "claim": "Maaari nang makapag-register para sa Ayuda para sa Kapos ang Kita Program (AKAP) ng Department of Social Welfare and Development (DSWD) gamit ang online application link.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2024-05-08",
-    "url": "https://www.rappler.com/newsbreak/fact-check/no-link-for-dswd-akap-cash-assistance-may-8-2024/",
-    "summary": "FACT CHECK: Walang link para sa DSWD AKAP cash assistance",
-    "lang": "fil"
   },
   {
     "id": "1b0firk",
@@ -9650,6 +9690,16 @@
     "lang": "fil"
   },
   {
+    "id": "1gz46ws",
+    "claim": "Sinabi ni dating pangulong Rodrigo Duterte na alam ng Armed Forces of the Philippines na may presidente ang Pilipinas na adik sa droga.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2024-01-30",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pagtawag-ni-rodrigo-duterte-kay-pangulong-marcos-na-drug-addict-nangangailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Pagtawag ni Rodrigo Duterte kay Pangulong Marcos na ‘drug addict’ nangangailangan ng konteksto",
+    "lang": "fil"
+  },
+  {
     "id": "clvukk",
     "claim": "The Philippines’ F-15 jets destroyed 300 Chinese fishing vessels in the West Philippine Sea.",
     "rating": "false",
@@ -9667,16 +9717,6 @@
     "date": "2024-01-27",
     "url": "https://www.rappler.com/newsbreak/fact-check/no-super-typhoon-expected-philippines-until-january-28/",
     "summary": "FACT CHECK: No super typhoon expected in PH up until January 28",
-    "lang": "en"
-  },
-  {
-    "id": "1qlom23",
-    "claim": "Sen. Imee Marcos showed evidence of the Philippine Charity Sweepstakes Office lotto draw being faked.",
-    "rating": "misleading",
-    "publisher": "VERA Files",
-    "date": "2024-01-26",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-no-revelation-from-imee-marcos-on-lotto-issue",
-    "summary": "VERA FILES FACT CHECK: NO 'revelation' from Imee Marcos on ...",
     "lang": "en"
   },
   {
@@ -9698,6 +9738,16 @@
     "url": "https://verafiles.org/articles/vera-files-fact-check-depeds-order-continuing-voucher-program-for-grade-11-students-in-sucs-lucs-for-sy-2023-2024-needs-context",
     "summary": "FACT CHECK: DepEd’s order continuing voucher program for Grade 11 students in SUCs, LUCs for SY 2023-2024 needs context",
     "lang": "en"
+  },
+  {
+    "id": "1e2pftu",
+    "claim": "Sa 17, 751 Grade 11 na mga mag-aaral na naka-enrol sa state at lokal na unibersidad at kolehiyo (SUCs at LUCs) na hindi nakatanggap ng mga voucher para sa kasalukuyang school year, pinalawig ng Department of Education (DepEd) ang Senior High School Voucher Program hanggang sa matapos sila sa susunod na school year.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2024-01-26",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-order-ng-deped-na-ipagpatuloy-ang-voucher-program-para-sa-grade-11-students-sa-sucs-lucs-para-sa-sy-2023-2024-nangangailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Order ng DepEd na ipagpatuloy ang voucher program para sa Grade 11 students sa SUCs, LUCs para sa SY 2023-2024 nangangailangan ng konteksto",
+    "lang": "fil"
   },
   {
     "id": "1r4r6pb",
@@ -9807,16 +9857,6 @@
     "date": "2024-01-12",
     "url": "https://www.rappler.com/newsbreak/fact-check/no-deped-baon-program/",
     "summary": "FACT CHECK: DepEd has no ‘Baon Program’",
-    "lang": "en"
-  },
-  {
-    "id": "fk5pkq",
-    "claim": "The International Criminal Court (ICC) has already finished its probe on the country and Antonio Trillanes IV will be arresting Rodrigo Duterte.",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2024-01-11",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-trillanes-not-deputized-by-icc-to-arrest-duterte",
-    "summary": "VERA FILES FACT CHECK: Trillanes NOT deputized by ICC to ...",
     "lang": "en"
   },
   {
@@ -10420,6 +10460,16 @@
     "lang": "en"
   },
   {
+    "id": "wjliiq",
+    "claim": "Hindi sang-ayon si dating Interior secretary Rafael Alunan III na tinatawag siyang \"tagasuporta\" ni dating pangulong Rodrigo Duterte, partikular bilang isang taong naniniwala na ang huli ay \"walang magagawang mali.\"",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2023-11-11",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-raffy-alunan-na-hindi-siya-tagasuporta-ni-duterte-nangangailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Pahayag ni Raffy Alunan na hindi siya ‘tagasuporta’ ni Duterte, nangangailangan ng konteksto",
+    "lang": "fil"
+  },
+  {
     "id": "1sp1lsj",
     "claim": "One billion people have been killed by Covid-19 vaccines.",
     "rating": "false",
@@ -10760,16 +10810,6 @@
     "lang": "en"
   },
   {
-    "id": "1o351gm",
-    "claim": "Sen. Robin Padilla called President Ferdinand Marcos Jr. stupid and useless",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2023-10-05",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-padilla-did-not-call-marcos-stupid-useless",
-    "summary": "VERA FILES FACT CHECK: Padilla did NOT call Marcos 'stupid ...",
-    "lang": "en"
-  },
-  {
     "id": "1xnrxnj",
     "claim": "Covid-19 vaccines have killed 17 million people worldwide",
     "rating": "false",
@@ -10900,16 +10940,6 @@
     "lang": "en"
   },
   {
-    "id": "1lm77xa",
-    "claim": "The price of rice in the world market plummeted by 21% following President Ferdinand Marcos' imposition of a price ceiling on rice.",
-    "rating": "misleading",
-    "publisher": "VERA Files",
-    "date": "2023-09-21",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-romualdez-misleads-with-claim-that-price-ceiling-on-rice-set-by-marcos-has-affected-world-market",
-    "summary": "FACT CHECK: Romualdez misleads with claim that price ceiling on ...",
-    "lang": "en"
-  },
-  {
     "id": "wfe4ct",
     "claim": "The meeting between Bongbong Marcos and the Australian prime minister in September 2023 had something to do with retrieving the Marcos family’s gold being kept in Australia.",
     "rating": "false",
@@ -10927,6 +10957,16 @@
     "date": "2023-09-21",
     "url": "https://verafiles.org/articles/vera-files-fact-check-vlogger-makes-misleading-claims-about-marcos-era",
     "summary": "VERA FILES FACT CHECK: Vlogger makes MISLEADING claims ...",
+    "lang": "en"
+  },
+  {
+    "id": "1lm77xa",
+    "claim": "The price of rice in the world market plummeted by 21% following President Ferdinand Marcos' imposition of a price ceiling on rice.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2023-09-21",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-romualdez-misleads-with-claim-that-price-ceiling-on-rice-set-by-marcos-has-affected-world-market",
+    "summary": "FACT CHECK: Romualdez misleads with claim that price ceiling on ...",
     "lang": "en"
   },
   {
@@ -11337,6 +11377,16 @@
     "date": "2023-08-16",
     "url": "https://factcheck.afp.com/doc.afp.com.33R86MD",
     "summary": "Posts misconstrue study on Covid antibodies transmitted by vaccinated",
+    "lang": "en"
+  },
+  {
+    "id": "1k0amk5",
+    "claim": "President Ferdinand Marcos Jr. is the first Philippine president in history to provide cash awards to outstanding Filipino athletes.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2023-08-15",
+    "url": "https://www.rappler.com/newsbreak/fact-check/philippine-presidents-even-before-bongbong-marcos-jr-gave-filipino-athletes-cash-awards/",
+    "summary": "FACT CHECK: PH presidents even before Marcos gave Filipino ...",
     "lang": "en"
   },
   {
@@ -11900,6 +11950,16 @@
     "lang": "en"
   },
   {
+    "id": "1lizipv",
+    "claim": "“Ginawa” ng Masagana 99 program \"ang [Pilipinas] na self-sufficient at isang rice exporting country,” isa sa \"maraming milestones\" sa 125-taong kasaysayan ng Department of Agriculture.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2023-06-23",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-marcos-hindi-binanggit-ang-mahalagang-konteksto-sa-masagana-99",
+    "summary": "VERA FILES FACT CHECK: Marcos hindi binanggit ang ...",
+    "lang": "en"
+  },
+  {
     "id": "1x39qh8",
     "claim": "The Masagana 99 program \"made the [Philippines] self-sufficient and a rice exporting country\" as one of the \"many milestones\" in the 125-year history of the Department of Agriculture.",
     "rating": "misleading",
@@ -12410,16 +12470,6 @@
     "lang": "en"
   },
   {
-    "id": "19n8e5v",
-    "claim": "President Ferdinand Marcos Jr. has ordered to revert the name of the Ninoy Aquino International Airport (NAIA) to the Manila International Airport (MIA).",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2023-05-06",
-    "url": "https://www.rappler.com/newsbreak/fact-check/marcos-did-not-order-renaming-naia/",
-    "summary": "FACT CHECK: Marcos did not order renaming of NAIA",
-    "lang": "en"
-  },
-  {
     "id": "1xx7cmo",
     "claim": "Covid-19 vaccines linked to increased risk of severe adverse events",
     "rating": "misleading",
@@ -12531,7 +12581,7 @@
   },
   {
     "id": "1j3jk3j",
-    "claim": "The Marcoses have trillions of dollars in gold reserves",
+    "claim": "President Ferdinand Marcos Jr. is withdrawing the interest earned by gold reserves deposited by his father, ex-president Ferdinand Marcos Sr., at the World Bank",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2023-04-26",
@@ -12760,6 +12810,16 @@
     "lang": "en"
   },
   {
+    "id": "xgujdc",
+    "claim": "Ang International Criminal Court ay walang hurisdiksyon sa Pilipinas.\nWalang legal o moral na obligasyon ang Pilipinas na makipagtulungan sa ICC.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2023-03-30",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-padilla-inulit-ang-pahayag-nina-marcos-at-guevarra-laban-sa-icc-na-walang-konteksto",
+    "summary": "VERA FILES FACT CHECK: Padilla inulit ang pahayag nina Marcos ...",
+    "lang": "en"
+  },
+  {
     "id": "1ele79r",
     "claim": "The International Criminal Court has no jurisdiction over the Philippines.\nThe Philippines has no legal or moral obligation to cooperate with the ICC.",
     "rating": "misleading",
@@ -12787,6 +12847,16 @@
     "date": "2023-03-23",
     "url": "https://verafiles.org/articles/vera-files-fact-check-claim-on-200-chinese-militia-vessels-in-wps-u-s-action-vs-china-misleads",
     "summary": "Claim on 200 Chinese militia vessels in WPS, US action vs China MISLEADS",
+    "lang": "en"
+  },
+  {
+    "id": "kir123",
+    "claim": "Papalapit na ang administrasyong Marcos sa pangako noong kampanya na ibababa ang presyo ng bigas sa P20 kada kilo.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2023-03-22",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-marcos-jr-inulit-ang-pahayag-na-nasa-p25-kada-kilo-na-ang-bigas-nangangailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Marcos Jr. inulit ang pahayag na nasa ...",
     "lang": "en"
   },
   {
@@ -13030,6 +13100,16 @@
     "lang": "en"
   },
   {
+    "id": "ytpwv9",
+    "claim": "Ang International Criminal Court ay walang hurisdiksyon upang imbestigahan ang mga pagpatay na may kaugnayan sa droga sa Pilipinas. Nanghihimasok ito sa mga panloob na usapin ng bansa at banta sa soberanya ng Pilipinas.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2023-02-22",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-marcos-sa-hurisdiksyon-ng-icc-nangangailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Pahayag ni Marcos sa hurisdiksyon ng ...",
+    "lang": "en"
+  },
+  {
     "id": "1yvm3xr",
     "claim": "The International Criminal Court has no jurisdiction to investigate drug-related killings in the Philippines. It is intruding into the country's internal matters and is a threat to Philippine sovereignty.",
     "rating": "misleading",
@@ -13188,6 +13268,16 @@
     "url": "https://www.rappler.com/newsbreak/fact-check/alleged-marcos-family-account-interest-will-not-be-used-nkti/",
     "summary": "FACT CHECK: 'Marcos account' interest will not be used for NKTI",
     "lang": "en"
+  },
+  {
+    "id": "5690gp",
+    "claim": "Walang hurisdiksyon ang International Criminal Court sa mga pagpatay na may kinalaman sa droga sa bansa sa panahon ng Duterte administration.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2023-02-08",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pagpayag-ni-dela-rosa-na-bitayin-dahil-sa-mga-pagpatay-na-may-kinalaman-sa-droga-walang-basehan",
+    "summary": "VERA FILES FACT CHECK: Pagpayag ni Dela Rosa na bitayin dahil sa mga pagpatay na may kinalaman sa droga walang basehan",
+    "lang": "fil"
   },
   {
     "id": "1vu2k88",
@@ -13480,6 +13570,16 @@
     "lang": "en"
   },
   {
+    "id": "ol1j70",
+    "claim": "Ang pagtaas ng 8.1% inflation rate ng bansa noong Disyembre 2022 ay bumabagal.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2023-01-16",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-marcos-sa-pagbagal-ng-inflation-rate-nangangailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Pahayag ni Marcos sa 'pagbagal' ng ...",
+    "lang": "en"
+  },
+  {
     "id": "1ugajfp",
     "claim": "Former president Joseph Estrada was impeached because yellow politicians knew he would fulfill the last will and testament of former president and dictator Ferdinand E. Marcos.",
     "rating": "false",
@@ -13560,16 +13660,6 @@
     "lang": "en"
   },
   {
-    "id": "isk6af",
-    "claim": "Senator Imee Marcos gave a speech in the Senate about the last will and testament of her father, former president and late dictator Ferdinand E. Marcos.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2023-01-09",
-    "url": "https://www.rappler.com/newsbreak/fact-check/speech-imee-marcos-about-agrarian-reform-not-her-father-last-will/",
-    "summary": "FACT CHECK: Speech of Imee Marcos about agrarian reform, not ...",
-    "lang": "en"
-  },
-  {
     "id": "5u05s6",
     "claim": "Florida doctor tweeted about Covid-19 vaccines, poison",
     "rating": "false",
@@ -13636,7 +13726,7 @@
     "publisher": "Rappler",
     "date": "2022-12-28",
     "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-did-not-develop-anti-typhoon-missiles-during-administration/",
-    "summary": "FACT CHECK: Ferdinand E. Marcos didn't develop anti-typhoon missiles during his administration",
+    "summary": "FACT CHECK: Ferdinand E. Marcos didn't develop anti-typhoon ...",
     "lang": "en"
   },
   {
@@ -13790,6 +13880,16 @@
     "lang": "en"
   },
   {
+    "id": "baar8q",
+    "claim": "Papalapit na ang administrasyong Marcos sa pagpapababa ng presyo ng bigas sa P20 kada kilo dahil nagkakahalaga na ngayon ito ng P25 kada kilo.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-12-02",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-marcos-jr-na-ang-bigas-ngayon-ay-nasa-p25-kada-kilo-nangangailangan-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Marcos Jr. na ang bigas ngayon ay nasa ...",
+    "lang": "en"
+  },
+  {
     "id": "5nvlwu",
     "claim": "The City of Pearl project is part of Rodrigo Duterte's flagship infrastructure program that is now being continued by the administration of Bongbong Marcos",
     "rating": "false",
@@ -13900,16 +14000,6 @@
     "lang": "en"
   },
   {
-    "id": "y6ezap",
-    "claim": "During the administration of former president Ferdinand E. Marcos, the Philippines was considered one of the top countries in Asia, especially in terms of economy.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2022-11-22",
-    "url": "https://www.rappler.com/newsbreak/fact-check/philippine-economy-not-the-best-asia-marcos-administration/",
-    "summary": "Philippine economy was not the best in Asia during the Marcos ...",
-    "lang": "en"
-  },
-  {
     "id": "1mg0asw",
     "claim": "President Ferdinand Marcos Jr. is the only one in the Association of Southeast Asian Nations (ASEAN) to address the Russia-Ukraine war and the North Korea threat.",
     "rating": "false",
@@ -13917,6 +14007,16 @@
     "date": "2022-11-22",
     "url": "https://www.rappler.com/newsbreak/fact-check/asean-countries-not-only-marcos-spoke-russia-ukraine-crisis/",
     "summary": "Several ASEAN leaders, not only Marcos, spoke up on Russia ...",
+    "lang": "en"
+  },
+  {
+    "id": "y6ezap",
+    "claim": "During the administration of former president Ferdinand E. Marcos, the Philippines was considered one of the top countries in Asia, especially in terms of economy.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2022-11-22",
+    "url": "https://www.rappler.com/newsbreak/fact-check/philippine-economy-not-the-best-asia-marcos-administration/",
+    "summary": "Philippine economy was not the best in Asia during the Marcos ...",
     "lang": "en"
   },
   {
@@ -14000,6 +14100,16 @@
     "lang": "en"
   },
   {
+    "id": "1yu9ugb",
+    "claim": "Sinabi ni Pangulong Ferdinand Marcos Jr. na ang pagbibigay ng patuloy na tulong ay \"nasa itaas ng listahan ng prayoridad ng [kanyang administrasyon].\"",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-11-15",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-marcos-na-ang-pagbibigay-ng-ayuda-ay-kanyang-top-priority-nangangailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Pahayag ni Marcos na ang pagbibigay ...",
+    "lang": "en"
+  },
+  {
     "id": "1b0nhxx",
     "claim": "Ferdinand Marcos Jr. obtained the highest number of votes by any candidate in Philippine history.",
     "rating": "misleading",
@@ -14007,6 +14117,16 @@
     "date": "2022-11-15",
     "url": "https://verafiles.org/articles/vera-files-fact-check-marcos-repeats-claim-on-having-the-highest-number-of-votes-needs-context",
     "summary": "VERA FILES FACT CHECK: Marcos repeats claim on having the ...",
+    "lang": "en"
+  },
+  {
+    "id": "li9xgw",
+    "claim": "Nakuha ni Ferdinand Marcos Jr. ang pinakamataas na bilang ng mga boto ng kahit na sinong kandidato sa kasaysayan ng Pilipinas.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-11-15",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-marcos-inulit-ang-pahayag-na-nakakuha-siya-ng-pinakamataas-na-bilang-ng-mga-boto-kailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Marcos inulit ang pahayag na ...",
     "lang": "en"
   },
   {
@@ -14190,16 +14310,6 @@
     "lang": "en"
   },
   {
-    "id": "w42c3n",
-    "claim": "Ang mga perang itinago ng dating pangulo at diktador na si Ferdinand E. Marcos sa Swiss bank ay nakalaan para sa sambayanang Pilipino.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2022-10-25",
-    "url": "https://www.rappler.com/newsbreak/fact-check/marcos-did-not-leave-trust-fund-filipinos/",
-    "summary": "Walang iniwan na trust fund si Ferdinand Marcos para sa ...",
-    "lang": "fil"
-  },
-  {
     "id": "1cfmskj",
     "claim": "A Rappler fact check entitled “HINDI TOTOO: Hindi ibinalita ang pagpunta ni Bongbong Marcos sa Tacloban noong 2013” claims that President Ferdinand Marcos Jr.’s visit to Tacloban did not happen.",
     "rating": "false",
@@ -14208,6 +14318,16 @@
     "url": "https://www.rappler.com/newsbreak/fact-check/does-not-paint-marcos-jr-tacloban-visit-false/",
     "summary": "Rappler fact check does not paint Marcos' visit to Tacloban as false",
     "lang": "en"
+  },
+  {
+    "id": "w42c3n",
+    "claim": "Ang mga perang itinago ng dating pangulo at diktador na si Ferdinand E. Marcos sa Swiss bank ay nakalaan para sa sambayanang Pilipino.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2022-10-25",
+    "url": "https://www.rappler.com/newsbreak/fact-check/marcos-did-not-leave-trust-fund-filipinos/",
+    "summary": "Walang iniwan na trust fund si Ferdinand Marcos para sa ...",
+    "lang": "fil"
   },
   {
     "id": "uz5wyo",
@@ -14381,7 +14501,7 @@
   },
   {
     "id": "1q9hzl4",
-    "claim": "Joe Biden discussed the Marcos gold with Bongbong Marcos.",
+    "claim": "America has to pay debts to Marcos in the form of gold kept in the US Federal Reserve System",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2022-10-12",
@@ -14630,6 +14750,16 @@
     "lang": "en"
   },
   {
+    "id": "dcjvrq",
+    "claim": "Ang Pilipinas ay nananatiling on track para maabot ang upper middle-income status sa 2023 sa kabila ng mga hamon ng pandemic at ng pagkadiskaril ng pandaigdigang ekonomiya.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-09-29",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-marcos-na-nananatiling-on-track-ang-ph-para-maabot-ang-upper-middle-income-status-sa-2023-nangangailangan-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Marcos na 'nananatiling on track' ang PH ...",
+    "lang": "en"
+  },
+  {
     "id": "1lxcrxu",
     "claim": "There are close to 4.5 million drug addicts in the Philippines.",
     "rating": "misleading",
@@ -14667,6 +14797,16 @@
     "date": "2022-09-27",
     "url": "https://verafiles.org/articles/vera-files-fact-check-marcos-jr-s-post-showing-large-audience-while-he-speaks-at-unga-needs-context",
     "summary": "Marcos' post with large audience in UNGA speech needs context",
+    "lang": "en"
+  },
+  {
+    "id": "cug7t0",
+    "claim": "Marami ang naging tagapakinig ni Pangulong Ferdinand Marcos Jr. habang nagtatalumpati sa 77th United Nations General Assembly noong Setyembre 21.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-09-27",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-post-ni-marcos-jr-na-nagpapakita-ng-malaking-audience-habang-nagsasalita-siya-sa-unga-nangangailangan-ng-konteksto",
+    "summary": "VERAfied: Post ni Marcos Jr. na nagpapakita ng malaking audience ...",
     "lang": "en"
   },
   {
@@ -14770,16 +14910,6 @@
     "lang": "fil"
   },
   {
-    "id": "wzsbsl",
-    "claim": "After the 1986 EDSA People Power revolution, the Marcoses were kidnapped and brought to Hawaii.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2022-09-21",
-    "url": "https://www.rappler.com/newsbreak/fact-check/united-states-central-intelligence-agency-did-not-kidnap-marcos-family-1986/",
-    "summary": "The US CIA did not kidnap the Marcos family in 1986",
-    "lang": "en"
-  },
-  {
     "id": "1gyvacj",
     "claim": "Vice President and Department of Education Secretary Sara Duterte’s visit to the Siquijor province was not covered by mainstream news outlets.",
     "rating": "false",
@@ -14857,6 +14987,26 @@
     "date": "2022-09-15",
     "url": "https://verafiles.org/articles/vera-files-fact-check-imee-marcos-crediting-nutribun-to-marcos-sr-needs-context",
     "summary": "VERA FILES FACT CHECK: Imee Marcos crediting nutribun to ...",
+    "lang": "en"
+  },
+  {
+    "id": "tdzsrn",
+    "claim": "Pinasimulan ni Ferdinand Marcos Sr. ang Nutribun Feeding Project noong 1970s.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-09-15",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pagbibigay-ni-imee-marcos-ng-kredito-sa-nutribun-kay-marcos-sr-kailangan-ng-konteksto",
+    "summary": "VERA FILES FACT CHECK: Pagbibigay ni Imee Marcos ng kredito ...",
+    "lang": "en"
+  },
+  {
+    "id": "kd57q8",
+    "claim": "Queen Elizabeth congratulated Bongbong Marcos for winning the 2022 Philippine presidential election",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-09-13",
+    "url": "https://verafiles.org/articles/fact-check-satirical-quote-card-of-queen-elizabeth-ii-supporting-marcos-resurfaces-on-tiktok",
+    "summary": "VERA FILES FACT CHECK: SATIRICAL quote card of Queen ...",
     "lang": "en"
   },
   {
@@ -14951,7 +15101,7 @@
   },
   {
     "id": "14dx7ug",
-    "claim": "The Marcoses were not imprisoned because they proved to courts that they are not guilty of corruption",
+    "claim": "International courts have ruled in favor of the Marcoses over “accusations” they had ill-gotten wealth",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2022-08-26",
@@ -14997,6 +15147,16 @@
     "date": "2022-08-16",
     "url": "https://verafiles.org/articles/vera-files-fact-check-imee-marcos-claim-that-the-president-is-on-a-veto-spree-needs-context",
     "summary": "Imee Marcos' claim that president is on a 'veto spree' needs context",
+    "lang": "en"
+  },
+  {
+    "id": "1ne1e82",
+    "claim": "Nag-\"veto spree\" ng mga panukalang batas si Pangulong Marcos.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-08-16",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-imee-marcos-na-nag-veto-spree-ang-pangulo-nangangailangan-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Imee Marcos na nag-'veto spree' ang ...",
     "lang": "en"
   },
   {
@@ -15130,6 +15290,16 @@
     "lang": "en"
   },
   {
+    "id": "1oebz8j",
+    "claim": "Former president Rodrigo Duterte never ordered the killing of anyone involved in illegal drugs.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2022-07-29",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-dela-rosa-falsely-claims-duterte-never-ordered-to-kill-anyone-involved-in-drugs",
+    "summary": "VERA FILES FACT CHECK: Dela Rosa falsely claims Duterte never ...",
+    "lang": "en"
+  },
+  {
     "id": "16fqify",
     "claim": "Hindi kailanman ipinag-utos ni dating pangulong Rodrigo Duterte ang pagpatay sa sinumang sangkot sa iligal na droga.",
     "rating": "false",
@@ -15138,16 +15308,6 @@
     "url": "https://verafiles.org/articles/vera-files-fact-check-dela-rosa-sinasabing-hindi-kailanman-nag-utos-si-duterte-na-patayin-ang-sinumang-sangkot-sa-droga-hindi-totoo",
     "summary": "FACT CHECK: Dela Rosa sinasabing hindi kailanman nag-utos si Duterte na patayin ang sinumang sangkot sa droga. HINDI TOTOO.",
     "lang": "fil"
-  },
-  {
-    "id": "1oebz8j",
-    "claim": "Former president Rodrigo Duterte never ordered the killing of anyone involved in illegal drugs.",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2022-07-29",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-dela-rosa-falsely-claims-duterte-never-ordered-to-kill-anyone-involved-in-drugs",
-    "summary": "VERA FILES FACT CHECK: Dela Rosa falsely claims Duterte never ordered to kill anyone involved in drugs",
-    "lang": "en"
   },
   {
     "id": "4swadm",
@@ -15250,16 +15410,6 @@
     "lang": "en"
   },
   {
-    "id": "1ctotqo",
-    "claim": "A photo showing former president Rodrigo Duterte relaxing outside his home in Davao City circulated on Facebook after his term ended on June 30.",
-    "rating": "misleading",
-    "publisher": "VERA Files",
-    "date": "2022-07-12",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-sen-robin-padilla-spreads-misleading-photo-of-duterte-retirement-at-davao-home",
-    "summary": "VERA FILES FACT CHECK: Sen. Robin Padilla spreads MISLEADING photo of Duterte retirement at Davao home",
-    "lang": "fil"
-  },
-  {
     "id": "1x2rfsb",
     "claim": "Kumalat sa Facebook ang isang larawang nagpapakita kay dating pangulong Rodrigo Duterte na nagpapahinga sa labas ng kanyang tahanan sa Davao City matapos ang kanyang termino noong Hunyo 30.",
     "rating": "misleading",
@@ -15267,6 +15417,16 @@
     "date": "2022-07-12",
     "url": "https://verafiles.org/articles/vera-files-fact-check-sen-robin-padilla-isa-sa-nagkalat-ng-misleading-na-litrato-ng-duterte-retirement-sa-bahay-sa-davao",
     "summary": "FACT CHECK: Sen. Robin Padilla isa sa nagkalat ng MISLEADING na litrato ng Duterte retirement sa bahay sa Davao",
+    "lang": "fil"
+  },
+  {
+    "id": "1ctotqo",
+    "claim": "A photo showing former president Rodrigo Duterte relaxing outside his home in Davao City circulated on Facebook after his term ended on June 30.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-07-12",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-sen-robin-padilla-spreads-misleading-photo-of-duterte-retirement-at-davao-home",
+    "summary": "VERA FILES FACT CHECK: Sen. Robin Padilla spreads MISLEADING photo of Duterte retirement at Davao home",
     "lang": "fil"
   },
   {
@@ -15320,6 +15480,16 @@
     "lang": "en"
   },
   {
+    "id": "am30ir",
+    "claim": "Sa halalan noong Mayo 9, nakuha ni Pangulong Ferdinand “Bongbong” Marcos Jr. ang \"pinakamalaking mandato sa eleksyon sa kasaysayan ng demokratikong Pilipinas.\"",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-07-02",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-marcos-jr-na-siya-ay-may-pinakamalaking-mandato-sa-halalan-nangangailangan-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Marcos Jr. na siya ay may ...",
+    "lang": "en"
+  },
+  {
     "id": "u5f7d9",
     "claim": "In the May 9 elections, President Ferdinand “Bongbong” Marcos Jr. got the \"biggest electoral mandate in history of Philippine democracy.\".",
     "rating": "misleading",
@@ -15347,6 +15517,16 @@
     "date": "2022-07-01",
     "url": "https://verafiles.org/articles/vera-files-fact-check-galvez-claim-that-ph-hit-vaxx-target-needs-context",
     "summary": "FACT CHECK: Galvez claim that PH hit vaxx target needs context",
+    "lang": "en"
+  },
+  {
+    "id": "109kmy6",
+    "claim": "Naabot ng gobyerno ng Pilipinas ang target nitong ganap na mabakunahan ang 70 milyong Pilipino laban sa sakit na coronavirus bago matapos ang termino ni Pangulong Rodrigo Duterte noong Hunyo 30.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-07-01",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-galvez-na-naabot-ng-ph-ang-vaxx-target-kailangan-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Galvez na naabot ng PH ang vaxx target ...",
     "lang": "en"
   },
   {
@@ -15498,6 +15678,16 @@
     "url": "https://verafiles.org/articles/vera-files-fact-check-dutertes-claim-on-ph-non-membership-in-icc-lacks-context",
     "summary": "Duterte’s claim on PH non-membership in ICC lacks context",
     "lang": "en"
+  },
+  {
+    "id": "1w75gda",
+    "claim": "Sinabi ni Pangulong Rodrigo Duterte na siya ang dapat kasuhan at litisin sa Pilipinas kaugnay ng mga paglabag sa karapatang pantao bunga ng kanyang war on drugs dahil hindi na miyembro ng International Criminal Court ang bansa.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-06-17",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-duterte-sa-hindi-pagiging-miyembro-ng-ph-sa-icc-kulang-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Duterte sa hindi pagiging miyembro ng PH sa ICCkulang ng konteksto",
+    "lang": "fil"
   },
   {
     "id": "1w5az4d",
@@ -16080,16 +16270,6 @@
     "lang": "en"
   },
   {
-    "id": "1fczfe3",
-    "claim": "Nag-imbak ng ginto si dating pangulong Ferdinand Marcos para sa Filipinas, at pinatunayan ito ng pahayag ni Bangko Sentral ng Pilipinas (BSP) Governor Benjamin Diokno.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2022-05-02",
-    "url": "https://www.rappler.com/newsbreak/fact-check/bangko-sentral-governor-diokno-proved-marcos-stored-gold/",
-    "summary": "HINDI TOTOO: Pinatunayan ng BSP na nag-imbak ng ginto si ...",
-    "lang": "fil"
-  },
-  {
     "id": "1pjen5p",
     "claim": "Naging selektibo ang publiko, at si Ferdinand Marcos Sr. lamang ang pangulong tinuligsa tungkol sa pagpatay sa mga journalists.",
     "rating": "false",
@@ -16151,7 +16331,7 @@
   },
   {
     "id": "s2cs3r",
-    "claim": "Ferdinand Marcos Sr. received a Distinguished Service Cross which General Douglas MacArthur personally pinned on him in recognition of his participation in the defense of Bataan.",
+    "claim": "Ferdinand Marcos Sr. received a Silver Star medal from the U.S. for leading the Mount Natib encounter.",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2022-04-25",
@@ -16290,16 +16470,6 @@
     "lang": "en"
   },
   {
-    "id": "66bumm",
-    "claim": "The Durano political clan has been leading Danao City, Cebu for “almost 15 decades.”",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2022-04-08",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-duterte-spews-false-claims-about-phili",
-    "summary": "VERA FILES FACT CHECK: Duterte spews false claims about Philippine republic, Durano political clan",
-    "lang": "en"
-  },
-  {
     "id": "8p7s7m",
     "claim": "Angkan ng mga Durano ang namumuno sa pulitika ng Danao City, Cebu, sa loob ng “halos 15 dekada.”",
     "rating": "false",
@@ -16318,6 +16488,16 @@
     "url": "https://verafiles.org/articles/vera-files-fact-check-panelo-inulit-ang-maling-pahayag-na-walang-hurisdiksyon-ang-icc-para-imbestigahan-ang-drug-war-ni-duterte",
     "summary": "FACT CHECK: Panelo inulit ang maling pahayag na ‘walang hurisdiksyon’ ang ICC para imbestigahan ang drug war ni Duterte",
     "lang": "fil"
+  },
+  {
+    "id": "66bumm",
+    "claim": "The Philippine republic was founded in 1947.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2022-04-08",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-duterte-spews-false-claims-about-phili",
+    "summary": "VERA FILES FACT CHECK: Duterte spews false claims about Philippine republic, Durano political clan",
+    "lang": "en"
   },
   {
     "id": "zm8v9n",
@@ -16400,6 +16580,16 @@
     "lang": "en"
   },
   {
+    "id": "1py20xj",
+    "claim": "Sinabi ni William Vincent “Vinny” Marcos na ang kanyang ama na si Ferdinand “Bongbong” Marcos Jr. ay isang dating drug addict.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2022-04-05",
+    "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-bongbong-marcos-jr-son-said-father-drug-addict/",
+    "summary": "HINDI TOTOO: Sinabi ng anak na dating drug addict si Marcos Jr.",
+    "lang": "fil"
+  },
+  {
     "id": "szbgui",
     "claim": "Ukrainian citizens need to be vaccinated to receive government war payment",
     "rating": "false",
@@ -16408,6 +16598,16 @@
     "url": "https://factcheck.afp.com/doc.afp.com.327A378",
     "summary": "Posts share false 'vaccination requirement' claim about Ukraine war relief fund",
     "lang": "en"
+  },
+  {
+    "id": "a9dcpy",
+    "claim": "Ang kuryente ay mula sa langis.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-04-02",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-duterte-na-langis-ang-nangungunang-pinagmumulan-ng-kuryente-nangangailangan-ng-konteksto",
+    "summary": "FACT CHECK: Pahayag ni Duterte na langis ang nangungunang pinagmumulan ng kuryente nangangailangan ng konteksto",
+    "lang": "fil"
   },
   {
     "id": "123ulo9",
@@ -16498,16 +16698,6 @@
     "url": "https://factcheck.afp.com/doc.afp.com.32697AF",
     "summary": "False graphic shared in misleading posts claiming 'Malaysians should get fourth Covid-19 jab'",
     "lang": "en"
-  },
-  {
-    "id": "lkht6k",
-    "claim": "Ang paniningil ng buwis para sa mga ari-arian ng pamilya ng dating diktador na si Ferdinand Marcos ay nangangahulugang hindi nakaw ang kanilang yaman.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2022-03-24",
-    "url": "https://www.rappler.com/newsbreak/fact-check/marcos-wealth-taxed-therefore-not-ill-gotten/",
-    "summary": "HINDI TOTOO: Dahil binubuwisan, hindi nakaw ang yaman ng mga ...",
-    "lang": "fil"
   },
   {
     "id": "1g7a3w7",
@@ -16730,6 +16920,16 @@
     "lang": "fil"
   },
   {
+    "id": "1afqwf8",
+    "claim": "Bilang bise presidente, wala akong kapangyarihan [sa] pagbibigay ng mga prangkisa. Bahala na ang Kongreso, ang House of Representatives, at ang Senado … susundin natin ang desisyon ng sangay ng gobyerno na may kapangyarihang gawin iyon.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-03-04",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-vp-bet-sara-duterte-hindi-makikialam-s",
+    "summary": "VERA FILES FACT CHECK: VP bet Sara Duterte hindi makikialam ...",
+    "lang": "en"
+  },
+  {
     "id": "1js6vgb",
     "claim": "As vice president, I don’t have any power [over] granting franchises. It will be up to Congress, the House of Representatives, and the Senate … we will abide by the decision of the branch of government that is empowered to do that.",
     "rating": "misleading",
@@ -16748,6 +16948,16 @@
     "url": "https://verafiles.org/articles/vera-files-fact-check-ilocos-sur-gov-chavit-singson-wrongly",
     "summary": "Chavit Singson wrongly claims $650M Marcos Swiss bank deposits ...",
     "lang": "en"
+  },
+  {
+    "id": "1y4dgdj",
+    "claim": "Nakakuha ang Philippine Navy ng dalawang bagong frigate sa ilalim ng administrasyong Duterte.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2022-03-01",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-lorenzana-sa-pagbili-ng-dal",
+    "summary": "VERA FILES FACT CHECK: Pahayag ni Lorenzana sa pagbili ng dalawang bagong frigate sa ilalim ng administrasyong Duterte nangangailangan ng konteksto",
+    "lang": "fil"
   },
   {
     "id": "1fyfbty",
@@ -16801,8 +17011,8 @@
   },
   {
     "id": "1ycg5p9",
-    "claim": "The Philippine government sequestered property from the Marcos family without winning any cases in court.",
-    "rating": "false",
+    "claim": "Ferdinand Marcos was acquitted in international court.",
+    "rating": "misleading",
     "publisher": "VERA Files",
     "date": "2022-02-24",
     "url": "https://verafiles.org/articles/vera-files-fact-check-video-resurrects-false-claims-marcos-c",
@@ -16848,6 +17058,16 @@
     "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-reason-gma-town-cavite/",
     "summary": "KULANG SA KONTEKSTO: Si Ferdinand Marcos ang dahilan kaya ...",
     "lang": "fil"
+  },
+  {
+    "id": "1x4ygir",
+    "claim": "A Jollibee mascot expressed support for Ferdinand “Bongbong” Marcos Jr.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2022-02-22",
+    "url": "https://www.rappler.com/newsbreak/fact-check/jollibee-expressed-support-ferdinand-bongbong-marcos-jr/",
+    "summary": "FALSE: Jollibee expressed support for Marcos Jr.",
+    "lang": "en"
   },
   {
     "id": "zer3kd",
@@ -17007,16 +17227,6 @@
     "date": "2022-02-05",
     "url": "https://verafiles.org/articles/vera-files-fact-check-sandro-marcos-did-not-say-father-clan",
     "summary": "VERA FILES FACT CHECK: Sandro Marcos DID NOT say father ...",
-    "lang": "en"
-  },
-  {
-    "id": "cw5xuz",
-    "claim": "Photo shows Vice President Leni Robredo holding up a piece of paper with the text “Bong-Bong MARCOS FOR PRESIDENT” written on it",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2022-02-04",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-altered-image-shows-robredo-endorsing",
-    "summary": "VERA FILES FACT CHECK: ALTERED image shows Robredo ...",
     "lang": "en"
   },
   {
@@ -17750,16 +17960,6 @@
     "lang": "en"
   },
   {
-    "id": "1bpxvh1",
-    "claim": "Only Duterte was given guards of honor during his visit to Japan.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2021-11-23",
-    "url": "https://www.rappler.com/newsbreak/fact-check/only-duterte-given-guard-of-honor-japan-visit/",
-    "summary": "KULANG SA KONTEKSTO: Si Duterte lang ang binigyan ng guard of honor ng Japan",
-    "lang": "fil"
-  },
-  {
     "id": "s529y7",
     "claim": "A photo showed what was supposed to be a business district with a bullet train located in the Philippines, supposedly constructed during President Rodrigo Duterte’s term.",
     "rating": "false",
@@ -17768,6 +17968,16 @@
     "url": "https://www.rappler.com/newsbreak/fact-check/photo-emerging-philippines-under-duterte/",
     "summary": "FALSE: Photo of ‘emerging Philippines’ under Duterte",
     "lang": "en"
+  },
+  {
+    "id": "1bpxvh1",
+    "claim": "Only Duterte was given guards of honor during his visit to Japan.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2021-11-23",
+    "url": "https://www.rappler.com/newsbreak/fact-check/only-duterte-given-guard-of-honor-japan-visit/",
+    "summary": "KULANG SA KONTEKSTO: Si Duterte lang ang binigyan ng guard of honor ng Japan",
+    "lang": "fil"
   },
   {
     "id": "19i3vi",
@@ -17881,7 +18091,7 @@
   },
   {
     "id": "1js8l2i",
-    "claim": "Ferdinand Marcos was the youngest mayor, governor, congressman, and senator.",
+    "claim": "Marcos led the construction of the Manila International Airport (MIA), now renamed as the Ninoy Aquino International Airport (NAIA)",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2021-11-17",
@@ -17901,7 +18111,7 @@
   },
   {
     "id": "4ibp5e",
-    "claim": "https://verafiles.org/articles/vera-files-fact-check-misleading-post-state-pasig-river-unde",
+    "claim": "Pasig River was cleaned under Duterte's time, while it stayed dirty under other administrations.",
     "rating": "misleading",
     "publisher": "VERA Files",
     "date": "2021-11-15",
@@ -17920,16 +18130,6 @@
     "lang": "en"
   },
   {
-    "id": "htiezo",
-    "claim": "Rabbinical Court rules Covid vaccine 'forbidden' for children, others",
-    "rating": "false",
-    "publisher": "AFP Fact Check",
-    "date": "2021-11-15",
-    "url": "https://factcheck.afp.com/doc.afp.com.9RK34P",
-    "summary": "Inaccurate claims about 'rabbinical court' opposing Covid-19 ...",
-    "lang": "en"
-  },
-  {
     "id": "1d3zugu",
     "claim": "Isang post noong Martes, Nobyembre 9, ang nagsasabing inireklamo raw si Manila Mayor at presidential aspirant Isko Moreno sa Commission on Elections (Comelec) matapos bumili ng boto.",
     "rating": "false",
@@ -17941,7 +18141,7 @@
   },
   {
     "id": "1oczp20",
-    "claim": "ABS-CBN never reported on the Hacienda Luisita massacre and Mendiola massacre.",
+    "claim": "Human rights violations committed under the Marcos dictatorship have never been proven in court",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2021-11-12",
@@ -18120,6 +18320,16 @@
     "lang": "fil"
   },
   {
+    "id": "1af4hz1",
+    "claim": "Ferdinand Marcos was a newly-wed congressman in 1962 or 1963 when the bank accounts were created.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2021-11-04",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-video-multiple-false-claims-marcos-swi",
+    "summary": "VERA FILES FACT CHECK: Video with multiple FALSE claims on ...",
+    "lang": "en"
+  },
+  {
     "id": "51l3a4",
     "claim": "The Supreme Court ruled in favor of Bongbong Marcos over a petition seeking to cancel his candidacy in the 2022 elections",
     "rating": "false",
@@ -18127,16 +18337,6 @@
     "date": "2021-11-04",
     "url": "https://verafiles.org/articles/vera-files-fact-check-video-falsely-claims-sc-officially-sid",
     "summary": "VERA FILES FACT CHECK: Video FALSELY claims SC officially ...",
-    "lang": "en"
-  },
-  {
-    "id": "1af4hz1",
-    "claim": "Marcos and his wife deposited US$68 million in their newly-opened Credit Suisse bank accounts.",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2021-11-04",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-video-multiple-false-claims-marcos-swi",
-    "summary": "VERA FILES FACT CHECK: Video with multiple FALSE claims on ...",
     "lang": "en"
   },
   {
@@ -18190,16 +18390,6 @@
     "lang": "en"
   },
   {
-    "id": "1cl5hnk",
-    "claim": "Ferdinand \"Bongbong\" Marcos Jr. \"ay hindi kailanman nagbigay ng maling impormasyon tungkol sa kanyang pag-aaral sa Oxford.\"",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2021-10-30",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-bongbong-marcos-spox-mali-sa-pahayag-n",
-    "summary": "VERA FILES FACT CHECK: Bongbong Marcos spox mali sa ...",
-    "lang": "en"
-  },
-  {
     "id": "1i6rzfs",
     "claim": "Ferdinand \"Bongbong\" Marcos Jr. \"has never misrepresented his Oxford education.\"",
     "rating": "false",
@@ -18240,16 +18430,6 @@
     "lang": "en"
   },
   {
-    "id": "eff6ag",
-    "claim": "Binuksan ng mag-asawang dating diktador na si Ferdinand Marcos at dating First Lady na si Imelda Marcos ang kanilang mga Swiss bank account noong taong 1954 at 1963.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2021-10-28",
-    "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-opened-swiss-bank-accounts-before-becoming-president/",
-    "summary": "HINDI TOTOO: Binuksan ni Marcos ang mga Swiss bank account ...",
-    "lang": "fil"
-  },
-  {
     "id": "2a77az",
     "claim": "Ferdinand \"Bongbong\" Marcos Jr. is an alumnus of the University of Oxford, based on a list of the university's notable alumni created by the website EduRank.",
     "rating": "misleading",
@@ -18258,6 +18438,16 @@
     "url": "https://www.rappler.com/newsbreak/fact-check/bongbong-marcos-featured-notable-alumnus-university-oxford-edurank/",
     "summary": "MISSING CONTEXT: Bongbong Marcos featured as University of ...",
     "lang": "en"
+  },
+  {
+    "id": "eff6ag",
+    "claim": "Binuksan ng mag-asawang dating diktador na si Ferdinand Marcos at dating First Lady na si Imelda Marcos ang kanilang mga Swiss bank account noong taong 1954 at 1963.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2021-10-28",
+    "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-opened-swiss-bank-accounts-before-becoming-president/",
+    "summary": "HINDI TOTOO: Binuksan ni Marcos ang mga Swiss bank account ...",
+    "lang": "fil"
   },
   {
     "id": "5aggci",
@@ -18350,13 +18540,13 @@
     "lang": "en"
   },
   {
-    "id": "1f5ote2",
-    "claim": "Binigay ng Liberal Party ang water concession sa mga Ayala, na ang partido ng oposisyon ay pinondohan ng mga oligarch.",
-    "rating": "false",
+    "id": "olpvme",
+    "claim": "Ang Metro Manila Skyway Stage 3 ay isang project na natapos sa ilalim ng programang \"Build, Build, Build\" ng administrasyong Duterte.",
+    "rating": "misleading",
     "publisher": "VERA Files",
     "date": "2021-10-22",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-duterte-na-binigay-ng-lp-sa",
-    "summary": "VERA FILES FACT CHECK: Pahayag ni Duterte na binigay ng LP sa mga Ayala ang water concession hindi totoo",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pag-tag-ni-villar-sa-skyway-stage-3-ng",
+    "summary": "VERA FILES FACT CHECK: Pag-tag ni Villar sa Skyway Stage 3 ng #BuildBuildBuild kulang sa konteksto",
     "lang": "fil"
   },
   {
@@ -18367,6 +18557,16 @@
     "date": "2021-10-22",
     "url": "https://verafiles.org/articles/vera-files-fact-check-duterte-falsely-claims-camiguin-govern",
     "summary": "Duterte falsely claims Camiguin governor ‘only rich’ PDP-Laban member",
+    "lang": "fil"
+  },
+  {
+    "id": "1f5ote2",
+    "claim": "Binigay ng Liberal Party ang water concession sa mga Ayala, na ang partido ng oposisyon ay pinondohan ng mga oligarch.",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2021-10-22",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-duterte-na-binigay-ng-lp-sa",
+    "summary": "VERA FILES FACT CHECK: Pahayag ni Duterte na binigay ng LP sa mga Ayala ang water concession hindi totoo",
     "lang": "fil"
   },
   {
@@ -18490,16 +18690,6 @@
     "lang": "en"
   },
   {
-    "id": "dev3bz",
-    "claim": "Hindi binalita ng midya ang pagdalo ng kandidato sa pagkapangulo at dating senador na si Ferdinand “Bongbong” Marcos Jr. sa pagdating ng mga labi ng 42 sa mga nasawing 44 na pulis na kasapi ng Special Action Force, na mas kilala sa tawag na “SAF 44,” sa Villamor Airbase noong Enero 29, 2015.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2021-10-15",
-    "url": "https://www.rappler.com/newsbreak/fact-check/media-did-not-report-bongbong-marcos-attending-saf-44-ceremony/",
-    "summary": "HINDI TOTOO: Hindi ibinalita ng midya ang pagdalo ni Bongbong ...",
-    "lang": "fil"
-  },
-  {
     "id": "hr991",
     "claim": "President Rodrigo Duterte was given by the U.S. State Department an International Anticorruption award",
     "rating": "misleading",
@@ -18580,6 +18770,16 @@
     "lang": "en"
   },
   {
+    "id": "gt3qau",
+    "claim": "Binigyan ng dating pangulong Ferdinand Marcos si Michael Jordan ng Nutribuns sa Wilmington, North Carolina noong Disyembre 24, 1969.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2021-10-11",
+    "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-gave-michael-jordan-nutribuns-1969/",
+    "summary": "HINDI TOTOO: Binigyan ni Marcos ng Nutribuns ang batang Michael ...",
+    "lang": "fil"
+  },
+  {
     "id": "inpjyc",
     "claim": "Vaccinated people are more susceptible to Covid-19 variants",
     "rating": "false",
@@ -18610,16 +18810,6 @@
     "lang": "fil"
   },
   {
-    "id": "wvocto",
-    "claim": "Ang ICC ay \"puro mga mga puti.”",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2021-10-07",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-sa-loob-ng-dalawang-minuto-duterte-kin",
-    "summary": "VERA FILES FACT CHECK: Sa loob ng dalawang minuto, Duterte kinontra ang sarili sa imbestigasyon ng ICC sa drug war",
-    "lang": "fil"
-  },
-  {
     "id": "cxut5s",
     "claim": "The ICC is \"full of white\" people.",
     "rating": "false",
@@ -18628,6 +18818,16 @@
     "url": "https://verafiles.org/articles/vera-files-fact-check-duterte-contradicts-self-within-two-mi",
     "summary": "Duterte contradicts self within two minutes on ICC probe",
     "lang": "en"
+  },
+  {
+    "id": "wvocto",
+    "claim": "Ang ICC ay \"puro mga mga puti.”",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2021-10-07",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-sa-loob-ng-dalawang-minuto-duterte-kin",
+    "summary": "VERA FILES FACT CHECK: Sa loob ng dalawang minuto, Duterte kinontra ang sarili sa imbestigasyon ng ICC sa drug war",
+    "lang": "fil"
   },
   {
     "id": "17h5o4w",
@@ -18691,8 +18891,8 @@
   },
   {
     "id": "ozmko5",
-    "claim": "History books were revised in 1986 in favor of the Aquinos.",
-    "rating": "false",
+    "claim": "The KADIWA group that handed out food during the Marcos administration eradicated hunger among the poor",
+    "rating": "misleading",
     "publisher": "VERA Files",
     "date": "2021-09-30",
     "url": "https://verafiles.org/articles/vera-files-fact-check-post-revised-history-books-against-mar",
@@ -18717,6 +18917,16 @@
     "date": "2021-09-30",
     "url": "https://verafiles.org/articles/vera-files-fact-check-fb-video-misleads-gordons-supposed-apo",
     "summary": "VERA FILES FACT CHECK: FB video MISLEADS with Gordon’s supposed ‘apology’ to Duterte",
+    "lang": "en"
+  },
+  {
+    "id": "kggvar",
+    "claim": "Winnie Monsod said that out of four public officials who had been her students, \"si Bongbong Marcos lang yung nangangamote sa economics (only Bongbong Marcos flopped in economics).\"",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2021-09-29",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-winnie-monsods-nangangamote-remark-bon",
+    "summary": "VERA FILES FACT CHECK: Winnie Monsod's 'nangangamote ...",
     "lang": "en"
   },
   {
@@ -18757,6 +18967,16 @@
     "date": "2021-09-28",
     "url": "https://www.rappler.com/newsbreak/fact-check/ferdinand-marcos-saved-philippines-cpp-npa-ndf-martial-law/",
     "summary": "HINDI TOTOO: Iniligtas ng Batas Militar ni Marcos ang Filipinas mula ...",
+    "lang": "fil"
+  },
+  {
+    "id": "19fzbmp",
+    "claim": "Ang Commission on Audit ay may mandato sa konstitusyon na i-audit ang Philippine Red Cross.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2021-09-28",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-sa-pangalawang-pagkakataon-duterte-inu",
+    "summary": "VERA FILES FACT CHECK: Sa pangalawang pagkakataon, Duterte inulit ang maling pahayag tungkol sa COA audit mandate",
     "lang": "fil"
   },
   {
@@ -19410,6 +19630,16 @@
     "lang": "en"
   },
   {
+    "id": "mk9aaf",
+    "claim": "No government funds were spent to build infrastructures former first lady Imelda Marcos wanted built.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2021-08-19",
+    "url": "https://www.rappler.com/newsbreak/fact-check/no-government-funds-spent-build-imelda-marcos-pet-infrastructure-projects/",
+    "summary": "FALSE: No gov't funds spent building Imelda Marcos' pet ...",
+    "lang": "en"
+  },
+  {
     "id": "1upx4so",
     "claim": "Twenty-four people died in the municipality of Bayog, Zamboanga del Sur, on August 16 after vaccination.",
     "rating": "false",
@@ -19426,7 +19656,7 @@
     "publisher": "VERA Files",
     "date": "2021-08-18",
     "url": "https://verafiles.org/articles/vera-files-fact-check-claim-us-begged-duterte-restore-vfa-fa",
-    "summary": "VERA FILES FACT CHECK: Claim that U.S. 'begged' Duterte to ...",
+    "summary": "VERA FILES FACT CHECK: Claim that U.S. ‘begged’ Duterte to restore VFA FALSE",
     "lang": "en"
   },
   {
@@ -19560,16 +19790,6 @@
     "lang": "en"
   },
   {
-    "id": "klf4qb",
-    "claim": "Rodrigo Duterte has approved the renaming of NAIA (Ninoy Aquino International Airport) to MIA (Manila International Airport)",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2021-08-11",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-no-approval-duterte-rename-naia",
-    "summary": "VERA FILES FACT CHECK: NO approval from Duterte to rename NAIA",
-    "lang": "en"
-  },
-  {
     "id": "1xxymz",
     "claim": "Joe Biden said he was impressed by Rodrigo Duterte and his infrastructure projects.",
     "rating": "false",
@@ -19577,6 +19797,16 @@
     "date": "2021-08-11",
     "url": "https://verafiles.org/articles/vera-files-fact-check-biden-did-not-praise-dutertes-infra-pr",
     "summary": "VERA FILES FACT CHECK: Biden did NOT ‘praise’ Duterte’s infra projects; media DOES report on Build, Build, Build",
+    "lang": "en"
+  },
+  {
+    "id": "klf4qb",
+    "claim": "Rodrigo Duterte has approved the renaming of NAIA (Ninoy Aquino International Airport) to MIA (Manila International Airport)",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2021-08-11",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-no-approval-duterte-rename-naia",
+    "summary": "VERA FILES FACT CHECK: NO approval from Duterte to rename NAIA",
     "lang": "en"
   },
   {
@@ -19610,16 +19840,6 @@
     "lang": "en"
   },
   {
-    "id": "1eu2xok",
-    "claim": "Pfizer CEO is still not vaccinated",
-    "rating": "false",
-    "publisher": "AFP Fact Check",
-    "date": "2021-08-10",
-    "url": "https://factcheck.afp.com/doc.afp.com.9KV9H4",
-    "summary": "Pfizer CEO is fully vaccinated against Covid-19",
-    "lang": "en"
-  },
-  {
     "id": "8ij7ij",
     "claim": "Covid-19 vaccine alters people's DNA",
     "rating": "false",
@@ -19627,6 +19847,16 @@
     "date": "2021-08-10",
     "url": "https://factcheck.afp.com/doc.afp.com.9KW9NP",
     "summary": "Popular Nigerian pastor falsely claims Covid-19 vaccines alter DNA",
+    "lang": "en"
+  },
+  {
+    "id": "1eu2xok",
+    "claim": "Pfizer CEO is still not vaccinated",
+    "rating": "false",
+    "publisher": "AFP Fact Check",
+    "date": "2021-08-10",
+    "url": "https://factcheck.afp.com/doc.afp.com.9KV9H4",
+    "summary": "Pfizer CEO is fully vaccinated against Covid-19",
     "lang": "en"
   },
   {
@@ -19748,6 +19978,16 @@
     "url": "https://verafiles.org/articles/vera-files-fact-check-duterte-makes-false-claim-abs-cbns-tax",
     "summary": "Duterte falsely claims ABS-CBN did not pay taxes properly",
     "lang": "en"
+  },
+  {
+    "id": "u9foot",
+    "claim": "Ang order kaugnay ng freedom of information ay nagbubukas ng mga rekord, transaksyon, desisyon at issuances ng lahat ng mga ahensya ng gobyerno.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2021-08-03",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-pahayag-ni-duterte-tungkol-sa-freedom",
+    "summary": "VERA FILES FACT CHECK: Pahayag ni Duterte tungkol sa Freedom of Information Act nangangailangan ng konteksto",
+    "lang": "fil"
   },
   {
     "id": "14xbt4h",
@@ -20771,12 +21011,12 @@
   },
   {
     "id": "wsfuj5",
-    "claim": "President Rodrigo Duterte ordered the imprisonment of Manila Auxiliary Bishop Broderick Pabillo over sexual harassment charges",
+    "claim": "President Rodrigo Duterte ordered the arrest of Manila Auxiliary Bishop Broderick Pabillo over sexual harassment charges",
     "rating": "false",
     "publisher": "VERA Files",
     "date": "2021-06-07",
     "url": "https://verafiles.org/articles/vera-files-fact-check-videos-duterte-ordering-arrest-jailing",
-    "summary": "VERA FILES FACT CHECK: Videos on Duterte ordering arrest ...",
+    "summary": "VERA FILES FACT CHECK: Videos on Duterte ordering arrest, jailing of Bishop Pabillo FAKE",
     "lang": "en"
   },
   {
@@ -20788,6 +21028,16 @@
     "url": "https://verafiles.org/articles/vera-files-fact-check-fb-post-claiming-duterte-best-world-le",
     "summary": "VERA FILES FACT CHECK: FB post claiming Duterte is ‘best’ world leader uses MISLEADING data",
     "lang": "en"
+  },
+  {
+    "id": "6z2g6n",
+    "claim": "Ang Pilipinas ay pangalawa sa COVID-19 vaccine rollout sa Southeast Asia batay sa bilang ng mga bakunang nagamit.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2021-06-07",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-report-ng-pna-sa-ph-covid-19-vaccinati",
+    "summary": "VERA FILES FACT CHECK: Report ng PNA sa PH COVID-19 vaccination rollout nangangailangan ng konteksto",
+    "lang": "fil"
   },
   {
     "id": "59oved",
@@ -21150,6 +21400,16 @@
     "lang": "en"
   },
   {
+    "id": "et6f1x",
+    "claim": "Ang mga lokal na opisyal na \"hindi magpapatupad ng mga patakaran ng COVID-19\" ay maaaring managot sa pagpapabaya sa tungkulin sa ilalim ng Revised Penal Code.",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2021-05-21",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-gamit-ang-revised-penal-code-duterte-n",
+    "summary": "VERA FILES FACT CHECK: Gamit ang Revised Penal Code, Duterte nagbabala sa mga lokal na opisyal na 'hindi magpapatupad ng COVID-19 na patakaran' kailangan ng konteksto",
+    "lang": "fil"
+  },
+  {
     "id": "1igfox8",
     "claim": "Local officials who \"do not enforce COVID-19 policies\" may be held accountable for dereliction of duty under the Revised Penal Code.",
     "rating": "misleading",
@@ -21308,6 +21568,16 @@
     "url": "https://factcheck.afp.com/covid-19-shots-not-designed-increase-cold-flu-lethality",
     "summary": "Covid-19 shots not designed to increase cold, flu lethality",
     "lang": "en"
+  },
+  {
+    "id": "3h4d39",
+    "claim": "Inulit ni Pangulong Rodrigo Duterte ang kanyang pangako sa kampanya noong 2016 na lumikha ng isang working environment kung saan ang security of tenure, bukod sa iba pa, \"ay hindi lamang pinangangalagaan, ngunit itinatangi din.”",
+    "rating": "misleading",
+    "publisher": "VERA Files",
+    "date": "2021-05-13",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-sa-kabila-ng-veto-sa-contractualizatio",
+    "summary": "VERA FILES FACT CHECK: Sa kabila ng veto sa contractualization bill, Duterte nangako ng security of tenure",
+    "lang": "fil"
   },
   {
     "id": "m5h8ri",
@@ -21591,8 +21861,8 @@
   },
   {
     "id": "m9lf6p",
-    "claim": "A country’s jurisdiction within her EEZ is limited to three aspects: set up and use of the artificial islands, installations, and structures; marine scientific research; and, protection, conservation and preservation of the marine environment.",
-    "rating": "false",
+    "claim": "The Philippines cannot drive away China from its EEZ. The Arbitral Tribunal was silent on this. The Philippines has no sovereignty over its EEZ, which means it has no power in that area to exclude in its most extreme form.",
+    "rating": "misleading",
     "publisher": "VERA Files",
     "date": "2021-04-28",
     "url": "https://verafiles.org/articles/vera-files-fact-check-pro-duterte-blogger-makes-multiple-ina",
@@ -21621,7 +21891,7 @@
   },
   {
     "id": "az5ovj",
-    "claim": "Hindi kailanman sinabi ng Arbitration Court na ang South China Sea ay atin.",
+    "claim": "Sinabi ng UNCLOS na ang isang coastal state, tulad ng Pilipinas, ay dapat tukuyin ang \"kakayahang umani ng living resources\" sa loob ng EEZ nito. Kung ang isang estado ay walang kakayahang anihin ang \"buong pinapayagang huli,\" dapat itong magbigay ng access sa ibang mga bansa para sa \"surplus.\"",
     "rating": "misleading",
     "publisher": "VERA Files",
     "date": "2021-04-28",
@@ -21680,16 +21950,6 @@
     "lang": "en"
   },
   {
-    "id": "1r0ue78",
-    "claim": "In 227 countries in the world that hold elections, 209 are using manual voting.",
-    "rating": "misleading",
-    "publisher": "VERA Files",
-    "date": "2021-04-24",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-bongbong-marcos-unloads-five-inaccurat",
-    "summary": "VERA FILES FACT CHECK: Bongbong Marcos unloads five ...",
-    "lang": "en"
-  },
-  {
     "id": "18gqqcm",
     "claim": "Covid vaccines have not been properly tested and pose long-term health risks",
     "rating": "false",
@@ -21701,8 +21961,8 @@
   },
   {
     "id": "1fpn6tg",
-    "claim": "Nagbabala si Pangulong Rodrigo Duterte mula sa simula na walang gamot para sa COVID-19.",
-    "rating": "false",
+    "claim": "Ang mga mamamayang Pilipino na higit sa 70 taong gulang ay wala sa listahan ng priyoridad para sa pagbabakuna sa COVID-19.",
+    "rating": "misleading",
     "publisher": "VERA Files",
     "date": "2021-04-23",
     "url": "https://verafiles.org/articles/vera-files-fact-check-matapos-ang-matagal-na-pagkawala-sa-pa",
@@ -21890,16 +22150,6 @@
     "lang": "en"
   },
   {
-    "id": "15zvd67",
-    "claim": "Former Virginia state senator Richard Black defended President Duterte and asked members of the opposition to stop spreading “fake news” against him worldwide.",
-    "rating": "false",
-    "publisher": "Rappler",
-    "date": "2021-04-09",
-    "url": "https://www.rappler.com/newsbreak/fact-check/united-states-senator-defends-duterte-opposition-fake-news/",
-    "summary": "FALSE: US senator defends Duterte from opposition's 'fake news'",
-    "lang": "en"
-  },
-  {
     "id": "1hqpmw3",
     "claim": "Duterte’s Pulse Asia Approval Rating is at 99.9%, and his disapproval rating is at 0.01%.",
     "rating": "false",
@@ -21907,6 +22157,16 @@
     "date": "2021-04-09",
     "url": "https://www.rappler.com/newsbreak/fact-check/president-duterte-pulse-asia-approval-rating-99-percent/",
     "summary": "FALSE: Duterte’s Pulse Asia approval rating is 99.9%",
+    "lang": "en"
+  },
+  {
+    "id": "15zvd67",
+    "claim": "Former Virginia state senator Richard Black defended President Duterte and asked members of the opposition to stop spreading “fake news” against him worldwide.",
+    "rating": "false",
+    "publisher": "Rappler",
+    "date": "2021-04-09",
+    "url": "https://www.rappler.com/newsbreak/fact-check/united-states-senator-defends-duterte-opposition-fake-news/",
+    "summary": "FALSE: US senator defends Duterte from opposition's 'fake news'",
     "lang": "en"
   },
   {
@@ -22950,16 +23210,6 @@
     "lang": "en"
   },
   {
-    "id": "ya18j7",
-    "claim": "Indian Muslim cleric talks about injecting mind controlling chip through COVID-19 vaccine",
-    "rating": "false",
-    "publisher": "AFP Fact Check",
-    "date": "2021-01-22",
-    "url": "https://factcheck.afp.com/indian-ruling-party-members-amplify-false-claim-indian-muslim-cleric-warned-vaccine-microchip",
-    "summary": "Indian ruling party members amplify false claim that 'Indian Muslim cleric warned of vaccine microchip conspiracy'",
-    "lang": "en"
-  },
-  {
     "id": "1k57i17",
     "claim": "Pfizer-BioNTech coronavirus vaccine caused deaths in Norway",
     "rating": "misleading",
@@ -22967,6 +23217,16 @@
     "date": "2021-01-22",
     "url": "https://factcheck.afp.com/social-media-posts-mislead-pfizer-biontech-vaccinations-norway",
     "summary": "Social media posts mislead on Pfizer-BioNTech vaccinations in Norway",
+    "lang": "en"
+  },
+  {
+    "id": "ya18j7",
+    "claim": "Indian Muslim cleric talks about injecting mind controlling chip through COVID-19 vaccine",
+    "rating": "false",
+    "publisher": "AFP Fact Check",
+    "date": "2021-01-22",
+    "url": "https://factcheck.afp.com/indian-ruling-party-members-amplify-false-claim-indian-muslim-cleric-warned-vaccine-microchip",
+    "summary": "Indian ruling party members amplify false claim that 'Indian Muslim cleric warned of vaccine microchip conspiracy'",
     "lang": "en"
   },
   {
@@ -24300,16 +24560,6 @@
     "lang": "en"
   },
   {
-    "id": "1y6k21j",
-    "claim": "I don't know the people behind the group pushing for a \"revolutionary government.\"",
-    "rating": "false",
-    "publisher": "VERA Files",
-    "date": "2020-08-31",
-    "url": "https://verafiles.org/articles/vera-files-fact-check-duterte-distances-self-group-behind-re",
-    "summary": "VERA FILES FACT CHECK: Duterte distances self from group ...",
-    "lang": "en"
-  },
-  {
     "id": "27mzwk",
     "claim": "Beatrice Elizabeth from the British Royal Family said she is “humbly praising” Duterte and that other world leaders “could learn from him.”",
     "rating": "false",
@@ -24317,6 +24567,16 @@
     "date": "2020-08-31",
     "url": "https://verafiles.org/articles/vera-files-fact-check-british-princess-spanish-doctors-group",
     "summary": "VERA FILES FACT CHECK: A British princess, Spanish doctor’s group DID NOT praise Duterte",
+    "lang": "en"
+  },
+  {
+    "id": "1y6k21j",
+    "claim": "I don't know the people behind the group pushing for a \"revolutionary government.\"",
+    "rating": "false",
+    "publisher": "VERA Files",
+    "date": "2020-08-31",
+    "url": "https://verafiles.org/articles/vera-files-fact-check-duterte-distances-self-group-behind-re",
+    "summary": "VERA FILES FACT CHECK: Duterte distances self from group behind ‘RevGov’ with false claims",
     "lang": "en"
   },
   {
@@ -24581,7 +24841,7 @@
   },
   {
     "id": "8fsw41",
-    "claim": "The number of drug addicts decreased under the Duterte administration.",
+    "claim": "Duterte legalized Philippine Offshore Gaming Operators (POGOs) and Filipinos are benefitting from the income taxes paid by them.",
     "rating": "misleading",
     "publisher": "VERA Files",
     "date": "2020-07-27",
@@ -25787,16 +26047,6 @@
     "date": "2019-09-11",
     "url": "https://factcheck.afp.com/house-survived-hurricane-ike-texas-2008-not-hurricane-dorian-bahamas",
     "summary": "This house survived Hurricane Ike in Texas in 2008 -- not Hurricane Dorian in the Bahamas",
-    "lang": "en"
-  },
-  {
-    "id": "15qbw2f",
-    "claim": "Hidden Chinese military base found in the Philippines",
-    "rating": "false",
-    "publisher": "AFP Fact Check",
-    "date": "2019-09-11",
-    "url": "https://factcheck.afp.com/not-photo-chinese-military-base-philippines-it-shows-tunnel-switzerland",
-    "summary": "This is not a photo of a Chinese military base in the Philippines -- it ...",
     "lang": "en"
   },
   {

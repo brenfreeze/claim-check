@@ -193,6 +193,7 @@ async function main(): Promise<void> {
       for (const [url, d] of debunks) allDebunks.set(url, d);
       for (const [rating, n] of unmapped) allUnmapped.set(rating, (allUnmapped.get(rating) ?? 0) + n);
       console.log(`${query} × ${site}: ${debunks.size}`);
+      await sleep(SLEEP_MS);
     }
   }
 

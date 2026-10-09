@@ -36,6 +36,7 @@ const FALSE_KEYWORDS = [
   'false',
   'fake',
   'mali',
+  'peke',
   'hindi totoo',
   'walang batayan',
   'fabricated',
@@ -44,6 +45,7 @@ const FALSE_KEYWORDS = [
   'pants on fire',
   'incorrect',
   'not true',
+  'untrue',
   'no basis',
 ];
 
@@ -54,6 +56,7 @@ const MISLEADING_KEYWORDS = [
   'missing context',
   'needs context',
   'kulang sa konteksto',
+  'kailangan ng konteksto',
   'out of context',
   'half true',
   'partly false',
@@ -66,15 +69,33 @@ const MISLEADING_KEYWORDS = [
 
 const TRUE_KEYWORDS = ['true', 'totoo', 'accurate', 'correct', 'fact'];
 
+/** Long free-text ratings (full sentences some publishers put in `textualRating`) must never map to `true`
+ *  off an incidental word match (e.g. "fact") — only an explicit false/misleading keyword can match them. */
+const MAX_SHORT_RATING_LEN = 60;
+
+function escapeRegExp(s: string): string {
+  return s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+/** Matches `keyword` as a whole word/phrase in `text` — bounded by non-letters or string edges, Unicode-aware
+ *  so e.g. "mali" matches standalone but not inside "malinaw". Both args are expected already lowercased. */
+function matchesKeyword(text: string, keyword: string): boolean {
+  const pattern = new RegExp(`(^|[^\\p{L}])${escapeRegExp(keyword)}([^\\p{L}]|$)`, 'u');
+  return pattern.test(text);
+}
+
 /**
- * Case-insensitive keyword map, English + Filipino. Checks false/misleading before true so phrases like
- * "not true" and "half true" don't fall through to the `true` keyword match.
+ * Case-insensitive keyword map, English + Filipino, matched on word boundaries. Checks false/misleading
+ * before true so phrases like "not true" and "half true" don't fall through to the `true` keyword match.
+ * A `textualRating` longer than MAX_SHORT_RATING_LEN that doesn't hit a false/misleading keyword is `other`
+ * even if it contains a `true` keyword — long free text is never trusted to mean "true".
  */
 export function normalizeRating(textualRating: string): 'false' | 'misleading' | 'true' | 'other' {
   const r = textualRating.toLowerCase();
-  if (FALSE_KEYWORDS.some((k) => r.includes(k))) return 'false';
-  if (MISLEADING_KEYWORDS.some((k) => r.includes(k))) return 'misleading';
-  if (TRUE_KEYWORDS.some((k) => r.includes(k))) return 'true';
+  if (FALSE_KEYWORDS.some((k) => matchesKeyword(r, k))) return 'false';
+  if (MISLEADING_KEYWORDS.some((k) => matchesKeyword(r, k))) return 'misleading';
+  if (textualRating.length > MAX_SHORT_RATING_LEN) return 'other';
+  if (TRUE_KEYWORDS.some((k) => matchesKeyword(r, k))) return 'true';
   return 'other';
 }
 
