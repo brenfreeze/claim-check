@@ -4,15 +4,18 @@ import { StatusBar } from 'expo-status-bar';
 import * as ort from 'onnxruntime-react-native';
 import { useEffect, useRef, useState } from 'react';
 import { Button, Platform, ScrollView, StyleSheet, Text, TextInput, View } from 'react-native';
+import { appleLlmAvailability, appleLlmBackend } from './modules/apple-llm';
 import { memSnapshot } from './modules/mem-probe';
+import { FACT_CHECK_INSTRUCTIONS, runLlmFixtures, type LlmFixtureReport } from './src/app/llmProtocol';
 import { benchmark, runFixtures, type BenchReport, type FixtureReport } from './src/app/phase0';
 import { downloadModel, listModelFiles, modelDir, modelPresent, readText, sessionPath } from './src/app/modelStore';
-import { OnDeviceDecimaEngine, type Decision } from './src/engine';
+import { LlmDecisionEngine, OnDeviceDecimaEngine, type Decision } from './src/engine';
 
 const DEFAULT_BASE_URL = process.env.EXPO_PUBLIC_MODEL_URL ?? 'http://10.0.2.2:8765';
 const AUTORUN = process.env.EXPO_PUBLIC_AUTORUN === '1';
 const THREADS = [1, 2, 4];
 const AUTORUN_THREADS = Number(process.env.EXPO_PUBLIC_THREADS ?? 2);
+const AUTORUN_ENGINE = process.env.EXPO_PUBLIC_ENGINE ?? 'decima'; // 'decima' | 'apple'
 
 const log = (tag: string, payload: unknown) => console.log(`PHASE0_RESULT ${tag} ${JSON.stringify(payload)}`);
 const fmt = (x: number, d = 1) => (Number.isFinite(x) ? x.toFixed(d) : String(x));
@@ -45,6 +48,8 @@ export default function App() {
   const [decision, setDecision] = useState<Decision | null>(null);
   const [bench, setBench] = useState<BenchReport | null>(null);
   const [fixtures, setFixtures] = useState<FixtureReport | null>(null);
+  const [llmReports, setLlmReports] = useState<LlmFixtureReport[]>([]);
+  const appleLlm = appleLlmAvailability();
   const busy = status.endsWith('…');
 
   async function step<T>(label: string, fn: () => Promise<T>): Promise<T | undefined> {
@@ -124,9 +129,29 @@ export default function App() {
       return f;
     });
 
+  const runLlmSuite = (mode: 'one-step' | 'two-step') =>
+    step(`apple llm ${mode}`, async () => {
+      const engine = new LlmDecisionEngine({ backend: appleLlmBackend({ permissive: true }), domainInstructions: FACT_CHECK_INSTRUCTIONS });
+      const r = await runLlmFixtures(engine, mode);
+      setLlmReports((prev) => [...prev.filter((x) => x.mode !== mode), r]);
+      const { items, ...summary } = r;
+      log('llm', summary);
+      items.forEach((it) => log('llm-item', { mode, ...it }));
+      return r;
+    });
+
   useEffect(() => {
     log('device', deviceInfo());
     if (!AUTORUN) return;
+    if (AUTORUN_ENGINE === 'apple') {
+      (async () => {
+        log('apple-llm', appleLlm);
+        await runLlmSuite('one-step');
+        await runLlmSuite('two-step');
+        log('autorun', 'complete');
+      })();
+      return;
+    }
     (async () => {
       // one thread count per fresh process, so cold load and memory are not polluted by earlier loads
       if (!modelPresent()) await download();
@@ -183,6 +208,25 @@ export default function App() {
           {`peak RSS ${fmt(bench.memory.after.peakRssMb, 0)} MB (reset ${bench.memory.peakReset}) · max PSS ${fmt(bench.memory.maxPssMb, 0)} MB`}
         </Text>
       )}
+
+      <Text style={styles.h2}>Apple on-device model</Text>
+      <Text style={styles.mono}>{`available: ${appleLlm.available} (${appleLlm.reason})`}</Text>
+      <View style={styles.row}>
+        <Button title="LLM fixtures 1-step" onPress={() => runLlmSuite('one-step')} disabled={busy || !appleLlm.available} />
+        <Button title="LLM fixtures 2-step" onPress={() => runLlmSuite('two-step')} disabled={busy || !appleLlm.available} />
+      </View>
+      {llmReports.map((r) => (
+        <View key={r.mode}>
+          <Text style={styles.mono}>
+            {`${r.mode}: ${Object.entries(r.accuracy).map(([l, a]) => `${l} ${a.correct}/${a.total}`).join(' · ')} · flips ${r.orderFlips} · refusals ${r.refusals} · median ${fmt(r.latencyMs.median, 0)} ms · p95 ${fmt(r.latencyMs.p95, 0)} ms`}
+          </Text>
+          {r.items.map((it) => (
+            <Text key={it.id} style={[styles.mono, !it.correct && styles.dim]}>
+              {`${it.id} ${it.label.padEnd(11)} → ${it.answer.padEnd(11)}${it.orderFlip ? ' FLIP' : ''}${it.errors.length ? ` ERR×${it.errors.length}` : ''}`}
+            </Text>
+          ))}
+        </View>
+      ))}
 
       <Text style={styles.h2}>Fixtures (20 × 3 orders)</Text>
       <Button title="Run fixtures" onPress={runFixtureSuite} disabled={busy} />

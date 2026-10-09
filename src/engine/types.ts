@@ -36,7 +36,7 @@ export type AnswerFor<Q extends Question> = Q extends { kind: 'choice' }
     : ScoreAnswer;
 
 export interface DecisionEngine {
-  readonly id: 'decima-local' | 'http';
+  readonly id: 'decima-local' | 'apple-on-device' | 'http';
   systemOne<Q extends Record<string, Question>>(
     state: string,
     questions: Q,
