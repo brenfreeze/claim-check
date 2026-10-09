@@ -13,7 +13,7 @@ The default path never touches the network. Live search becomes an optional per-
 
 - Every result shows "Checked on-device against N saved fact-checks · synced <date>" (from `corpusInfo()`), on Results and as the Home chip.
 - A matched claim's main evidence card *is* the fact-check: publisher, date, rating pill (false / misleading / true), summary, and URL.
-- An Unverified claim reached by the offline path shows "No known fact-check" and an **Online enrichment** button. The button is enabled only when `useIsOnline()` is true; offline, it queues the claim and shows "Queued for recheck". Enrichment streams live-search results into the same claim.
+- An Unverified claim reached by the offline path shows its reason ("No known fact-check", or "Related fact-check found (post says the opposite)" with the fact-check card still attached) and an **Online enrichment** button. Offline match scores are labelled "match confidence". The button is enabled only when `useIsOnline()` is true; offline, it queues the claim and shows "Queued for recheck". Enrichment streams live-search results into the same claim.
 - The Analyzing stepper becomes Find claims → Match saved fact-checks → Calibrate verdicts. Its subtitle reads "Everything runs on this phone. Nothing is sent." Enrichment shows its own Find evidence → Weigh evidence progress on the claim.
 - The mockup's "You're offline" banner appears only when `useIsOnline()` is false. The Offline mockup's matched-block and queued styles become the standard claim-card variants.
 - `@react-native-community/netinfo` is added by the engine session, not here; `src/core/connectivity.ts` is a stub hook.
@@ -99,7 +99,7 @@ export interface EvidenceSource {
   tier: 'A' | 'B' | 'C';
   kind: 'government' | 'factcheck' | 'news' | 'other';
   snippet: string;                       // best chunk (live) or fact-check summary (offline); shown highlighted
-  stance: Stance; confidence: number;    // offline match: confidence = p(same claim)
+  stance: Stance; confidence: number;    // offline match: p(supports) from ft3 3-way framing; label it "match confidence"
   date?: string;                         // ISO; shown on fact-check cards
   claimReview?: { rating: string; headline: string };   // rating pill; offline corpus uses FactcheckRating
 }
@@ -110,7 +110,7 @@ export interface ClaimResult {
   original: string;                      // sentence from the post
   path: ClaimPath;                       // how this verdict was reached
   verdict: Verdict; confidence: number;  // confidence < gate ⇒ verdict 'unverified'
-  reason: string;                        // offline no-match: "No known fact-check"
+  reason: string;                        // offline no-match: "No known fact-check"; opposite: "Related fact-check found (post says the opposite)"
   evidence: EvidenceSource[];            // strongest first; offline match = the fact-check itself (tier A, kind factcheck)
   stats: { engine: EngineChoice; decisions: number; ms: number; rule: string; calibration: string };
   enrichment?: { status: 'idle' | 'queued' | 'running' | 'done' | 'failed'; message?: string };
