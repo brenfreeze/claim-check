@@ -6,6 +6,7 @@ import { enrich } from '../checkStore';
 import { confidenceLabel, score, shortDate, sourceSummary, STANCE_LABEL } from '../format';
 import { ChevronRight, ExternalIcon, SearchIcon } from '../icons';
 import { color, font, type } from '../tokens';
+import { ExpandableText } from './ExpandableText';
 import { Button, Card } from './primitives';
 import { RatingPill, TierBadge, VerdictChip } from './verdict';
 
@@ -32,12 +33,12 @@ export function ClaimCard({ claim, gate, checkId, onPress }: { claim: ClaimResul
           <VerdictChip verdict={claim.verdict} />
           <Text style={styles.score}>{noSavedMatch ? 'no saved match' : confidenceLabel(claim, gate)}</Text>
         </View>
-        <Text style={type.claimCard}>{claim.text}</Text>
+        <ExpandableText text={claim.text} max={140} style={type.claimCard} />
         {unverified ? (
-          <Text style={styles.reason}>{claim.reason}</Text>
-        ) : (
-          <Text style={styles.quote}>“{truncate(claim.original, 52)}”</Text>
-        )}
+          <ExpandableText text={claim.reason} max={140} style={styles.reason} />
+        ) : claim.original !== claim.text ? (
+          <ExpandableText text={claim.original} max={90} prefix="“" suffix="”" style={styles.quote} />
+        ) : null}
         {fc ? <FactcheckBlock source={fc} related={unverified} /> : null}
         {enrichable ? null : (
           <View style={styles.cardFooter}>
@@ -64,7 +65,10 @@ export function FactcheckBlock({ source, related }: { source: EvidenceSource; re
         <Text style={styles.fcLabel}>{related ? 'Related saved fact-check' : 'Matched saved fact-check'}</Text>
         <Text style={styles.fcMatch}>match {score(source.confidence)}</Text>
       </View>
-      <Text style={styles.fcHeadline}>{source.claimReview?.headline ?? source.title}</Text>
+      <ExpandableText text={source.claimReview?.headline ?? source.title} max={120} style={styles.fcHeadline} />
+      {source.snippet && source.snippet !== (source.claimReview?.headline ?? source.title) ? (
+        <ExpandableText text={source.snippet} max={110} style={styles.fcSummary} />
+      ) : null}
       <View style={styles.fcMeta}>
         <Text style={styles.fcMetaText}>
           {source.publisher}
@@ -154,7 +158,6 @@ export function EvidenceCard({ source }: { source: EvidenceSource }) {
   );
 }
 
-const truncate = (s: string, n: number) => (s.length > n ? `${s.slice(0, n).trimEnd()}…` : s);
 
 const styles = StyleSheet.create({
   cardTop: { flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' },
@@ -178,6 +181,7 @@ const styles = StyleSheet.create({
   fcLabel: { fontFamily: font.bodySemibold, fontSize: 12, color: color.inkSecondary },
   fcMatch: { fontFamily: font.mono, fontSize: 11, color: color.inkMuted },
   fcHeadline: { fontFamily: font.body, fontSize: 13.5, lineHeight: 19, color: color.ink },
+  fcSummary: { fontFamily: font.body, fontSize: 12.5, lineHeight: 18, color: color.inkSecondary },
   fcMeta: { flexDirection: 'row', alignItems: 'center', gap: 8 },
   fcMetaText: { fontFamily: font.body, fontSize: 12, color: color.inkMuted },
   enrich: { gap: 8, paddingTop: 8, borderTopWidth: 1, borderTopColor: color.divider },
