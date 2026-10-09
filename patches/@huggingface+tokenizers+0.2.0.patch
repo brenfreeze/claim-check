@@ -1,0 +1,72 @@
+diff --git a/node_modules/@huggingface/tokenizers/dist/tokenizers.cjs b/node_modules/@huggingface/tokenizers/dist/tokenizers.cjs
+index 46e461d..5cc1531 100644
+--- a/node_modules/@huggingface/tokenizers/dist/tokenizers.cjs
++++ b/node_modules/@huggingface/tokenizers/dist/tokenizers.cjs
+@@ -1870,8 +1870,14 @@ var Unigram = class extends TokenizerModel_default {
+     this.min_score = min(this.scores)[0];
+     this.unk_score = this.min_score - 10;
+     this.scores[this.unk_token_id] = this.unk_score;
+-    this.trie = new CharTrie_default();
+-    this.trie.extend(this.vocab);
++    // claim-check: trie-free unigram — the 250k-piece CharTrie cost ~1.6 s and ~100 MB to build on every load.
++    // Prefix search below walks tokens_to_ids for substrings up to the longest piece instead (same results, same order).
++    this.max_piece_chars = 0;
++    for (const piece of this.vocab) {
++      let n = 0;
++      for (const _ of piece) n++;
++      if (n > this.max_piece_chars) this.max_piece_chars = n;
++    }
+     this.fuse_unk = true;
+   }
+   /**
+@@ -1884,7 +1890,13 @@ var Unigram = class extends TokenizerModel_default {
+     let begin_pos = 0;
+     while (begin_pos < chars.length) {
+       let has_single_node = false;
+-      const prefixed_tokens = this.trie.common_prefix_search(chars, begin_pos);
++      const prefixed_tokens = [];
++      let prefix = "";
++      const end = Math.min(chars.length, begin_pos + this.max_piece_chars);
++      for (let i = begin_pos; i < end; ++i) {
++        prefix += chars[i];
++        if (this.tokens_to_ids.has(prefix)) prefixed_tokens.push(prefix);
++      }
+       for (const token of prefixed_tokens) {
+         const token_id = this.tokens_to_ids.get(token);
+         const token_score = this.scores[token_id];
+diff --git a/node_modules/@huggingface/tokenizers/dist/tokenizers.mjs b/node_modules/@huggingface/tokenizers/dist/tokenizers.mjs
+index d2b6d9c..75ff072 100644
+--- a/node_modules/@huggingface/tokenizers/dist/tokenizers.mjs
++++ b/node_modules/@huggingface/tokenizers/dist/tokenizers.mjs
+@@ -1797,8 +1797,14 @@ var Unigram = class extends TokenizerModel_default {
+     this.min_score = min(this.scores)[0];
+     this.unk_score = this.min_score - 10;
+     this.scores[this.unk_token_id] = this.unk_score;
+-    this.trie = new CharTrie_default();
+-    this.trie.extend(this.vocab);
++    // claim-check: trie-free unigram — the 250k-piece CharTrie cost ~1.6 s and ~100 MB to build on every load.
++    // Prefix search below walks tokens_to_ids for substrings up to the longest piece instead (same results, same order).
++    this.max_piece_chars = 0;
++    for (const piece of this.vocab) {
++      let n = 0;
++      for (const _ of piece) n++;
++      if (n > this.max_piece_chars) this.max_piece_chars = n;
++    }
+     this.fuse_unk = true;
+   }
+   /**
+@@ -1811,7 +1817,13 @@ var Unigram = class extends TokenizerModel_default {
+     let begin_pos = 0;
+     while (begin_pos < chars.length) {
+       let has_single_node = false;
+-      const prefixed_tokens = this.trie.common_prefix_search(chars, begin_pos);
++      const prefixed_tokens = [];
++      let prefix = "";
++      const end = Math.min(chars.length, begin_pos + this.max_piece_chars);
++      for (let i = begin_pos; i < end; ++i) {
++        prefix += chars[i];
++        if (this.tokens_to_ids.has(prefix)) prefixed_tokens.push(prefix);
++      }
+       for (const token of prefixed_tokens) {
+         const token_id = this.tokens_to_ids.get(token);
+         const token_score = this.scores[token_id];
