@@ -125,6 +125,10 @@ export default function Home() {
           ))}
         </View>
       ) : null}
+
+      <Pressable accessibilityRole="link" onPress={() => router.push('/about')} style={styles.about}>
+        <Text style={styles.aboutText}>About CheckitFirst · what it does and what we held back</Text>
+      </Pressable>
     </Screen>
   );
 }
@@ -152,6 +156,8 @@ const styles = StyleSheet.create({
   inputMeta: { flexDirection: 'row', justifyContent: 'space-between' },
   grid: { flexDirection: 'row', gap: 10 },
   hint: { flexDirection: 'row', alignItems: 'center', gap: 8 },
+  about: { alignItems: 'center', paddingVertical: 14, marginTop: 4 },
+  aboutText: { fontFamily: font.body, fontSize: 13, color: color.link, textAlign: 'center' },
   hintText: { fontFamily: font.body, fontSize: 13, color: color.inkMuted, flexShrink: 1 },
   recent: {
     flexDirection: 'row',
