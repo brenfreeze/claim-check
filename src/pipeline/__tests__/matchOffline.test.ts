@@ -76,11 +76,11 @@ test('a fact-check rated true → supported', async () => {
   expect(m.debunk?.id).toBe('rice');
 });
 
-test('post asserts the opposite (contradicts ≥ gate) → unverified with the debunk attached', async () => {
+test('contradicts ≥ gate is not a match: unverified, "No known fact-check", no debunk attached', async () => {
   const engine = fakeEngine({ [CORPUS[0].claim]: { supports: 0.05, contradicts: 0.85, unrelated: 0.1 } });
   const m = await matcher.match('Malacañang did not declare class suspensions on July 27', engine, 0.7);
-  expect(m).toMatchObject({ verdict: 'unverified', reason: 'Related fact-check found (post says the opposite)', opposite: true });
-  expect(m.debunk?.id).toBe('suspension');
+  expect(m).toMatchObject({ verdict: 'unverified', reason: 'No known fact-check' });
+  expect(m.debunk).toBeUndefined();
 });
 
 test('prefilter returns at most TOP_K ranked by Jaccard; no overlap → no engine calls', async () => {

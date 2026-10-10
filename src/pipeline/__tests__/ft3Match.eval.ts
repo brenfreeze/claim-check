@@ -46,7 +46,7 @@ d('offline matcher on ft3 (real model)', () => {
       rows.push(
         [
           it.expect.padEnd(8), it.lang.padEnd(7), `top8:${inTop === null ? '-' : inTop ? 'Y' : 'N'}`,
-          `target ${fmt(target?.probs)}`, `best ${fmt(best?.probs)} ${best?.debunk.claim.slice(0, 50) ?? ''}`,
+          `target j${target?.jaccard.toFixed(2) ?? '-'} ${fmt(target?.probs)}`, `best j${best?.jaccard.toFixed(2) ?? '-'} ${fmt(best?.probs)} ${best?.debunk.claim.slice(0, 50) ?? ''}`,
           `${m.decisions}d ${m.ms}ms`, `| ${it.post.slice(0, 60)}`,
         ].join('  '),
       );

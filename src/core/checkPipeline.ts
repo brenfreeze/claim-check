@@ -164,14 +164,13 @@ function toClaim(id: string, text: string, m: OfflineMatch, engine: EngineChoice
     verdict: m.verdict,
     confidence: m.confidence,
     reason: m.reason,
-    evidence: m.debunk ? [toEvidence(m.debunk, m.confidence, m.opposite === true)] : [],
+    evidence: m.debunk ? [toEvidence(m.debunk, m.confidence)] : [],
     stats: { engine, decisions: m.decisions, ms: m.ms, rule: MATCH_RULE, calibration: 'temperature-scaled' },
     enrichment: m.verdict === 'unverified' && path === 'offline-match' ? { status: 'idle' } : undefined,
   };
 }
 
-function toEvidence(d: Debunk, confidence: number, opposite: boolean): EvidenceSource {
-  const agrees = d.rating === 'true' !== opposite;
+function toEvidence(d: Debunk, confidence: number): EvidenceSource {
   return {
     url: d.url,
     publisher: d.publisher,
@@ -180,7 +179,7 @@ function toEvidence(d: Debunk, confidence: number, opposite: boolean): EvidenceS
     tier: 'A',
     kind: 'factcheck',
     snippet: d.summary,
-    stance: agrees ? 'supports' : 'contradicts',
+    stance: d.rating === 'true' ? 'supports' : 'contradicts',
     confidence,
     date: d.date,
     claimReview: { rating: d.rating, headline: d.claim },

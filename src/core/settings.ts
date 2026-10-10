@@ -5,7 +5,8 @@ import { createStore, useStore } from './store';
 export const DEFAULT_SETTINGS: Settings = {
   engine: 'decima-local',
   lanUrl: '192.168.1.20:8000',
-  gate: 0.7,
+  // real matches score ≥ 0.97 on ft3, false ones 0.73–0.79 (src/pipeline/__tests__/*.eval.ts)
+  gate: 0.85,
   compareHosted: false,
   factcheckSources: { verafiles: true, rappler: true, tsek: true },
   wifiOnlySync: true,

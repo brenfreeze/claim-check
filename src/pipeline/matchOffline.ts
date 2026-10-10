@@ -26,8 +26,6 @@ export interface OfflineMatch {
   confidence: number;
   reason: string;
   debunk?: Debunk;
-  /** true when the post asserts the opposite of the fact-checked claim */
-  opposite?: boolean;
   candidates: MatchCandidate[];
   decisions: number;
   ms: number;
@@ -110,20 +108,8 @@ export class OfflineMatcher {
       };
     }
 
-    const opposite = judged
-      .filter((c) => c.probs!.contradicts >= gate && c.probs!.contradicts >= c.probs!.supports && c.probs!.contradicts >= c.probs!.unrelated)
-      .sort((a, b) => b.probs!.contradicts - a.probs!.contradicts)[0];
-    if (opposite) {
-      return {
-        ...base,
-        verdict: 'unverified',
-        confidence: opposite.probs!.contradicts,
-        reason: 'Related fact-check found (post says the opposite)',
-        debunk: opposite.debunk,
-        opposite: true,
-      };
-    }
-
+    // No "post says the opposite" result: on Tagalog pairs ft3 answers contradicts ≈ 1.0 for unrelated fact-checks
+    // (src/pipeline/__tests__/demoPosts.eval.ts), so attaching them as "related" would mislead.
     return { ...base, verdict: 'unverified', confidence: best?.probs!.supports ?? 0, reason: 'No known fact-check' };
   }
 }

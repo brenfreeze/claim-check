@@ -83,6 +83,8 @@ Laptop reference (onnxruntime-node, 2 threads): about 0.45–0.7 s per claim, 8 
 ## Known limits (say them if asked)
 
 - **Negation.** "SSS pensioners will NOT get their 13th month…" still matched the original claim as the same claim (p 0.98). ft3 under-weights "not".
-- **Some English paraphrases** read as "contradicts". "Super Typhoon Enteng is now Signal No. 4!!" got contradicts 0.95 against Rappler's "According to the latest weather report, Super Typhoon Enteng is now Signal No. 4". It then shows as Unverified with the related fact-check attached, which is the safe failure.
+- **Some English paraphrases** read as "contradicts". "Super Typhoon Enteng is now Signal No. 4!!" got contradicts 0.95 against Rappler's "According to the latest weather report, Super Typhoon Enteng is now Signal No. 4", so it shows as Unverified: the safe failure.
+- **Gate 0.85, not 0.7.** On ft3, real matches score ≥ 0.94 and false ones 0.73–0.79, so the default gate is 0.85. A "post says the opposite" rule was dropped, because ft3 answers "contradicts" ≈ 1.0 on unrelated Tagalog pairs. Evidence: `src/pipeline/__tests__/*.eval.ts`.
+- **Taglish post vs English fact-check** sometimes misses the text prefilter. The demo items have hand-written Taglish aliases in `assets/corpus/demo-overrides.json`; a multilingual retriever is the next step.
 - **The corpus is a snapshot.** It was built from Google Fact Check Tools on the date shown in the app. Online enrichment covers newer fact-checks.
 - **Almost no "true" ratings** (1 in the corpus). PH fact-checkers mostly publish debunks, so the app is a debunk finder, not a truth oracle.
