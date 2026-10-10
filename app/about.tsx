@@ -23,7 +23,7 @@ const HELD_BACK: string[] = [
   'The saved fact-checks are a snapshot from the sync date. There’s no background sync yet; Online enrichment is how you reach newer ones.',
   'Matching misses some posts. A Taglish post doesn’t always reach an English-language fact-check, and the model can miss negation (“will NOT…”). A few demo posts have hand-written Taglish aliases to help them match.',
   'The match threshold (0.85) comes from a small test set of 15 posts, not a full evaluation.',
-  'Finding claims in a post uses a simple rule (sentence length, “share” prompts), not the model.',
+  'Each sentence is checked on its own. Claims that span sentences or lean on context (“Ganyan din si…”, “Sabi niya yan”) lose their meaning, so long personal stories check poorly. Finding claims uses a simple rule (sentence length, “share” prompts), not the model.',
   'The fine-tuned model was trained on fact-check text we don’t have permission to redistribute. A public release needs that permission or retraining on licensed data.',
   'Only on-device Decima runs checks. Apple’s on-device model is built but hidden (it fails on some posts); laptop and hosted engines aren’t built yet.',
   'No share-sheet extension yet: copy and paste, or scan a screenshot. Screenshot scanning is iPhone-only for now.',
