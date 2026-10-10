@@ -1,5 +1,6 @@
 // Builds the bundled offline corpus from the Google Fact Check Tools API.
-//   node --experimental-strip-types scripts/pull-factchecks.ts
+//   node --experimental-strip-types scripts/pull-factchecks.ts                 full pull (recent sweep + topics)
+//   node --experimental-strip-types scripts/pull-factchecks.ts --recent-only   recent sweep merged into the corpus
 // Requires FACTCHECK_API_KEY in .env.local (git-ignored) or the environment. Network use is build-time only;
 // the app itself never calls this API.
 import * as fs from 'fs';
@@ -57,6 +58,9 @@ const LANGS = ['en', 'tl'];
 const PAGE_SIZE = 100;
 const MAX_PAGES = 5;
 const SLEEP_MS = 150;
+/** Recent sweep: every fact-check from the last year per publisher, regardless of topic. */
+const RECENT_DAYS = 365;
+const RECENT_MAX_PAGES = 30;
 const RETRY_DELAY_MS = 2000;
 const API_URL = 'https://factchecktools.googleapis.com/v1alpha1/claims:search';
 
@@ -102,7 +106,9 @@ async function fetchPage(
   pageToken: string | undefined,
 ): Promise<SearchResponse> {
   const url = new URL(API_URL);
-  url.searchParams.set('query', query);
+  // An empty query is the recent sweep: every fact-check the publisher posted in the last RECENT_DAYS days.
+  if (query) url.searchParams.set('query', query);
+  else url.searchParams.set('maxAgeDays', String(RECENT_DAYS));
   url.searchParams.set('reviewPublisherSiteFilter', site);
   url.searchParams.set('pageSize', String(PAGE_SIZE));
   if (languageCode) url.searchParams.set('languageCode', languageCode);
@@ -169,11 +175,11 @@ async function fetchCombo(
       // pass's results — stop paginating it rather than spending calls confirming that.
       if (languageCode && page === 1 && !addedThisPage) pageToken = undefined;
       if (pageToken) await sleep(SLEEP_MS);
-    } while (pageToken && page < MAX_PAGES);
+    } while (pageToken && page < (query ? MAX_PAGES : RECENT_MAX_PAGES));
   }
 
   await runPasses(undefined);
-  for (const lang of LANGS) {
+  for (const lang of query ? LANGS : []) {
     await sleep(SLEEP_MS);
     await runPasses(lang);
   }
@@ -184,15 +190,21 @@ async function fetchCombo(
 async function main(): Promise<void> {
   const apiKey = readApiKey();
 
+  const recentOnly = process.argv.includes('--recent-only');
   const allDebunks = new Map<string, Debunk>();
   const allUnmapped = new Map<string, number>();
+  if (recentOnly) {
+    const existing: Debunk[] = JSON.parse(fs.readFileSync(path.join(CORPUS_DIR, 'debunks.json'), 'utf8'));
+    for (const d of existing) allDebunks.set(d.url, d);
+  }
 
-  for (const query of QUERIES) {
+  // Recent sweep first (no keyword), then the topic queries for older fact-checks on PH-relevant subjects.
+  for (const query of recentOnly ? [''] : ['', ...QUERIES]) {
     for (const site of PUBLISHERS) {
       const { debunks, unmapped } = await fetchCombo(apiKey, query, site);
       for (const [url, d] of debunks) allDebunks.set(url, d);
       for (const [rating, n] of unmapped) allUnmapped.set(rating, (allUnmapped.get(rating) ?? 0) + n);
-      console.log(`${query} × ${site}: ${debunks.size}`);
+      console.log(`${query || `last ${RECENT_DAYS} days`} × ${site}: ${debunks.size}`);
       await sleep(SLEEP_MS);
     }
   }

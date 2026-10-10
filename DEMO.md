@@ -1,6 +1,6 @@
 # CheckitFirst demo: offline fact-check matching
 
-**Pitch:** "Has this already been fact-checked?" The app answers on the phone, in airplane mode. It matches each claim against 2,600+ saved PH fact-checks from Rappler, VERA Files and AFP, using an on-device model (Decima ft3).
+**Pitch:** "Has this already been fact-checked?" The app answers on the phone, in airplane mode. It matches each claim against 4,500 saved fact-checks from Rappler, VERA Files and AFP (the last year in full, older ones by PH topic), using an on-device model (Decima ft3).
 
 ## Before the demo (online, once)
 

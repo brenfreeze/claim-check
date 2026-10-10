@@ -25,6 +25,10 @@ describe('normalizeRating', () => {
     ['PEKE', 'false'],
     [LONG_RATING_WITH_FACT, 'other'],
     ['Malinaw', 'other'],
+    ['Altered video', 'false'],
+    ['WALANG BASEHAN', 'false'],
+    ['Nakapanliligaw', 'misleading'],
+    ['Hindi tumpak', 'misleading'],
   ] as const)('%s -> %s', (input, expected) => {
     expect(normalizeRating(input)).toBe(expected);
   });

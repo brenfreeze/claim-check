@@ -47,6 +47,13 @@ const FALSE_KEYWORDS = [
   'not true',
   'untrue',
   'no basis',
+  'walang basehan',
+  'baseless',
+  'unsubstantiated',
+  'no evidence',
+  'altered',
+  'manipulated',
+  'ai-generated',
 ];
 
 const MISLEADING_KEYWORDS = [
@@ -57,6 +64,11 @@ const MISLEADING_KEYWORDS = [
   'needs context',
   'kulang sa konteksto',
   'kailangan ng konteksto',
+  'nangangailangan ng konteksto',
+  'nakapanliligaw',
+  'nakapanlilinlang',
+  'hindi tumpak',
+  'misrepresented',
   'out of context',
   'half true',
   'partly false',
