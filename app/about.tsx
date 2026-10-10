@@ -1,14 +1,15 @@
-import { StyleSheet, Text, View } from 'react-native';
-import { corpusInfo } from '../src/core/factcheckCache';
+import { Linking, StyleSheet, Text, View } from 'react-native';
+import { useCorpusInfo } from '../src/core/factcheckCache';
 import { Card, Meta, Screen, ScreenHeader, SectionLabel } from '../src/ui/components/primitives';
 import { color, font, type } from '../src/ui/tokens';
 
 // What the app does and, honestly, what the hackathon build leaves out.
+const FACT_CHECK_TOOLS_URL = 'https://developers.google.com/fact-check/tools/api';
 const FEATURES: [string, string][] = [
   ['Works without internet', 'Every check runs on this phone. Nothing is sent anywhere unless you tap Online enrichment.'],
   [
     'Saved fact-checks',
-    'Each claim is compared with published fact-checks from Rappler, VERA Files and AFP Fact Check, saved in the app (from Google Fact Check Tools).',
+    'Each claim is compared with published fact-checks from Rappler, VERA Files and AFP Fact Check, saved in the app. Settings → Sync now adds newer ones while you’re online.',
   ],
   [
     'On-device AI',
@@ -20,7 +21,7 @@ const FEATURES: [string, string][] = [
 
 const HELD_BACK: string[] = [
   'It finds debunks, it doesn’t judge truth. Filipino fact-checkers mostly publish “false” and “misleading” verdicts, so “Unverified” means “no saved fact-check matches”, not “true”.',
-  'The saved fact-checks are a snapshot from the sync date. There’s no background sync yet; Online enrichment is how you reach newer ones.',
+  'Only Rappler, VERA Files and AFP publish to Google’s fact-check index, so Tsek.ph and newsroom fact-checks aren’t included. Syncing is manual (Settings → Sync now); there’s no background sync.',
   'Matching misses some posts. A Taglish post doesn’t always reach an English-language fact-check, and the model can miss negation (“will NOT…”). A few demo posts have hand-written Taglish aliases to help them match.',
   'The match threshold (0.85) comes from a small test set of 15 posts, not a full evaluation.',
   'Each sentence is checked on its own. Claims that span sentences or lean on context (“Ganyan din si…”, “Sabi niya yan”) lose their meaning, so long personal stories check poorly. Finding claims uses a simple rule (sentence length, “share” prompts), not the model.',
@@ -31,7 +32,7 @@ const HELD_BACK: string[] = [
 ];
 
 export default function About() {
-  const corpus = corpusInfo();
+  const corpus = useCorpusInfo();
   return (
     <Screen gap={18}>
       <ScreenHeader title="About CheckitFirst" />
@@ -53,6 +54,17 @@ export default function About() {
           </View>
         ))}
       </View>
+
+      <Card style={{ gap: 6 }}>
+        <Text style={styles.itemTitle}>Powered by the Google Fact Check Tools API</Text>
+        <Text style={styles.itemBody}>
+          Every saved fact-check comes from Google’s ClaimReview index: the claim, the publisher’s rating and a link to the article. Fact-checkers
+          publish these; we only store the claim and rating, never the article text.
+        </Text>
+        <Text accessibilityRole="link" onPress={() => void Linking.openURL(FACT_CHECK_TOOLS_URL)} suppressHighlighting style={styles.link}>
+          developers.google.com/fact-check/tools/api ↗
+        </Text>
+      </Card>
 
       <View style={{ gap: 10 }}>
         <SectionLabel>What we held back</SectionLabel>
@@ -76,5 +88,6 @@ const styles = StyleSheet.create({
   itemTitle: { fontFamily: font.bodySemibold, fontSize: 15, lineHeight: 21, color: color.ink },
   itemBody: { flex: 1, fontFamily: font.body, fontSize: 14, lineHeight: 20, color: color.inkBody },
   bulletRow: { flexDirection: 'row', gap: 8 },
+  link: { fontFamily: font.bodyMedium, fontSize: 14, color: color.link },
   bullet: { fontFamily: font.body, fontSize: 14, lineHeight: 20, color: color.inkMuted },
 });

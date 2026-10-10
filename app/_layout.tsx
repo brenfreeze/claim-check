@@ -13,10 +13,13 @@ import { StatusBar } from 'expo-status-bar';
 import { useEffect } from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { useIsOnline } from '../src/core/connectivity';
+import { loadSyncedCorpus } from '../src/core/corpusSync';
 import { flushQueuedEnrichments } from '../src/ui/checkStore';
 import { color } from '../src/ui/tokens';
 
 void SplashScreen.preventAutoHideAsync();
+// fact-checks saved by earlier manual syncs (Settings → Sync now)
+void loadSyncedCorpus();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({

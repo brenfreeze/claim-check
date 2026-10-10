@@ -3,7 +3,7 @@ import { Redirect, router, useLocalSearchParams } from 'expo-router';
 import { useEffect, useState } from 'react';
 import { Pressable, StyleSheet, Text, TextInput, View } from 'react-native';
 import { effectiveEngine } from '../src/core/engines';
-import { corpusInfo } from '../src/core/factcheckCache';
+import { useCorpusInfo } from '../src/core/factcheckCache';
 import { useSettings } from '../src/core/settings';
 import { useSharedText } from '../src/core/shareIntent';
 import { detectLanguage, splitSentences } from '../src/core/text';
@@ -25,7 +25,7 @@ export default function Home() {
   const settings = useSettings();
   const engine = effectiveEngine(settings.engine, settings.lanUrl);
   const recent = useRecentChecks(5);
-  const corpus = corpusInfo();
+  const corpus = useCorpusInfo();
 
   // Re-read on change, not only at mount: a link or share can arrive while Home is already open.
   useEffect(() => {

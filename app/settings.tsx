@@ -4,7 +4,8 @@ import { useState } from 'react';
 import { Pressable, StyleSheet, Switch, Text, View } from 'react-native';
 import { setSimulatedOffline, useSimulatedOffline } from '../src/core/connectivity';
 import { engineOptions } from '../src/core/engines';
-import { corpusInfo } from '../src/core/factcheckCache';
+import { syncFactchecks } from '../src/core/corpusSync';
+import { useCorpusInfo } from '../src/core/factcheckCache';
 import { setSettings, useSettings } from '../src/core/settings';
 import type { Settings } from '../src/core/checkTypes';
 import { EngineOptionRow } from '../src/ui/components/panels';
@@ -30,9 +31,18 @@ export default function SettingsScreen() {
   const options = engineOptions(s.lanUrl);
   const saved = options.find((o) => o.id === s.engine)!;
   const current = saved.available ? saved : options[0];
-  const corpus = corpusInfo();
+  const corpus = useCorpusInfo();
   const [gate, setGate] = useState(s.gate);
-  const [synced, setSynced] = useState(false);
+  const [sync, setSync] = useState<{ busy: boolean; note?: string; error?: boolean }>({ busy: false });
+  const runSync = async () => {
+    setSync({ busy: true });
+    try {
+      const { added } = await syncFactchecks();
+      setSync({ busy: false, note: added ? `${added.toLocaleString('en-US')} new fact-checks` : 'Already up to date' });
+    } catch (e) {
+      setSync({ busy: false, note: e instanceof Error ? e.message : String(e), error: true });
+    }
+  };
 
   return (
     <Screen gap={22}>
@@ -100,9 +110,10 @@ export default function SettingsScreen() {
           <View style={[styles.rowBetween, styles.groupRow, styles.divider]}>
             <View style={{ gap: 2 }}>
               <Text style={[styles.label, { fontFamily: font.bodyMedium }]}>{corpus.count.toLocaleString('en-US')} saved</Text>
-              <Meta>last sync {synced ? 'just now' : relativeTime(corpus.syncedAt)}</Meta>
+              <Meta>last sync {relativeTime(corpus.syncedAt)}</Meta>
+              {sync.note ? <Meta style={sync.error ? { color: color.verdict.contradicted.fg } : undefined}>{sync.note}</Meta> : null}
             </View>
-            <SmallButton label="Sync now" primary onPress={() => setSynced(true)} />
+            <SmallButton label={sync.busy ? 'Syncing…' : 'Sync now'} primary onPress={() => void (sync.busy ? undefined : runSync())} />
           </View>
           {SOURCES.map((src) => (
             <ToggleRow
